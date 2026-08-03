@@ -1598,6 +1598,51 @@ select.trial-input {
 }
 
 /* ============================================
+   Content Blocks (Legal / Trust Pages)
+   ============================================ */
+.content-block {
+    margin-bottom: 40px;
+}
+
+.content-block h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 14px;
+    letter-spacing: -0.02em;
+}
+
+.content-block h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.content-block p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+}
+
+.content-block ul {
+    margin: 0 0 14px 0;
+    padding-left: 20px;
+}
+
+.content-block ul li {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.content-block ul li strong {
+    color: var(--text-primary);
+}
+
+/* ============================================
    CTA Section
    ============================================ */
 .cta-section {
