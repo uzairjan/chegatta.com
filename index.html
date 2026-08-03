@@ -10,7 +10,156 @@
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="canonical" href="https://chegatta.com/">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate" hreflang="en" href="https://chegatta.com/">
+    <link rel="alternate" hreflang="es" href="https://chegatta.com/es/">
+    <link rel="alternate" hreflang="pt" href="https://chegatta.com/pt/">
+    <link rel="alternate" hreflang="x-default" href="https://chegatta.com/">
     <title>Chegatta — Smart Attendance Tracking & Workforce Insights</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Chegatta">
+    <meta property="og:url" content="https://chegatta.com/">
+    <meta property="og:title" content="Chegatta — Smart Attendance Tracking & Workforce Insights">
+    <meta property="og:description" content="Geolocation clock-in, real-time analytics, and AI-powered insights for staffing agencies managing employees across multiple companies.">
+    <meta property="og:image" content="https://chegatta.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="pt_PT">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chegatta — Smart Attendance Tracking & Workforce Insights">
+    <meta name="twitter:description" content="Geolocation clock-in, real-time analytics, and AI-powered insights for staffing agencies.">
+    <meta name="twitter:image" content="https://chegatta.com/og-image.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Chegatta",
+        "url": "https://chegatta.com",
+        "logo": "https://chegatta.com/favicon.svg",
+        "sameAs": [
+            "https://twitter.com/chegatta",
+            "https://www.linkedin.com/company/chegatta",
+            "https://github.com/chegatta"
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Chegatta",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "https://chegatta.com",
+        "description": "Smart employee attendance tracking and staffing management with geolocation clock-in, real-time analytics, and AI-powered workforce insights.",
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Starter",
+                "price": "49",
+                "priceCurrency": "EUR"
+            },
+            {
+                "@type": "Offer",
+                "name": "Professional",
+                "price": "149",
+                "priceCurrency": "EUR"
+            }
+        ],
+        "featureList": [
+            "Geolocation clock-in",
+            "Break and overtime tracking",
+            "AI-powered insights",
+            "Multi-company assignment",
+            "Web push notifications",
+            "Multi-language support"
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does geolocation clock-in work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Employees clock in from their phone browser. Chegatta captures their GPS coordinates and verifies they are within the company's geofence radius. If they are outside the designated area, the clock-in is flagged as off-site for review."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do employees need to install an app?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Chegatta is a web-based application. Employees simply open a URL in their phone's browser to clock in. Push notifications work through the browser, so there is nothing to install from an app store."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does the AI attention scoring work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The analytics engine calculates a weighted score for each employee based on factors like lateness frequency, off-site clock-ins, missing clock-outs, and excessive overtime. Employees are ranked as none, low, medium, or high attention so managers know where to focus."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I manage employees across multiple companies?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Chegatta is built for staffing agencies. You can assign employees to multiple client companies, track assignment history, rotate employees between sites, and compare attendance across all companies from a single dashboard."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What languages are supported?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Chegatta currently supports English, Spanish, and Portuguese. The interface automatically detects the user's browser language. Additional languages can be added through the translation system."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is my data secure?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Chegatta uses Laravel Sanctum for authentication, Laratrust for role-based access control, and stores all data in a secure MySQL database. Role-based permissions ensure employees, companies, and admins only see what they are authorized to access."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are there mobile apps available?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Native iOS and Android apps are coming soon. In the meantime, Chegatta works in any mobile browser with full support for geolocation clock-in, push notifications, and all features."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does the 1-month free trial work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sign up with your company name and work email, with no credit card required. You get 30 days of full access to all features on any plan. At the end of the trial you can choose a plan that fits your team or let it expire."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need a credit card to start the trial?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Just enter your company name and email. No credit card, no payment details, no hidden charges. If you decide to continue after the trial, you can add your payment information then."
+                }
+            }
+        ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -27,19 +176,17 @@
                 <span>Chegatta</span>
             </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#features">Features</a></li>
+                <li><a href="features.html">Features</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#analytics">Analytics</a></li>
-                <li><a href="#roles">For Teams</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#apps">Apps</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="use-cases.html">Use Cases</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li class="nav-cta-mobile">
-                    <a href="#cta" class="btn btn-primary btn-sm">Get Started</a>
+                    <a href="#trial" class="btn btn-primary btn-sm">Get Started</a>
                 </li>
             </ul>
             <div class="nav-actions">
-                <a href="#cta" class="btn btn-primary btn-sm">Get Started</a>
+                <a href="#trial" class="btn btn-primary btn-sm">Get Started</a>
             </div>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
                 <span></span>
@@ -814,10 +961,10 @@
                 <div class="footer-col">
                     <h4>Product</h4>
                     <ul>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#analytics">Analytics</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="use-cases.html">Use Cases</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -845,6 +992,7 @@
         </div>
     </footer>
 
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="ee106db2-370e-4f23-91d6-7d79eec21946"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

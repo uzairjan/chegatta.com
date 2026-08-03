@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Chegatta: control inteligente de asistencia para agencias de trabajo temporal. Fichaje por geolocalización, analíticas en tiempo real e información basada en IA.">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="canonical" href="https://chegatta.com/es/">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="alternate" hreflang="en" href="https://chegatta.com/">
+    <link rel="alternate" hreflang="es" href="https://chegatta.com/es/">
+    <link rel="alternate" hreflang="pt" href="https://chegatta.com/pt/">
+    <link rel="alternate" hreflang="x-default" href="https://chegatta.com/">
+    <title>Chegatta — Control Inteligente de Asistencia para Agencias de Trabajo Temporal</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Chegatta">
+    <meta property="og:url" content="https://chegatta.com/es/">
+    <meta property="og:title" content="Chegatta — Control Inteligente de Asistencia">
+    <meta property="og:description" content="Fichaje por geolocalización, analíticas en tiempo real e información basada en IA para agencias de trabajo temporal.">
+    <meta property="og:image" content="https://chegatta.com/og-image.png">
+    <meta property="og:locale" content="es_ES">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chegatta — Control Inteligente de Asistencia">
+    <meta name="twitter:description" content="Fichaje por geolocalización, analíticas en tiempo real e información basada en IA.">
+    <meta name="twitter:image" content="https://chegatta.com/og-image.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Chegatta",
+        "url": "https://chegatta.com",
+        "logo": "https://chegatta.com/favicon.svg"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/>
+                </svg>
+                <span>Chegatta</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../features.html">Funciones</a></li>
+                <li><a href="../index.html#how-it-works">Cómo funciona</a></li>
+                <li><a href="../pricing.html">Precios</a></li>
+                <li><a href="../use-cases.html">Casos de uso</a></li>
+                <li><a href="#faq">Preguntas frecuentes</a></li>
+                <li class="nav-cta-mobile">
+                    <a href="#trial" class="btn btn-primary btn-sm">Empezar</a>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#trial" class="btn btn-primary btn-sm">Empezar</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span>
+                    <span>Prueba gratuita de 1 mes: sin tarjeta de crédito</span>
+                </div>
+                <h1 class="hero-title">
+                    Controla la asistencia.<br>
+                    <span class="gradient-text">Comprende a tu plantilla.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Registro de entrada/salida por geolocalización, analíticas en tiempo real e información
+                    inteligente. Diseñado para agencias de trabajo temporal que gestionan empleados en
+                    múltiples empresas.
+                </p>
+                <div class="hero-actions">
+                    <a href="#trial" class="btn btn-primary btn-lg">
+                        Empezar Prueba Gratuita de 1 Mes
+                        <svg viewBox="0 0 24 24" fill="none" class="btn-icon"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="#how-it-works" class="btn btn-outline btn-lg">
+                        <svg viewBox="0 0 24 24" fill="none" class="btn-icon"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M10 8l6 4-6 4V8z" fill="currentColor"/></svg>
+                        Ver demo
+                    </a>
+                </div>
+                <p class="hero-trial-note">
+                    <svg viewBox="0 0 24 24" fill="none" class="check-icon"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                    Sin tarjeta de crédito · 30 días gratis · Cancela cuando quieras
+                </p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="stat-number">99,9%</span>
+                        <span class="stat-label">Disponibilidad</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Idiomas</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Supervisión</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="dashboard-mockup">
+                    <div class="mockup-header">
+                        <div class="mockup-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="mockup-title">Panel de asistencia</div>
+                    </div>
+                    <div class="mockup-body">
+                        <div class="mockup-stats">
+                            <div class="mockup-stat-card">
+                                <div class="mockup-stat-icon present">
+                                    <svg viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                                </div>
+                                <div>
+                                    <div class="mockup-stat-value">142</div>
+                                    <div class="mockup-stat-label">Presentes</div>
+                                </div>
+                            </div>
+                            <div class="mockup-stat-card">
+                                <div class="mockup-stat-icon absent">
+                                    <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="currentColor"/></svg>
+                                </div>
+                                <div>
+                                    <div class="mockup-stat-value">8</div>
+                                    <div class="mockup-stat-label">Ausentes</div>
+                                </div>
+                            </div>
+                            <div class="mockup-stat-card">
+                                <div class="mockup-stat-icon late">
+                                    <svg viewBox="0 0 24 24" fill="none"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/></svg>
+                                </div>
+                                <div>
+                                    <div class="mockup-stat-value">12</div>
+                                    <div class="mockup-stat-label">Con retraso</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mockup-chart">
+                            <div class="mockup-chart-title">Asistencia semanal</div>
+                            <div class="mockup-bars">
+                                <div class="mockup-bar" style="height: 60%"></div>
+                                <div class="mockup-bar" style="height: 75%"></div>
+                                <div class="mockup-bar" style="height: 90%"></div>
+                                <div class="mockup-bar" style="height: 85%"></div>
+                                <div class="mockup-bar" style="height: 95%"></div>
+                                <div class="mockup-bar" style="height: 70%"></div>
+                                <div class="mockup-bar" style="height: 50%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-card card-1">
+                    <div class="floating-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/></svg>
+                    </div>
+                    <div>
+                        <div class="floating-card-title">Geocerca</div>
+                        <div class="floating-card-text">Ubicación verificada</div>
+                    </div>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="floating-card-icon notify">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" fill="currentColor"/></svg>
+                    </div>
+                    <div>
+                        <div class="floating-card-title">Alerta push</div>
+                        <div class="floating-card-text">Salida sin registrar</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0 120V60C240 20 480 0 720 0C960 0 1200 20 1440 60V120H0Z" fill="var(--bg-secondary)"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Confianza -->
+    <section class="trust-bar">
+        <div class="container">
+            <p class="trust-label">Con la confianza de agencias de trabajo temporal de toda Europa</p>
+            <div class="trust-logos">
+                <div class="trust-logo">StaffPro</div>
+                <div class="trust-logo">EuroWork</div>
+                <div class="trust-logo">Lisboa HR</div>
+                <div class="trust-logo">Madrid Staff</div>
+                <div class="trust-logo">Berlin Force</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funciones -->
+    <section class="features section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Funciones</span>
+                <h2 class="section-title">Todo lo que necesitas para gestionar la asistencia</h2>
+                <p class="section-subtitle">Del fichaje por geolocalización a la información basada en IA, Chegatta te da el control total de tu plantilla.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-blue">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Fichaje por geolocalización</h3>
+                    <p>Entrada/salida verificada por GPS con geocercas de empresa. Asegúrate de que los empleados están en el lugar correcto al marcar su asistencia.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-green">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Pausas y horas extra</h3>
+                    <p>Detección automática de pausas y cálculo de horas extra. Controla horas trabajadas, pausas y horas extra al segundo.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-purple">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Información basada en IA</h3>
+                    <p>Detecta anomalías, predice patrones de asistencia y obtén puntuaciones de atención para empleados en riesgo antes de que los problemas escalen.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-orange">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 7v7H7v2h10v-2h-5V7h-2zm0-5c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Asignación multi-empresa</h3>
+                    <p>Asigna empleados a varias empresas cliente. Gestiona asignaciones, rotaciones y mantén un registro de auditoría completo.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-red">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Notificaciones push</h3>
+                    <p>Alertas push en tiempo real para salidas sin registrar, anomalías y eventos importantes de asistencia. No te pierdas nada.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-teal">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.21-4.61 1.35-6.93-.21-.52-.48-1.02-.8-1.47l1.8-1.8c1.18 1.27 1.87 2.94 1.87 4.72 0 .34-.03.67-.07.99.61.34 1.16.78 1.62 1.32.72-.6 1.2-1.48 1.2-2.49 0-1.79-1.45-3.24-3.24-3.24-.39 0-.76.07-1.11.2-.36-1.07-.95-2.04-1.72-2.84.84-.53 1.83-.84 2.83-.84 3.31 0 6 2.69 6 6 0 2.97-2.16 5.44-5 5.92v.08z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Multilingüe</h3>
+                    <p>Internacionalización completa en inglés, español y portugués. Pensado para agencias europeas con plantillas diversas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo funciona -->
+    <section class="how-it-works section section-alt" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Cómo funciona</span>
+                <h2 class="section-title">En marcha en minutos</h2>
+                <p class="section-subtitle">Sin configuraciones complejas. Sin hardware. Solo un control inteligente de asistencia que funciona.</p>
+            </div>
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Crea tu empresa</h3>
+                        <p>Configura tu agencia de trabajo temporal, añade empresas cliente y define geocercas para cada lugar de trabajo.</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step reveal">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Añade y asigna empleados</h3>
+                        <p>Invita empleados, asígnalos a empresas cliente y configura turnos. Los roles y permisos se gestionan automáticamente.</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step reveal">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Registra y analiza</h3>
+                        <p>Los empleados fichan desde su teléfono. Tú obtienes paneles en tiempo real, detección de anomalías e información accionable.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Precios -->
+    <section class="pricing section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Precios</span>
+                <h2 class="section-title">Precios sencillos y transparentes</h2>
+                <p class="section-subtitle">Elige el plan que se adapte a tu equipo. Sin cargos ocultos. Cancela cuando quieras.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card reveal">
+                    <div class="pricing-header">
+                        <h3>Inicial</h3>
+                        <p class="pricing-price">49&nbsp;€<span>/mes</span></p>
+                        <p class="pricing-desc">Para agencias pequeñas que empiezan</p>
+                    </div>
+                    <div class="pricing-trial-badge">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/></svg>
+                        Prueba gratuita de 1 mes · Sin tarjeta
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Hasta 25 empleados</li>
+                        <li>1 empresa cliente</li>
+                        <li>Fichaje por geolocalización</li>
+                        <li>Informes básicos de asistencia</li>
+                        <li>Soporte por correo</li>
+                    </ul>
+                    <a href="#trial" class="btn btn-outline btn-block">Empezar prueba gratuita</a>
+                </div>
+                <div class="pricing-card pricing-popular reveal">
+                    <div class="popular-badge">El más popular</div>
+                    <div class="pricing-header">
+                        <h3>Profesional</h3>
+                        <p class="pricing-price">149&nbsp;€<span>/mes</span></p>
+                        <p class="pricing-desc">Para agencias en crecimiento con varios clientes</p>
+                    </div>
+                    <div class="pricing-trial-badge">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/></svg>
+                        Prueba gratuita de 1 mes · Sin tarjeta
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Hasta 150 empleados</li>
+                        <li>Empresas cliente ilimitadas</li>
+                        <li>Información y alertas con IA</li>
+                        <li>Sistema de puntuación de atención</li>
+                        <li>Notificaciones push web</li>
+                        <li>Predicción de patrones</li>
+                        <li>Soporte prioritario</li>
+                    </ul>
+                    <a href="#trial" class="btn btn-primary btn-block">Empezar prueba gratuita</a>
+                </div>
+                <div class="pricing-card reveal">
+                    <div class="pricing-header">
+                        <h3>Empresa</h3>
+                        <p class="pricing-price">Personalizado</p>
+                        <p class="pricing-desc">Para operaciones a gran escala</p>
+                    </div>
+                    <div class="pricing-trial-badge">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/></svg>
+                        Prueba gratuita de 1 mes · Sin tarjeta
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Empleados ilimitados</li>
+                        <li>Empresas ilimitadas</li>
+                        <li>Integraciones personalizadas</li>
+                        <li>Responsable de cuenta dedicado</li>
+                        <li>Garantía de nivel de servicio (SLA)</li>
+                        <li>Informes personalizados</li>
+                        <li>Soporte telefónico 24/7</li>
+                    </ul>
+                    <a href="#trial" class="btn btn-outline btn-block">Empezar prueba gratuita</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prueba -->
+    <section class="trial-section section" id="trial">
+        <div class="container">
+            <div class="trial-box reveal">
+                <div class="trial-badge">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/></svg>
+                    Prueba gratuita de 30 días
+                </div>
+                <h2 class="trial-title">Prueba Chegatta gratis durante 1 mes</h2>
+                <p class="trial-subtitle">Acceso completo a todas las funciones. Sin tarjeta de crédito. Sin compromisos. Regístrate y empieza a controlar la asistencia en minutos.</p>
+                <div class="trial-benefits">
+                    <div class="trial-benefit">
+                        <div class="trial-benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                        </div>
+                        <div>
+                            <h4>Sin tarjeta de crédito</h4>
+                            <p>Regístrate al instante sin introducir datos de pago.</p>
+                        </div>
+                    </div>
+                    <div class="trial-benefit">
+                        <div class="trial-benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                        </div>
+                        <div>
+                            <h4>Acceso completo</h4>
+                            <p>Todas las funciones desbloqueadas: IA, notificaciones push, todo.</p>
+                        </div>
+                    </div>
+                    <div class="trial-benefit">
+                        <div class="trial-benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                        </div>
+                        <div>
+                            <h4>Cancela cuando quieras</h4>
+                            <p>Sin obligaciones. Si no es para ti, deja de usarlo.</p>
+                        </div>
+                    </div>
+                    <div class="trial-benefit">
+                        <div class="trial-benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                        </div>
+                        <div>
+                            <h4>Configuración en 5 minutos</h4>
+                            <p>Crea tu cuenta, añade empleados y empieza a registrar hoy.</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="trial-form" onsubmit="return handleTrialSubmit(event)">
+                    <div class="trial-form-row">
+                        <input type="text" placeholder="Nombre de la empresa" required class="trial-input">
+                        <input type="email" placeholder="Correo de trabajo" required class="trial-input">
+                    </div>
+                    <div class="trial-form-row">
+                        <select class="trial-input" required>
+                            <option value="">Selecciona el tamaño del equipo</option>
+                            <option value="1-25">1-25 empleados</option>
+                            <option value="26-50">26-50 empleados</option>
+                            <option value="51-150">51-150 empleados</option>
+                            <option value="150+">150+ empleados</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Empezar mi prueba gratuita</button>
+                    </div>
+                </form>
+                <p class="trial-note">
+                    <svg viewBox="0 0 24 24" fill="none" class="check-icon"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                    Sin tarjeta de crédito · 30 días de acceso completo · Cancela cuando quieras
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preguntas frecuentes -->
+    <section class="faq section section-alt" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Preguntas frecuentes</span>
+                <h2 class="section-title">Preguntas frecuentes</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>¿Cómo funciona el fichaje por geolocalización?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Los empleados fichan desde el navegador de su teléfono. Capturamos sus coordenadas GPS y verificamos que estén dentro del radio de geocerca de la empresa. Si están fuera de la zona designada, el fichaje se marca como fuera del sitio para revisión.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>¿Necesitan los empleados instalar una aplicación?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No. Chegatta es una aplicación web. Los empleados solo abren una URL en el navegador de su teléfono para fichar. Las notificaciones push funcionan a través del navegador, sin instalar nada.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>¿Puedo gestionar empleados en varias empresas?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Por supuesto. Chegatta está diseñado específicamente para agencias de trabajo temporal. Puedes asignar empleados a varias empresas cliente, gestionar rotaciones y comparar la asistencia de todas las empresas desde un único panel.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>¿Qué idiomas se admiten?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Chegatta admite actualmente inglés, español y portugués. La interfaz detecta automáticamente el idioma del navegador del usuario.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>¿Cómo funciona la prueba gratuita de 1 mes?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Regístrate con el nombre de tu empresa y un correo de trabajo, sin tarjeta de crédito. Tienes 30 días de acceso completo a todas las funciones de cualquier plan.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>¿Necesito una tarjeta de crédito para empezar la prueba?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No. Solo necesitas el nombre de tu empresa y un correo electrónico. Sin tarjeta, sin datos de pago, sin cargos ocultos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-box reveal">
+                <h2 class="cta-title">¿Listo para transformar el control de asistencia?</h2>
+                <p class="cta-subtitle">Empieza tu prueba gratuita de 1 mes hoy. Sin tarjeta de crédito. Acceso completo a todas las funciones.</p>
+                <a href="#trial" class="btn btn-primary btn-lg btn-cta">Empezar mi prueba gratuita</a>
+                <p class="cta-note">Sin tarjeta de crédito · 30 días de acceso completo · Cancela cuando quieras</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="nav-logo">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/>
+                        </svg>
+                        <span>Chegatta</span>
+                    </a>
+                    <p class="footer-tagline">Control inteligente de asistencia y datos de plantilla para agencias de trabajo temporal modernas.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Producto</h4>
+                    <ul>
+                        <li><a href="../features.html">Funciones</a></li>
+                        <li><a href="../pricing.html">Precios</a></li>
+                        <li><a href="../use-cases.html">Casos de uso</a></li>
+                        <li><a href="#faq">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#cta">Contacto</a></li>
+                        <li><a href="#trial">Empezar prueba</a></li>
+                        <li><a href="../index.html#apps">Apps móviles</a></li>
+                        <li><a href="../index.html#analytics">Analíticas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Términos del servicio</a></li>
+                        <li><a href="#">RGPD</a></li>
+                        <li><a href="#">Seguridad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Chegatta. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="ee106db2-370e-4f23-91d6-7d79eec21946"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

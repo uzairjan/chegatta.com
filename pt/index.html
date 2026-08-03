@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Chegatta: registo inteligente de assiduidade para agências de trabalho temporário. Registo por geolocalização, análises em tempo real e informações com IA.">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="canonical" href="https://chegatta.com/pt/">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="alternate" hreflang="en" href="https://chegatta.com/">
+    <link rel="alternate" hreflang="es" href="https://chegatta.com/es/">
+    <link rel="alternate" hreflang="pt" href="https://chegatta.com/pt/">
+    <link rel="alternate" hreflang="x-default" href="https://chegatta.com/">
+    <title>Chegatta — Registo Inteligente de Assiduidade para Agências de Trabalho Temporário</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Chegatta">
+    <meta property="og:url" content="https://chegatta.com/pt/">
+    <meta property="og:title" content="Chegatta — Registo Inteligente de Assiduidade">
+    <meta property="og:description" content="Registo por geolocalização, análises em tempo real e informações com IA para agências de trabalho temporário.">
+    <meta property="og:image" content="https://chegatta.com/og-image.png">
+    <meta property="og:locale" content="pt_PT">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chegatta — Registo Inteligente de Assiduidade">
+    <meta name="twitter:description" content="Registo por geolocalização, análises em tempo real e informações com IA.">
+    <meta name="twitter:image" content="https://chegatta.com/og-image.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Chegatta",
+        "url": "https://chegatta.com",
+        "logo": "https://chegatta.com/favicon.svg"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/>
+                </svg>
+                <span>Chegatta</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../features.html">Funcionalidades</a></li>
+                <li><a href="../index.html#how-it-works">Como funciona</a></li>
+                <li><a href="../pricing.html">Preços</a></li>
+                <li><a href="../use-cases.html">Casos de uso</a></li>
+                <li><a href="#faq">Perguntas frequentes</a></li>
+                <li class="nav-cta-mobile">
+                    <a href="#trial" class="btn btn-primary btn-sm">Começar</a>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#trial" class="btn btn-primary btn-sm">Começar</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span>
+                    <span>Teste gratuito de 1 mês: sem cartão de crédito</span>
+                </div>
+                <h1 class="hero-title">
+                    Registe a assiduidade.<br>
+                    <span class="gradient-text">Compreenda a sua equipa.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Registo de entrada/saída por geolocalização, análises em tempo real e informações
+                    inteligentes. Criado para agências de trabalho temporário que gerem colaboradores
+                    em várias empresas.
+                </p>
+                <div class="hero-actions">
+                    <a href="#trial" class="btn btn-primary btn-lg">
+                        Começar Teste Gratuito de 1 Mês
+                        <svg viewBox="0 0 24 24" fill="none" class="btn-icon"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="#how-it-works" class="btn btn-outline btn-lg">
+                        <svg viewBox="0 0 24 24" fill="none" class="btn-icon"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M10 8l6 4-6 4V8z" fill="currentColor"/></svg>
+                        Ver demonstração
+                    </a>
+                </div>
+                <p class="hero-trial-note">
+                    <svg viewBox="0 0 24 24" fill="none" class="check-icon"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                    Sem cartão de crédito · 30 dias grátis · Cancele quando quiser
+                </p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="stat-number">99,9%</span>
+                        <span class="stat-label">Disponibilidade</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Idiomas</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Monitorização</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="dashboard-mockup">
+                    <div class="mockup-header">
+                        <div class="mockup-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="mockup-title">Painel de assiduidade</div>
+                    </div>
+                    <div class="mockup-body">
+                        <div class="mockup-stats">
+                            <div class="mockup-stat-card">
+                                <div class="mockup-stat-icon present">
+                                    <svg viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                                </div>
+                                <div>
+                                    <div class="mockup-stat-value">142</div>
+                                    <div class="mockup-stat-label">Presentes</div>
+                                </div>
+                            </div>
+                            <div class="mockup-stat-card">
+                                <div class="mockup-stat-icon absent">
+                                    <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="currentColor"/></svg>
+                                </div>
+                                <div>
+                                    <div class="mockup-stat-value">8</div>
+                                    <div class="mockup-stat-label">Ausentes</div>
+                                </div>
+                            </div>
+                            <div class="mockup-stat-card">
+                                <div class="mockup-stat-icon late">
+                                    <svg viewBox="0 0 24 24" fill="none"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/></svg>
+                                </div>
+                                <div>
+                                    <div class="mockup-stat-value">12</div>
+                                    <div class="mockup-stat-label">Com atraso</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mockup-chart">
+                            <div class="mockup-chart-title">Assiduidade semanal</div>
+                            <div class="mockup-bars">
+                                <div class="mockup-bar" style="height: 60%"></div>
+                                <div class="mockup-bar" style="height: 75%"></div>
+                                <div class="mockup-bar" style="height: 90%"></div>
+                                <div class="mockup-bar" style="height: 85%"></div>
+                                <div class="mockup-bar" style="height: 95%"></div>
+                                <div class="mockup-bar" style="height: 70%"></div>
+                                <div class="mockup-bar" style="height: 50%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-card card-1">
+                    <div class="floating-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/></svg>
+                    </div>
+                    <div>
+                        <div class="floating-card-title">Geocerca</div>
+                        <div class="floating-card-text">Localização verificada</div>
+                    </div>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="floating-card-icon notify">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" fill="currentColor"/></svg>
+                    </div>
+                    <div>
+                        <div class="floating-card-title">Alerta push</div>
+                        <div class="floating-card-text">Saída sem registo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0 120V60C240 20 480 0 720 0C960 0 1200 20 1440 60V120H0Z" fill="var(--bg-secondary)"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Confiança -->
+    <section class="trust-bar">
+        <div class="container">
+            <p class="trust-label">Confiado por agências de trabalho temporário em toda a Europa</p>
+            <div class="trust-logos">
+                <div class="trust-logo">StaffPro</div>
+                <div class="trust-logo">EuroWork</div>
+                <div class="trust-logo">Lisboa HR</div>
+                <div class="trust-logo">Madrid Staff</div>
+                <div class="trust-logo">Berlin Force</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funcionalidades -->
+    <section class="features section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Funcionalidades</span>
+                <h2 class="section-title">Tudo o que precisa para gerir a assiduidade</h2>
+                <p class="section-subtitle">Do registo por geolocalização às informações com IA, o Chegatta dá-lhe controlo total sobre a sua equipa.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-blue">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Registo por geolocalização</h3>
+                    <p>Entrada/saída verificada por GPS com geocercas de empresa. Garanta que os colaboradores estão no local certo quando registam a assiduidade.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-green">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Pausas e horas extra</h3>
+                    <p>Deteção automática de pausas e cálculo de horas extra. Controle horas trabalhadas, pausas e horas extra ao segundo.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-purple">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Informações com IA</h3>
+                    <p>Detete anomalias, preveja padrões de assiduidade e obtenha pontuações de atenção para colaboradores em risco antes de os problemas escalarem.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-orange">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 7v7H7v2h10v-2h-5V7h-2zm0-5c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Atribuição multi-empresa</h3>
+                    <p>Atribua colaboradores a várias empresas cliente. Gira atribuições, rotações e mantenha um registo de auditoria completo.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-red">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Notificações push web</h3>
+                    <p>Alertas push em tempo real para saídas sem registo, anomalias e eventos importantes de assiduidade. Não perca nada.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-teal">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.21-4.61 1.35-6.93-.21-.52-.48-1.02-.8-1.47l1.8-1.8c1.18 1.27 1.87 2.94 1.87 4.72 0 .34-.03.67-.07.99.61.34 1.16.78 1.62 1.32.72-.6 1.2-1.48 1.2-2.49 0-1.79-1.45-3.24-3.24-3.24-.39 0-.76.07-1.11.2-.36-1.07-.95-2.04-1.72-2.84.84-.53 1.83-.84 2.83-.84 3.31 0 6 2.69 6 6 0 2.97-2.16 5.44-5 5.92v.08z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Suporte multilingue</h3>
+                    <p>Internacionalização completa em inglês, espanhol e português. Criado para agências europeias com equipas diversas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como funciona -->
+    <section class="how-it-works section section-alt" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Como funciona</span>
+                <h2 class="section-title">Em funcionamento em minutos</h2>
+                <p class="section-subtitle">Sem configurações complexas. Sem hardware. Apenas um registo inteligente de assiduidade que funciona.</p>
+            </div>
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Crie a sua empresa</h3>
+                        <p>Configure a sua agência de trabalho temporário, adicione empresas cliente e defina geocercas para cada local de trabalho.</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step reveal">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Adicione e atribua colaboradores</h3>
+                        <p>Convide colaboradores, atribua-os a empresas cliente e configure turnos. Os papéis e permissões são geridos automaticamente.</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step reveal">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Registe e analise</h3>
+                        <p>Os colaboradores registam a entrada a partir do telemóvel. Você obtém painéis em tempo real, deteção de anomalias e informações acionáveis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preços -->
+    <section class="pricing section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Preços</span>
+                <h2 class="section-title">Preços simples e transparentes</h2>
+                <p class="section-subtitle">Escolha o plano que se adequa à sua equipa. Sem taxas ocultas. Cancele quando quiser.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card reveal">
+                    <div class="pricing-header">
+                        <h3>Inicial</h3>
+                        <p class="pricing-price">49&nbsp;€<span>/mês</span></p>
+                        <p class="pricing-desc">Para agências pequenas a começar</p>
+                    </div>
+                    <div class="pricing-trial-badge">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/></svg>
+                        Teste gratuito de 1 mês · Sem cartão
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Até 25 colaboradores</li>
+                        <li>1 empresa cliente</li>
+                        <li>Registo por geolocalização</li>
+                        <li>Relatórios básicos de assiduidade</li>
+                        <li>Suporte por email</li>
+                    </ul>
+                    <a href="#trial" class="btn btn-outline btn-block">Começar teste gratuito</a>
+                </div>
+                <div class="pricing-card pricing-popular reveal">
+                    <div class="popular-badge">O mais popular</div>
+                    <div class="pricing-header">
+                        <h3>Profissional</h3>
+                        <p class="pricing-price">149&nbsp;€<span>/mês</span></p>
+                        <p class="pricing-desc">Para agências em crescimento com vários clientes</p>
+                    </div>
+                    <div class="pricing-trial-badge">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/></svg>
+                        Teste gratuito de 1 mês · Sem cartão
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Até 150 colaboradores</li>
+                        <li>Empresas cliente ilimitadas</li>
+                        <li>Informações e alertas com IA</li>
+                        <li>Sistema de pontuação de atenção</li>
+                        <li>Notificações push web</li>
+                        <li>Previsão de padrões</li>
+                        <li>Suporte prioritário</li>
+                    </ul>
+                    <a href="#trial" class="btn btn-primary btn-block">Começar teste gratuito</a>
+                </div>
+                <div class="pricing-card reveal">
+                    <div class="pricing-header">
+                        <h3>Empresa</h3>
+                        <p class="pricing-price">Personalizado</p>
+                        <p class="pricing-desc">Para operações de grande escala</p>
+                    </div>
+                    <div class="pricing-trial-badge">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/></svg>
+                        Teste gratuito de 1 mês · Sem cartão
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Colaboradores ilimitados</li>
+                        <li>Empresas ilimitadas</li>
+                        <li>Integrações personalizadas</li>
+                        <li>Gestor de conta dedicado</li>
+                        <li>Garantia SLA</li>
+                        <li>Relatórios personalizados</li>
+                        <li>Suporte telefónico 24/7</li>
+                    </ul>
+                    <a href="#trial" class="btn btn-outline btn-block">Começar teste gratuito</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teste -->
+    <section class="trial-section section" id="trial">
+        <div class="container">
+            <div class="trial-box reveal">
+                <div class="trial-badge">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/></svg>
+                    Teste gratuito de 30 dias
+                </div>
+                <h2 class="trial-title">Experimente o Chegatta grátis durante 1 mês</h2>
+                <p class="trial-subtitle">Acesso total a todas as funcionalidades. Sem cartão de crédito. Sem compromissos. Registe-se e comece a controlar a assiduidade em minutos.</p>
+                <div class="trial-benefits">
+                    <div class="trial-benefit">
+                        <div class="trial-benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                        </div>
+                        <div>
+                            <h4>Sem cartão de crédito</h4>
+                            <p>Registe-se instantaneamente sem introduzir dados de pagamento.</p>
+                        </div>
+                    </div>
+                    <div class="trial-benefit">
+                        <div class="trial-benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                        </div>
+                        <div>
+                            <h4>Acesso total</h4>
+                            <p>Todas as funcionalidades desbloqueadas: IA, notificações push, tudo.</p>
+                        </div>
+                    </div>
+                    <div class="trial-benefit">
+                        <div class="trial-benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                        </div>
+                        <div>
+                            <h4>Cancele quando quiser</h4>
+                            <p>Sem obrigações. Se não for para si, basta deixar de usar.</p>
+                        </div>
+                    </div>
+                    <div class="trial-benefit">
+                        <div class="trial-benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                        </div>
+                        <div>
+                            <h4>Configuração em 5 minutos</h4>
+                            <p>Crie a sua conta, adicione colaboradores e comece a registar hoje.</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="trial-form" onsubmit="return handleTrialSubmit(event)">
+                    <div class="trial-form-row">
+                        <input type="text" placeholder="Nome da empresa" required class="trial-input">
+                        <input type="email" placeholder="Email de trabalho" required class="trial-input">
+                    </div>
+                    <div class="trial-form-row">
+                        <select class="trial-input" required>
+                            <option value="">Selecione o tamanho da equipa</option>
+                            <option value="1-25">1-25 colaboradores</option>
+                            <option value="26-50">26-50 colaboradores</option>
+                            <option value="51-150">51-150 colaboradores</option>
+                            <option value="150+">150+ colaboradores</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Começar o meu teste gratuito</button>
+                    </div>
+                </form>
+                <p class="trial-note">
+                    <svg viewBox="0 0 24 24" fill="none" class="check-icon"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                    Sem cartão de crédito · 30 dias de acesso total · Cancele quando quiser
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perguntas frequentes -->
+    <section class="faq section section-alt" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Perguntas frequentes</span>
+                <h2 class="section-title">Perguntas frequentes</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Como funciona o registo por geolocalização?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Os colaboradores registam a entrada a partir do navegador do telemóvel. Capturamos as coordenadas GPS e verificamos se estão dentro do raio de geocerca da empresa. Se estiverem fora da zona designada, o registo é marcado como fora do local para revisão.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Os colaboradores precisam de instalar uma aplicação?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Não. O Chegatta é uma aplicação web. Os colaboradores só precisam de abrir um URL no navegador do telemóvel para registar a entrada. As notificações push funcionam através do navegador, sem instalar nada.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Posso gerir colaboradores em várias empresas?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim. O Chegatta foi criado especificamente para agências de trabalho temporário. Pode atribuir colaboradores a várias empresas cliente, gerir rotações e comparar a assiduidade de todas as empresas a partir de um único painel.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Que idiomas são suportados?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O Chegatta suporta atualmente inglês, espanhol e português. A interface deteta automaticamente o idioma do navegador do utilizador.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Como funciona o teste gratuito de 1 mês?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Registe-se com o nome da sua empresa e um email de trabalho, sem cartão de crédito. Tem 30 dias de acesso total a todas as funcionalidades de qualquer plano.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Preciso de um cartão de crédito para começar o teste?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Não. Só precisa do nome da sua empresa e de um email. Sem cartão, sem dados de pagamento, sem custos ocultos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-box reveal">
+                <h2 class="cta-title">Pronto para transformar o registo de assiduidade?</h2>
+                <p class="cta-subtitle">Comece o seu teste gratuito de 1 mês hoje. Sem cartão de crédito. Acesso total a todas as funcionalidades.</p>
+                <a href="#trial" class="btn btn-primary btn-lg btn-cta">Começar o meu teste gratuito</a>
+                <p class="cta-note">Sem cartão de crédito · 30 dias de acesso total · Cancele quando quiser</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="nav-logo">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/>
+                        </svg>
+                        <span>Chegatta</span>
+                    </a>
+                    <p class="footer-tagline">Registo inteligente de assiduidade e dados de equipa para agências de trabalho temporário modernas.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Produto</h4>
+                    <ul>
+                        <li><a href="../features.html">Funcionalidades</a></li>
+                        <li><a href="../pricing.html">Preços</a></li>
+                        <li><a href="../use-cases.html">Casos de uso</a></li>
+                        <li><a href="#faq">Perguntas frequentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#cta">Contacto</a></li>
+                        <li><a href="#trial">Começar teste</a></li>
+                        <li><a href="../index.html#apps">Apps móveis</a></li>
+                        <li><a href="../index.html#analytics">Análises</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Política de privacidade</a></li>
+                        <li><a href="#">Termos de serviço</a></li>
+                        <li><a href="#">RGPD</a></li>
+                        <li><a href="#">Segurança</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Chegatta. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="ee106db2-370e-4f23-91d6-7d79eec21946"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -130,6 +130,11 @@
         // Reset input style
         input.style.boxShadow = '';
 
+        // Track CTA email capture goal
+        if (window.umami) {
+            window.umami.track('cta_submit');
+        }
+
         // Simulate submission
         const originalText = button.textContent;
         button.textContent = 'Submitting...';
@@ -191,6 +196,16 @@
             return false;
         }
 
+        // Track trial signup goal
+        if (window.umami) {
+            var teamSize = '';
+            var sizeSelect = form.querySelector('select.trial-input');
+            if (sizeSelect) {
+                teamSize = sizeSelect.value;
+            }
+            window.umami.track('trial_signup', { team_size: teamSize });
+        }
+
         // Simulate submission
         var originalText = button.textContent;
         button.textContent = 'Creating your account...';
@@ -216,6 +231,16 @@
 
         return false;
     };
+
+    /* ============================================
+       Trial CTA Click Tracking (goal: start_trial_click)
+       ============================================ */
+    document.addEventListener('click', function (e) {
+        var anchor = e.target.closest('a[href*="#trial"]');
+        if (anchor && window.umami) {
+            window.umami.track('start_trial_click');
+        }
+    });
 
     /* ============================================
        Smooth Scroll for Anchor Links
