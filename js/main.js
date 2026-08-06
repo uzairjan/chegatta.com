@@ -156,91 +156,19 @@
     };
 
     /* ============================================
-       Trial Form Handler
-       ============================================ */
-    window.handleTrialSubmit = function (event) {
-        event.preventDefault();
-        var form = event.target;
-        var inputs = form.querySelectorAll('.trial-input');
-        var button = form.querySelector('button[type="submit"]');
-        var hasError = false;
-
-        // Validate all inputs
-        inputs.forEach(function (input) {
-            var value = input.value.trim();
-            var isValid = true;
-
-            if (input.type === 'email') {
-                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                isValid = emailRegex.test(value);
-            } else if (input.tagName === 'SELECT') {
-                isValid = value !== '';
-            } else {
-                isValid = value.length >= 2;
-            }
-
-            if (!isValid) {
-                input.style.borderColor = '#ef4444';
-                input.style.boxShadow = '0 0 0 3px rgba(239, 68, 68, 0.1)';
-                if (!hasError) {
-                    input.focus();
-                }
-                hasError = true;
-            } else {
-                input.style.borderColor = '';
-                input.style.boxShadow = '';
-            }
-        });
-
-        if (hasError) {
-            return false;
-        }
-
-        // Track trial signup goal
-        if (window.umami) {
-            var teamSize = '';
-            var sizeSelect = form.querySelector('select.trial-input');
-            if (sizeSelect) {
-                teamSize = sizeSelect.value;
-            }
-            window.umami.track('trial_signup', { team_size: teamSize });
-        }
-
-        // Simulate submission
-        var originalText = button.textContent;
-        button.textContent = 'Creating your account...';
-        button.disabled = true;
-
-        setTimeout(function () {
-            button.textContent = '✓ Trial Started! Check your email';
-            button.style.background = '#10b981';
-            button.style.borderColor = '#10b981';
-
-            // Reset form
-            inputs.forEach(function (input) {
-                input.value = '';
-            });
-
-            setTimeout(function () {
-                button.textContent = originalText;
-                button.disabled = false;
-                button.style.background = '';
-                button.style.borderColor = '';
-            }, 3500);
-        }, 1200);
-
-        return false;
-    };
-
-    /* ============================================
-       Trial CTA Click Tracking (goal: start_trial_click)
+       App CTA Click Tracking (trial + demo)
        ============================================ */
     document.addEventListener('click', function (e) {
-        var anchor = e.target.closest('a[href*="#trial"]');
-        if (anchor && window.umami) {
+        var trialAnchor = e.target.closest('a[href*="app.chegatta.com/trial"]');
+        if (trialAnchor && window.umami) {
             window.umami.track('start_trial_click');
         }
+        var demoAnchor = e.target.closest('a[href*="app.chegatta.com/demo/request"]');
+        if (demoAnchor && window.umami) {
+            window.umami.track('request_demo_click');
+        }
     });
+
 
     /* ============================================
        Smooth Scroll for Anchor Links
