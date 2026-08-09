@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Controlo automatizado de horas extra para trabalhadores temporários. Calcula as horas extra de acordo com as regras de cada cliente, controla os limites diários e semanais e exporta para o processamento salarial. Comece o seu teste gratuito.">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="canonical" href="https://chegatta.com/pt/automated-overtime-tracking.html">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="alternate" hreflang="en" href="https://chegatta.com/automated-overtime-tracking.html">
+    <link rel="alternate" hreflang="es" href="https://chegatta.com/es/automated-overtime-tracking.html">
+    <link rel="alternate" hreflang="pt" href="https://chegatta.com/pt/automated-overtime-tracking.html">
+    <link rel="alternate" hreflang="x-default" href="https://chegatta.com/automated-overtime-tracking.html">
+    <title>Controlo Automatizado de Horas Extra para Trabalhadores Temporários — Chegatta</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Chegatta">
+    <meta property="og:url" content="https://chegatta.com/pt/automated-overtime-tracking.html">
+    <meta property="og:title" content="Controlo Automatizado de Horas Extra para Trabalhadores Temporários — Chegatta">
+    <meta property="og:description" content="Controlo automatizado de horas extra para trabalhadores temporários. Calcula as horas extra de acordo com as regras de cada cliente, controla os limites diários e semanais e exporta as horas verificadas para o processamento salarial.">
+    <meta property="og:image" content="https://chegatta.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="pt_PT">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Controlo Automatizado de Horas Extra para Trabalhadores Temporários — Chegatta">
+    <meta name="twitter:description" content="Controlo automatizado de horas extra para trabalhadores temporários. Calcula as horas extra de acordo com as regras de cada cliente, controla os limites diários e semanais e exporta as horas verificadas para o processamento salarial.">
+    <meta name="twitter:image" content="https://chegatta.com/og-image.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Controlo Automatizado de Horas Extra para Trabalhadores Temporários",
+        "description": "Controlo automatizado de horas extra para trabalhadores temporários. Calcula as horas extra de acordo com as regras de cada cliente, controla os limites diários e semanais e exporta para o processamento salarial. Comece o seu teste gratuito.",
+        "url": "https://chegatta.com/pt/automated-overtime-tracking.html",
+        "isPartOf": { "@type": "WebSite", "name": "Chegatta", "url": "https://chegatta.com" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "O que é o controlo automatizado de horas extra?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "O controlo automatizado de horas extra calcula as horas extra dos trabalhadores temporários de acordo com as regras de cada cliente automaticamente. A Chegatta acompanha as horas extra diárias e semanais, lida com cálculos de pagamento duplo e exporta as horas verificadas para o processamento salarial."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Como é que o controlo automatizado de horas extra lida com as regras de cada cliente?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cada empresa cliente pode ter os seus próprios limites e políticas de horas extra. Quando um trabalhador regista o ponto no local de um cliente, a Chegatta aplica as regras desse cliente automaticamente."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "O controlo de horas extra lida tanto com horas extra diárias como semanais?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sim. A Chegatta acompanha tanto as horas extra diárias (mais de 8 horas por dia) como as semanais (mais de 40 horas por semana). O sistema calcula ambas automaticamente."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "O controlo automatizado de horas extra inclui pagamento duplo?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sim. Alguns clientes exigem pagamento duplo depois de um certo número de horas. A Chegatta lida com os cálculos de pagamento duplo automaticamente, de acordo com as regras de cada cliente."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Como é que o controlo de horas extra ajuda a controlar os custos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A Chegatta envia alertas quando os trabalhadores se aproximam dos limites de horas extra. Pode tomar decisões fundamentadas sobre autorizar mais horas ou chamar substitutos, antes de os custos de horas extra dispararem."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quanto custa o controlo automatizado de horas extra?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Os planos da Chegatta começam em 49 € por mês para até 25 trabalhadores e crescem com a sua agência. Todos os planos incluem 14 dias de teste gratuito sem cartão de crédito. O controlo de horas extra está incluído em todos os planos."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- i18n: Language detection & switcher (must load early) -->
+    <script src="../js/i18n.js"></script>
+    <script src="../js/lang-switcher.js"></script>
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/>
+                </svg>
+                <span>Chegatta</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="features.html">Funcionalidades</a></li>
+                <li><a href="../index.html#how-it-works">Como funciona</a></li>
+                <li><a href="pricing.html">Preços</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Soluções</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="attendance-software-for-staffing-agencies.html">Agências de Trabalho</a></li>
+                        <li><a href="employee-clock-in-app-for-staffing-agencies.html">App de Ponto</a></li>
+                        <li><a href="../use-cases.html">Casos de uso</a></li>
+                    </ul>
+                </li>
+                <li><a href="../index.html#faq">Perguntas frequentes</a></li>
+                <li class="nav-cta-mobile">
+                    <a href="https://app.chegatta.com/trial" class="btn btn-primary btn-sm">Começar</a>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="https://app.chegatta.com/trial" class="btn btn-primary btn-sm">Começar</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Cabeçalho -->
+    <section class="section" style="padding-bottom: 0;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Horas Extra</span>
+                <h1 class="section-title">Controlo automatizado de horas extra para trabalhadores temporários</h1>
+                <p class="section-subtitle">O controlo automatizado de horas extra calcula as horas extra dos trabalhadores temporários de acordo com as regras de cada cliente, controla os limites diários e semanais e exporta as horas verificadas para o processamento salarial. A Chegatta lida com cenários complexos de horas extra automaticamente, para nunca pagar a mais nem a menos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Porque Precisa -->
+    <section class="features section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Porque Precisa</span>
+                <h2 class="section-title">As regras das horas extra são complexas — a automatização torna-as simples</h2>
+                <p class="section-subtitle">Clientes diferentes têm limites de horas extra diferentes. Alguns calculam horas extra diárias, outros semanais. Alguns têm pagamento duplo depois de um certo número de horas. Controlar isto manualmente em vários clientes e trabalhadores é propenso a erros e demorado. A automatização cuida de tudo.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-blue">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Regras de horas extra por cliente</h3>
+                    <p>Cada empresa cliente pode ter os seus próprios limites e políticas de horas extra. A Chegatta aplica as regras certas automaticamente, com base no cliente onde o trabalhador está colocado.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-green">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Controlo diário e semanal</h3>
+                    <p>Controla tanto as horas extra diárias (mais de 8 horas por dia) como as semanais (mais de 40 horas por semana). O sistema calcula ambas automaticamente.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-purple">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Cálculo de pagamento duplo</h3>
+                    <p>Alguns clientes exigem pagamento duplo depois de um certo número de horas. A Chegatta lida com os cálculos de pagamento duplo automaticamente, de acordo com as regras de cada cliente.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-orange">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 7v7H7v2h10v-2h-5V7h-2zm0-5c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Alertas de horas extra</h3>
+                    <p>Receba alertas quando os trabalhadores se aproximam dos limites de horas extra. Tome decisões fundamentadas sobre autorizar mais horas ou chamar substitutos.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-red">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Relatórios de horas extra</h3>
+                    <p>Gere relatórios com as horas extra por trabalhador, por cliente e por período. Veja tendências, identifique áreas problemáticas e controla os custos das horas extra.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-teal">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H5v-2h7v2zm7-4H5v-2h14v2zm0-4H5V7h14v2z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Exportação para processamento salarial</h3>
+                    <p>Exporte as horas extra verificadas diretamente para o seu sistema de processamento salarial. Chega de calcular horas extra manualmente ou de voltar a introduzir horas a partir de folhas de presença.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como funciona -->
+    <section class="how-it-works section section-alt" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Como Funciona</span>
+                <h2 class="section-title">Do início às horas verificadas numa tarde</h2>
+            </div>
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Adicione as suas empresas cliente</h3>
+                        <p>Crie cada empresa cliente na Chegatta e coloque uma geocerca em cada local de trabalho onde operam os seus trabalhadores.</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step reveal">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Atribua trabalhadores a colocações</h3>
+                        <p>Convide os trabalhadores por email, atribua-os a uma ou várias empresas cliente e defina as regras de turno para pausas e horas extra.</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step reveal">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Siga cada trabalhador em tempo real</h3>
+                        <p>Os trabalhadores registam o ponto a partir do telemóvel em qualquer local do cliente. Vê a assiduidade verificada de todas as empresas, com anomalias assinaladas automaticamente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparação -->
+    <section class="analytics section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Comparação</span>
+                <h2 class="section-title">Como a Chegatta se compara ao controlo manual de horas extra</h2>
+                <p class="section-subtitle">O controlo manual de horas extra é lento, propenso a erros e impossível de verificar. A automatização cuida de tudo.</p>
+            </div>
+            <div class="analytics-grid">
+                <div class="analytics-content reveal">
+                    <div class="analytics-features">
+                        <div class="analytics-feature">
+                            <div class="analytics-check">
+                                <svg viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                            </div>
+                            <div>
+                                <h4>Cálculo automático</h4>
+                                <p>As horas extra são calculadas automaticamente de acordo com as regras de cada cliente. Sem aritmética manual, sem folhas de cálculo, sem erros.</p>
+                            </div>
+                        </div>
+                        <div class="analytics-feature">
+                            <div class="analytics-check">
+                                <svg viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                            </div>
+                            <div>
+                                <h4>Regras por cliente</h4>
+                                <p>Cada cliente tem os seus próprios limites e políticas de horas extra. O sistema aplica as regras certas automaticamente em cada colocação.</p>
+                            </div>
+                        </div>
+                        <div class="analytics-feature">
+                            <div class="analytics-check">
+                                <svg viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                            </div>
+                            <div>
+                                <h4>Seguimento em tempo real</h4>
+                                <p>Veja as horas extra a acumular em tempo real. Receba alertas quando os trabalhadores se aproximam dos limites, para tomar decisões fundamentadas.</p>
+                            </div>
+                        </div>
+                        <div class="analytics-feature">
+                            <div class="analytics-check">
+                                <svg viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                            </div>
+                            <div>
+                                <h4>Registos prontos para auditoria</h4>
+                                <p>Cada hora extra é registada com carimbo de tempo, verificação GPS e as regras aplicadas. Perfeito para auditorias e resolução de litígios.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="analytics-visual reveal">
+                    <div class="insights-panel">
+                        <div class="insights-header">
+                            <h4>Informação de Assiduidade</h4>
+                            <span class="insights-badge">Ao vivo</span>
+                        </div>
+                        <div class="insights-body">
+                            <div class="insight-row">
+                                <span class="insight-label">Presentes hoje</span>
+                                <div class="insight-bar-container">
+                                    <div class="insight-bar insight-bar-green" style="width: 92%"></div>
+                                </div>
+                                <span class="insight-value">92%</span>
+                            </div>
+                            <div class="insight-row">
+                                <span class="insight-label">Chegadas tardias</span>
+                                <div class="insight-bar-container">
+                                    <div class="insight-bar insight-bar-orange" style="width: 8%"></div>
+                                </div>
+                                <span class="insight-value">8%</span>
+                            </div>
+                            <div class="insight-row">
+                                <span class="insight-label">Fora de zona</span>
+                                <div class="insight-bar-container">
+                                    <div class="insight-bar insight-bar-red" style="width: 3%"></div>
+                                </div>
+                                <span class="insight-value">3%</span>
+                            </div>
+                            <div class="insight-row">
+                                <span class="insight-label">Horas extra</span>
+                                <div class="insight-bar-container">
+                                    <div class="insight-bar insight-bar-blue" style="width: 18%"></div>
+                                </div>
+                                <span class="insight-value">18%</span>
+                            </div>
+                            <div class="insight-summary">
+                                <div class="insight-summary-icon">
+                                    <svg viewBox="0 0 24 24" fill="none"><path d="M11 5h2v14h-2V5zm-7 7h2v7H4v-7zm14-7h2v14h-2V5z" fill="currentColor"/></svg>
+                                </div>
+                                <p>2 trabalhadores necessitam de atenção em 3 locais de clientes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funcionalidades -->
+    <section class="roles section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Funcionalidades</span>
+                <h2 class="section-title">Tudo o que precisa para o controlo de horas extra</h2>
+            </div>
+            <div class="roles-grid">
+                <div class="role-card reveal">
+                    <div class="role-icon role-admin">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V1l-9-1z" fill="currentColor" opacity="0.2"/><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V1l-9-1zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Registo de Ponto por Geolocalização</h3>
+                    <p>Registo de ponto verificado por GPS com geocerca por local de trabalho. Cada hora declarada é uma hora realmente trabalhada no local correto do cliente.</p>
+                </div>
+                <div class="role-card reveal">
+                    <div class="role-icon role-company">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Atribuição Multiempresa</h3>
+                    <p>Atribua trabalhadores a várias empresas cliente, consulte o histórico de colocações, rode trabalhadores entre os locais e mantenha um registo de auditoria completo.</p>
+                </div>
+                <div class="role-card reveal">
+                    <div class="role-icon role-employee">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Pausas e Controlo de Horas Extra</h3>
+                    <p>Deteção automática de pausas e alertas de horas extra de acordo com as regras de turno de cada cliente. O processamento salarial e a faturação usam horas verificadas e exportadas.</p>
+                </div>
+            </div>
+            <div class="section-header" style="margin-top: 3rem;">
+                <a href="features.html" class="btn btn-outline btn-lg">Ver Todas as Funcionalidades</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Controlo automatizado de horas extra, perguntas respondidas</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>O que é o controlo automatizado de horas extra?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O controlo automatizado de horas extra calcula as horas extra dos trabalhadores temporários de acordo com as regras de cada cliente automaticamente. A Chegatta acompanha as horas extra diárias e semanais, lida com cálculos de pagamento duplo e exporta as horas verificadas para o processamento salarial.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Como é que o controlo automatizado de horas extra lida com as regras de cada cliente?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Cada empresa cliente pode ter os seus próprios limites e políticas de horas extra. Quando um trabalhador regista o ponto no local de um cliente, a Chegatta aplica as regras desse cliente automaticamente.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>O controlo de horas extra lida tanto com horas extra diárias como semanais?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim. A Chegatta acompanha tanto as horas extra diárias (mais de 8 horas por dia) como as semanais (mais de 40 horas por semana). O sistema calcula ambas automaticamente.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>O controlo automatizado de horas extra inclui pagamento duplo?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim. Alguns clientes exigem pagamento duplo depois de um certo número de horas. A Chegatta lida com os cálculos de pagamento duplo automaticamente, de acordo com as regras de cada cliente.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Como é que o controlo de horas extra ajuda a controlar os custos?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A Chegatta envia alertas quando os trabalhadores se aproximam dos limites de horas extra. Pode tomar decisões fundamentadas sobre autorizar mais horas ou chamar substitutos, antes de os custos de horas extra dispararem.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Quanto custa o controlo automatizado de horas extra?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Os planos da Chegatta começam em 49 € por mês para até 25 trabalhadores e crescem com a sua agência. Todos os planos incluem 14 dias de teste gratuito sem cartão de crédito. O controlo de horas extra está incluído em todos os planos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section section-alt">
+        <div class="container">
+            <div class="cta-box reveal">
+                <h2 class="cta-title">Nunca mais pague horas extra a mais nem a menos</h2>
+                <p class="cta-subtitle">Comece o seu teste gratuito de 14 dias hoje. Sem cartão de crédito. Acesso total a todas as funcionalidades.</p>
+                <a href="https://app.chegatta.com/trial" class="btn btn-primary btn-lg btn-cta">Começar o meu teste gratuito</a>
+                <a href="https://app.chegatta.com/demo/request" class="btn btn-outline btn-lg btn-cta">Solicitar uma demonstração</a>
+                <p class="cta-note">Sem cartão de crédito · 14 dias de acesso total · Cancele quando quiser · Registo em 5 minutos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="nav-logo">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/>
+                        </svg>
+                        <span>Chegatta</span>
+                    </a>
+                    <p class="footer-tagline">Controlo inteligente de assiduidade e informações da força de trabalho para agências modernas.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.64-.58 1.38-.58 2.17 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.84 3.44 4.21a4.22 4.22 0 0 1-1.93.07c.54 1.69 2.13 2.93 4.01 2.97-1.47 1.16-3.32 1.84-5.34 1.84-.35 0-.69-.02-1.03-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/></svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+                        <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Produto</h4>
+                    <ul>
+                        <li><a href="features.html">Funcionalidades</a></li>
+                        <li><a href="pricing.html">Preços</a></li>
+                        <li><a href="attendance-software-for-staffing-agencies.html">Software de Assiduidade</a></li>
+                        <li><a href="employee-clock-in-app-for-staffing-agencies.html">App de Registo de Ponto</a></li>
+                        <li><a href="../use-cases.html">Casos de uso</a></li>
+                        <li><a href="../index.html#faq">Perguntas frequentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="../about.html">Sobre nós</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="../index.html#apps">Apps móveis</a></li>
+                        <li><a href="https://app.chegatta.com/trial">Começar teste</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Política de privacidade</a></li>
+                        <li><a href="terms.html">Termos do serviço</a></li>
+                        <li><a href="../privacy.html#gdpr">RGPD</a></li>
+                        <li><a href="../security.html">Segurança</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Chegatta. Todos os direitos reservados. Construído com Laravel + React + Tailwind CSS.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="ee106db2-370e-4f23-91d6-7d79eec21946"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
