@@ -311,6 +311,44 @@ body {
     display: none;
 }
 
+/* Language Switcher - Mobile */
+.lang-switcher {
+    display: flex;
+    gap: 4px;
+    margin-left: 8px;
+}
+
+.lang-btn {
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: #fff;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.lang-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+.lang-btn:hover {
+    background: var(--primary-bg);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.lang-btn.active:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
 /* Mobile: Show hamburger toggle */
 .nav-toggle {
     display: flex;
@@ -506,6 +544,181 @@ body {
     font-size: 12px;
     color: var(--text-tertiary);
     font-weight: 500;
+}
+
+/* Hero Paths - Choose your path */
+.hero-paths {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 24px 0 16px;
+}
+
+.hero-path-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.hero-paths .btn-sm {
+    width: 100%;
+    max-width: 280px;
+    margin: 0;
+}
+
+/* Path Selector (How It Works) */
+.path-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.path-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 32px 24px;
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.path-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.path-card:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.path-card:hover::before {
+    transform: scaleX(1);
+}
+
+.path-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+    background: var(--primary-bg);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+}
+
+.path-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.path-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.path-card > p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.path-features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 28px;
+    padding: 0 16px;
+}
+
+.path-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    font-size: 14px;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+}
+
+.path-features li:last-child {
+    border-bottom: none;
+}
+
+.path-features li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--green);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.path-divider {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0 16px;
+}
+
+/* Shared Steps */
+.shared-steps {
+    border-top: 1px solid var(--border);
+    padding-top: 48px;
+    margin-top: 16px;
+}
+
+.shared-steps > h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+/* Badges for testimonials */
+.badge-agency,
+.badge-business {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    margin-left: 8px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.badge-agency {
+    background: var(--purple-bg);
+    color: var(--purple);
+}
+
+.badge-business {
+    background: var(--teal-bg);
+    color: var(--teal);
 }
 
 /* Hero Visual - Dashboard Mockup */
@@ -2074,6 +2287,44 @@ select.trial-input {
         gap: 12px;
     }
 
+    /* Language Switcher - Tablet/Desktop */
+    .lang-switcher {
+        display: flex;
+        gap: 4px;
+        margin-left: 16px;
+    }
+
+    .lang-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+        font-weight: 600;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        background: #fff;
+        color: var(--text-secondary);
+        cursor: pointer;
+        transition: var(--transition);
+        text-decoration: none;
+    }
+
+    .lang-btn.active {
+        background: var(--primary);
+        border-color: var(--primary);
+        color: #fff;
+    }
+
+    .lang-btn:hover {
+        background: var(--primary-bg);
+        border-color: var(--primary);
+        color: var(--primary);
+    }
+
+    .lang-btn.active:hover {
+        background: var(--primary);
+        border-color: var(--primary);
+        color: #fff;
+    }
+
     .nav-toggle {
         display: none;
     }
@@ -2131,6 +2382,69 @@ select.trial-input {
 
     .stat-label {
         font-size: 13px;
+    }
+
+    /* Hero Paths - tablet: horizontal layout */
+    .hero-paths {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .hero-path-label {
+        margin-right: 8px;
+        white-space: nowrap;
+    }
+
+    .hero-paths .btn-sm {
+        width: auto;
+        max-width: none;
+    }
+
+    /* Path Selector - tablet: side by side */
+    .path-selector {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .path-card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .path-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 24px;
+        font-size: 13px;
+        transform: rotate(90deg);
+    }
+
+    .path-features {
+        flex: 1;
+    }
+
+    /* Shared Steps - tablet: horizontal */
+    .shared-steps {
+        padding-top: 64px;
+    }
+
+    .shared-steps .steps {
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    .shared-steps .step {
+        max-width: none;
+    }
+
+    .shared-steps .step-connector {
+        width: 32px;
+        height: 2px;
     }
 
     /* Dashboard mockup with 3D */
