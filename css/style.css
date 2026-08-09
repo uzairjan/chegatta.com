@@ -3437,3 +3437,35 @@ select.trial-input {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+/* ============================================
+    LinkedIn Page Badge
+    ============================================ */
+.linkedin-badge {
+    margin-top: 12px;
+}
+
+.linkedin-badge-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-full);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.linkedin-badge-link:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.linkedin-badge svg {
+    width: 18px;
+    height: 18px;
+}
