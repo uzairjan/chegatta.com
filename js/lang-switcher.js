@@ -107,6 +107,21 @@
 
         // Insert after .nav-actions
         navActions.parentNode.insertBefore(container, navActions.nextSibling);
+
+        // Save the chosen language (for i18n.js) before navigating
+        container.addEventListener('click', function (e) {
+            const link = e.target.closest('.lang-btn');
+            if (!link) return;
+            const lang = link.getAttribute('data-lang');
+            if (lang) {
+                try {
+                    localStorage.setItem('chegatta_lang', lang);
+                    document.cookie = `chegatta_lang=${lang}; expires=${new Date(Date.now() + 365 * 864e5).toUTCString()}; path=/; domain=chegatta.com; SameSite=Lax`;
+                } catch (err) {
+                    /* ignore */
+                }
+            }
+        });
     }
 
     // Initialize when DOM is ready

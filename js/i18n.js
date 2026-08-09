@@ -187,6 +187,8 @@
 
         const targetPath = getTargetPath(browserLang);
         if (targetPath && targetPath !== getCurrentPath()) {
+            // Persist the detected language so the switcher/i18n stop redirecting
+            setStoredLang(browserLang);
             // Preserve query string and hash
             const search = window.location.search;
             const hash = window.location.hash;
