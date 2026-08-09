@@ -32,9 +32,17 @@
             navLinks.classList.toggle('active');
         });
 
-        // Close mobile menu when a link is clicked
+        // Close mobile menu when a link is clicked (unless it's the Solutions dropdown toggle)
         navLinks.querySelectorAll('a').forEach(function (link) {
             link.addEventListener('click', function () {
+                if (link.classList.contains('nav-dropdown-toggle')) {
+                    // Toggle the nested menu open state on mobile
+                    const dropdown = link.closest('.nav-dropdown');
+                    if (dropdown) {
+                        dropdown.classList.toggle('open');
+                    }
+                    return;
+                }
                 navToggle.classList.remove('active');
                 navLinks.classList.remove('active');
             });
@@ -54,7 +62,10 @@
 
         // Reset mobile menu state on resize to desktop
         window.addEventListener('resize', function () {
-            if (window.innerWidth >= 768) {
+            document.querySelectorAll('.nav-dropdown.open').forEach(function (d) {
+                d.classList.remove('open');
+            });
+            if (window.innerWidth >= 1024) {
                 navToggle.classList.remove('active');
                 navLinks.classList.remove('active');
             }
