@@ -4,7 +4,7 @@
 
 ## Objective
 
-This document explains how Chegatta's attendance tracking technology reduces operational costs for staffing agencies and independent businesses, while providing better visibility into employee work hours. By replacing manual processes with automated GPS-verified clock-in, AI-powered anomaly detection, and seamless SEPA payroll exports, Chegatta delivers tangible ROI from day one.
+This document explains how Chegatta's attendance tracking technology reduces operational costs for business clients and independent businesses, while providing better visibility into employee work hours. By replacing manual processes with automated GPS-verified clock-in, AI-powered anomaly detection, and seamless SEPA payroll exports, Chegatta delivers tangible ROI from day one.
 
 ## Technology Stack
 
@@ -26,7 +26,7 @@ This document explains how Chegatta's attendance tracking technology reduces ope
 | Payroll errors cost 2–5% of total payroll in corrections | Verified, exportable hours reduce payroll errors to <0.5% |
 | Client billing disputes over "unreported" hours | GPS-verified clock-in proves presence at worksite; off-site clock-ins flagged for review |
 
-**Cost Savings:** 80% reduction in timesheet management labor. For a 50-employee agency, this translates to ~20 hours/week saved = ~$1,000/month in operational overhead (at $25/hour).
+**Cost Savings:** 80% reduction in timesheet management labor. For a 50-employee business client, this translates to ~20 hours/week saved = ~$1,000/month in operational overhead (at $25/hour).
 
 ### 2. Prevents Buddy Punching & Time Theft
 
@@ -97,7 +97,7 @@ Compare attendance, lateness, and overtime across every client company. Identify
 
 Employees clock in in English, Spanish, or Portuguese — no training manuals needed. Temporary workers from any market can start immediately. This is critical for agencies operating across Portugal, Spain, and other European markets.
 
-## ROI Example: 50-Employee Staffing Agency
+## ROI Example: 50-Employee Business Client
 
 | Metric | Before Chegatta | After Chegatta | Monthly Savings |
 |--------|----------------|----------------|-----------------|
@@ -116,7 +116,7 @@ Chegatta isn't just an attendance tracker — it's a workforce intelligence plat
 
 The technology is particularly valuable for:
 
-- Staffing agencies managing multiple client companies
+- Business clients managing multiple client companies
 - Independent businesses with remote or field workers
 - Agencies operating across EU markets (PT, ES, FR compliance)
 - Companies needing SEPA payroll exports for direct bank transfers

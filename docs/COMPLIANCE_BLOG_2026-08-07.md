@@ -4,13 +4,13 @@
 
 ## Objective
 
-This document explains how Chegatta helps staffing agencies and independent businesses maintain payroll compliance across multiple countries (US states and EU countries), reducing legal risk and avoiding costly fines. With increasingly complex regulations around overtime, break penalties, holiday pay, and tax withholding, Chegatta automates compliance so you don't have to.
+This document explains how Chegatta helps business clients and independent businesses maintain payroll compliance across multiple countries (US states and EU countries), reducing legal risk and avoiding costly fines. With increasingly complex regulations around overtime, break penalties, holiday pay, and tax withholding, Chegatta automates compliance so you don't have to.
 
 ## Why Compliance Matters for Staffing Agencies
 
 ### The Compliance Challenge
 
-Staffing agencies operate in a complex regulatory environment:
+Business clients operate in a complex regulatory environment:
 
 | Regulation Type | Risk | Potential Cost |
 |----------------|------|----------------|
@@ -20,7 +20,7 @@ Staffing agencies operate in a complex regulatory environment:
 | **Tax withholding** | Wrong state/local tax deductions for remote workers | Penalties + back taxes + interest |
 | **Record-keeping** | Inadequate audit trails for labor inspections | $1,000–$10,000 per infraction |
 
-For a 50-employee agency with employees across multiple states/countries, non-compliance can easily cost $50,000–$200,000+ annually in fines, back pay, and legal fees.
+For a 50-employee business client with employees across multiple states/countries, non-compliance can easily cost $50,000–$200,000+ annually in fines, back pay, and legal fees.
 
 ## How Chegatta Ensures Compliance
 
@@ -134,7 +134,7 @@ Every Chegatta action creates an immutable audit trail:
 | Audit preparation | 20+ hours/document gathering | Ready records | $500 |
 | **Total** | — | — | **~$1,300/month** |
 
-**Annual Savings:** ~$15,600 for a 50-employee agency.
+**Annual Savings:** ~$15,600 for a 50-employee business client.
 
 Plus avoided fines: Typical labor board investigations result in $5,000–$50,000+ in back pay and penalties. Chegatta's audit-ready records dramatically reduce this risk.
 
@@ -202,11 +202,11 @@ When adding a new client company in Chegatta, configure these compliance setting
 
 ## Conclusion
 
-Chegatta transforms compliance from a manual, error-prone process into an automated, auditable system. For staffing agencies operating across multiple jurisdictions, this means:
+Chegatta transforms compliance from a manual, error-prone process into an automated, auditable system. For business clients operating across multiple jurisdictions, this means:
 
 - **Zero compliance guesswork** — Rules applied automatically per jurisdiction
 - **Audit-ready records** — Immutable audit trails for every action
-- **Significant cost savings** — $1,300+/month for mid-size agencies
+- **Significant cost savings** — $1,300+/month for mid-size business clients
 - **Reduced legal risk** — Dramatically lower chance of fines and penalties
 - **Scalability** — Add new clients across new jurisdictions without compliance overhead
 
