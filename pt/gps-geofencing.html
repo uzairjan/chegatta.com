@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="GPS vs geofencing para o registo de assiduidade: diferenças, casos de uso, comparação de precisão e como escolher entre GPS e geofencing para o controlo de tempo da sua empresa.">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="canonical" href="https://chegatta.com/pt/gps-geofencing.html">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="alternate" hreflang="en" href="https://chegatta.com/gps-geofencing.html">
+    <link rel="alternate" hreflang="pt" href="https://chegatta.com/pt/gps-geofencing.html">
+    <link rel="alternate" hreflang="es" href="https://chegatta.com/es/gps-geofencing.html">
+    <link rel="alternate" hreflang="x-default" href="https://chegatta.com/">
+    <title>GPS vs Geofencing para o Registo de Assiduidade 2026 — Chegatta</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Chegatta">
+    <meta property="og:url" content="https://chegatta.com/pt/gps-geofencing.html">
+    <meta property="og:title" content="GPS vs Geofencing para o Registo de Assiduidade 2026">
+    <meta property="og:description" content="GPS vs geofencing para o registo de assiduidade: diferenças, casos de uso, comparação de precisão e como escolher entre GPS e geofencing para o controlo de tempo da sua empresa.">
+    <meta property="og:image" content="https://chegatta.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="pt_PT">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GPS vs Geofencing para o Registo de Assiduidade 2026">
+    <meta name="twitter:description" content="Compare o rastreio GPS e o geofencing para o registo de assiduidade dos colaboradores — diferenças, casos de uso e precisão.">
+    <meta name="twitter:image" content="https://chegatta.com/og-image.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- i18n: Language detection & switcher (must load early) -->
+    <script src="../js/i18n.js"></script>
+    <script src="../js/lang-switcher.js"></script>
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/>
+                </svg>
+                <span>Chegatta</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Funcionalidades</a></li>
+                <li><a href="pricing.html">Preços</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Soluções</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="attendance-tracking-software.html">Attendance Software</a></li>
+                        <li><a href="buddy-punching-prevention.html">Buddy Punching</a></li>
+                        <li><a href="compliance-requirements.html">Compliance</a></li>
+                        <li><a href="gps-geofencing.html">GPS vs Geofencing</a></li>
+                        <li><a href="free-vs-paid.html">Free vs Paid</a></li>
+                        <li><a href="employee-clock-in-app-for-staffing-agencies.html">App de Ponto</a></li>
+                        <li><a href="../use-cases.html">Casos de uso</a></li>
+                    </ul>
+                </li>
+                <li><a href="#how-it-works">Como funciona</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="#faq">Perguntas frequentes</a></li>
+                <li class="nav-cta-mobile">
+                    <a href="https://app.chegatta.com/trial" class="btn btn-primary btn-sm">Começar</a>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="https://app.chegatta.com/trial" class="btn btn-primary btn-sm">Começar</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Cabeçalho da página -->
+    <section class="section" style="padding-bottom: 0;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Guia</span>
+                <h1 class="section-title">GPS vs Geofencing para o Registo de Assiduidade 2026</h1>
+                <p class="section-subtitle">Comparação abrangente entre as tecnologias de GPS e geofencing para sistemas de registo de assiduidade e controlo de tempo dos colaboradores.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Índice -->
+    <section class="section section-alt" style="padding-bottom: 0;">
+        <div class="container">
+            <div class="guide">
+                <span class="section-tag">Nesta página</span>
+                <ol>
+                    <li><a href="#gps-explained">GPS Explicado</a></li>
+                    <li><a href="#geofencing-explained">Geofencing Explicado</a></li>
+                    <li><a href="#key-differences">Principais Diferenças</a></li>
+                    <li><a href="#use-cases">Melhores Casos de Uso</a></li>
+                    <li><a href="#accuracy-comparison">Comparação de Precisão</a></li>
+                    <li><a href="#implementation-considerations">Considerações de Implementação</a></li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- GPS Explicado -->
+    <section class="section" id="gps-explained">
+        <div class="container">
+            <div class="guide">
+                <h2>GPS Explicado</h2>
+                <p>O Sistema de Posicionamento Global (GPS) fornece dados de localização precisos do dispositivo de um colaborador no momento do registo de entrada ou saída. Esta tecnologia utiliza uma rede de satélites para determinar as coordenadas exatas de latitude e longitude.</p>
+                <ul>
+                    <li><strong>Precisão:</strong> Normalmente 5-10 metros ao ar livre</li>
+                    <li><strong>Requisitos:</strong> Telemóvel com GPS ativado e permissões de localização concedidas</li>
+                    <li><strong>Impacto na bateria:</strong> A utilização moderada de GPS consome a bateria mais rapidamente</li>
+                    <li><strong>Ideal para:</strong> Trabalhadores remotos, equipas de assistência no terreno, condutores de entregas, forças de trabalho distribuídas</li>
+                </ul>
+                <p>O GPS é ideal para empresas onde os colaboradores trabalham em vários locais de trabalho ao longo do dia, ou onde a própria localização do local de trabalho é o principal método de verificação.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Geofencing Explicado -->
+    <section class="section section-alt" id="geofencing-explained">
+        <div class="container">
+            <div class="guide">
+                <h2>Geofencing Explicado</h2>
+                <p>O geofencing cria uma zona virtual à volta de um local de trabalho específico. Quando as coordenadas GPS de um colaborador cruzam esta zona pré-definida (para dentro ou para fora), o sistema aciona uma ação (como permitir ou bloquear o registo de entrada).</p>
+                <ul>
+                    <li><strong>Limite/zona virtual:</strong> Normalmente uma área circular com raio de 100-500 metros (configurável)</li>
+                    <li><strong>Acionamento:</strong> O sistema verifica se as coordenadas GPS estão dentro do geofence no momento do registo de entrada/saída</li>
+                    <li><strong>Configuração:</strong> Os empregadores definem as coordenadas do local de trabalho e o tamanho da zona</li>
+                    <li><strong>Ideal para:</strong> Locais de trabalho fixos, estaleiros de construção, escritórios, armazéns, qualquer empresa com uma localização específica</li>
+                </ul>
+                <p>O geofencing é o mais adequado para empresas com um local de trabalho principal onde os colaboradores têm de estar fisicamente presentes para registar a entrada ou a saída.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Principais Diferenças -->
+    <section class="section" id="key-differences">
+        <div class="container">
+            <div class="guide">
+                <h2>Principais Diferenças</h2>
+                <h3>Precisão e exatidão</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Característica</th>
+                                <th>GPS</th>
+                                <th>Geofencing</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Precisão típica</td>
+                                <td>5-10 metros</td>
+                                <td>Depende da qualidade do sinal GPS</td>
+                            </tr>
+                            <tr>
+                                <td>Dados de localização</td>
+                                <td>Fornece coordenadas exatas</td>
+                                <td>Sim/Não: dentro ou fora da zona</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3>Controlo da zona</h3>
+                <ul>
+                    <li>GPS: Regista a localização exata; o empregador decide se é aceitável</li>
+                    <li>Geofencing: O sistema aceita/rejeita automaticamente com base na zona</li>
+                    <li>Combinados: O GPS fornece os dados, o geofence toma a decisão</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Melhores Casos de Uso -->
+    <section class="features section section-alt" id="use-cases">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Casos de Uso</span>
+                <h2 class="section-title">Melhores Casos de Uso</h2>
+                <p class="section-subtitle">Onde cada abordagem brilha — e porque é que combiná-las cobre a maioria dos cenários.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-blue">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>GPS Ideal Para</h3>
+                    <ul class="guide-mini-list">
+                        <li>Técnicos de assistência no terreno</li>
+                        <li>Entregas e transportes</li>
+                        <li>Consultores em vários locais</li>
+                        <li>Trabalhadores remotos</li>
+                        <li>Equipas de construção que se deslocam entre locais</li>
+                    </ul>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-green">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Geofencing Ideal Para</h3>
+                    <ul class="guide-mini-list">
+                        <li>Escritório único ou sede</li>
+                        <li>Estaleiro de construção com perímetro definido</li>
+                        <li>Armazém ou centro de distribuição</li>
+                        <li>Loja de retalho</li>
+                        <li>Instalações de fabrico</li>
+                    </ul>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon icon-purple">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" fill="currentColor"/></svg>
+                    </div>
+                    <h3>GPS + Geofencing Combinados</h3>
+                    <ul class="guide-mini-list">
+                        <li>Trabalhadores no terreno que têm de se apresentar num local central</li>
+                        <li>Condutores de entregas que fazem paragens em locais específicos</li>
+                        <li>Contratados com escritório em casa, mas um local de trabalho central</li>
+                        <li>Equipas híbridas (remoto + escritório)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparação de Precisão -->
+    <section class="section" id="accuracy-comparison">
+        <div class="container">
+            <div class="guide">
+                <h2>Comparação de Precisão</h2>
+                <p>Compreender as limitações de precisão de cada tecnologia ajuda a definir expectativas realistas e zonas adequadas.</p>
+                <h3>Fatores de precisão do GPS</h3>
+                <ul>
+                    <li>Céu aberto no exterior: precisão de 3-5 metros</li>
+                    <li>Zonas urbanas com edifícios: precisão de 5-15 metros</li>
+                    <li>Interiores ou áreas cobertas: precisão de 50+ metros ou indisponível</li>
+                    <li>Condições meteorológicas: A chuva e a neve podem degradar ligeiramente a precisão</li>
+                    <li>Qualidade do dispositivo: Os telemóveis mais recentes têm melhores chips de GPS</li>
+                </ul>
+                <h3>Recomendações de raio do geofence</h3>
+                <ul>
+                    <li>Edifícios de escritórios: raio de 100-200 metros</li>
+                    <li>Estaleiros de construção: raio de 300-500 metros</li>
+                    <li>Armazéns: raio de 100-200 metros</li>
+                    <li>Lojas de retalho: raio de 150-300 metros</li>
+                    <li>Definições flexíveis: Permitir configuração pelo empregador</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Considerações de Implementação -->
+    <section class="section section-alt" id="implementation-considerations">
+        <div class="container">
+            <div class="guide">
+                <h2>Considerações de Implementação</h2>
+                <ol>
+                    <li><strong>Consentimento dos colaboradores:</strong> Comunicar de forma transparente as políticas de rastreio de localização e obter o consentimento necessário</li>
+                    <li><strong>Conformidade de privacidade:</strong> Garantir a conformidade com o RGPD, a CCPA e a legislação local na recolha de dados de localização</li>
+                    <li><strong>Impacto na bateria:</strong> Informar os colaboradores sobre o impacto do GPS na duração da bateria; oferecer definições de otimização</li>
+                    <li><strong>Dependências de rede:</strong> O GPS funciona melhor com ligação de dados/celular para transmitir a localização</li>
+                    <li><strong>Opções de recurso:</strong> Ter métodos de verificação alternativos para zonas com sinal GPS fraco</li>
+                    <li><strong>Auditorias regulares:</strong> Rever periodicamente a precisão dos dados de localização e ajustar as zonas de geofence conforme necessário</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-box reveal">
+                <h2 class="cta-title">Comece a registar assiduidade da forma certa</h2>
+                <p class="cta-subtitle">Experimente a Chegatta gratuitamente durante 14 dias. Registo com GPS, geofencing, prevenção de buddy punching e conformidade — sem cartão de crédito.</p>
+                <a href="https://app.chegatta.com/trial" class="btn btn-primary btn-lg btn-cta">Começar Teste Gratuito de 14 Dias</a>
+                <a href="https://app.chegatta.com/demo/request" class="btn btn-outline btn-lg btn-cta">Pedir Demonstração</a>
+                <p class="cta-note">Sem cartão de crédito · 14 dias grátis · Cancele quando quiser</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/>
+                        </svg>
+                        <span>Chegatta</span>
+                    </a>
+                    <p class="footer-tagline">Registo inteligente de assiduidade e dados de equipa para agências de trabalho temporário modernas.</p>
+                    <div class="linkedin-badge">
+                        <a href="https://www.linkedin.com/company/chegatta/?viewAsMember=true" target="_blank" rel="noopener" class="linkedin-badge-link" aria-label="Chegatta no LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67h-3.56V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45h-3.56V9h3.56v11.45zM8.91 20.45h3.56V9h-3.56v11.45z"/></svg>
+                            <span>Siga-nos no LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Produto</h4>
+                    <ul>
+                        <li><a href="features.html">Funcionalidades</a></li>
+                        <li><a href="pricing.html">Preços</a></li>
+                        <li><a href="attendance-software-for-staffing-agencies.html">Software de assiduidade</a></li>
+                        <li><a href="employee-clock-in-app-for-staffing-agencies.html">App de Registo de Ponto</a></li>
+                        <li><a href="../use-cases.html">Casos de uso</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#faq">Perguntas frequentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="../about.html">Sobre nós</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="../index.html#apps">Apps móveis</a></li>
+                        <li><a href="https://app.chegatta.com/trial">Começar teste</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Política de privacidade</a></li>
+                        <li><a href="terms.html">Termos de serviço</a></li>
+                        <li><a href="../privacy.html#gdpr">RGPD</a></li>
+                        <li><a href="../security.html">Segurança</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Chegatta. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="ee106db2-370e-4f23-91d6-7d79eec21946"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
