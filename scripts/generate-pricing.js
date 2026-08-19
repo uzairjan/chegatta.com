@@ -1,4 +1,185 @@
-<!DOCTYPE html>
+#!/usr/bin/env node
+
+/**
+ * generate-pricing.js
+ *
+ * Fetches plan data from the Chegatta API and generates pricing.html.
+ * Run via: node scripts/generate-pricing.js
+ *
+ * Environment variables:
+ *   CHEGATTA_API_URL — API base URL (default: https://app.chegatta.com/api)
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+const API_URL = process.env.CHEGATTA_API_URL || 'https://app.chegatta.com/api';
+const OUT_FILE = path.resolve(__dirname, '..', 'pricing.html');
+
+// ── Fetch plans from API ─────────────────────────────────────────────────────
+async function fetchPlans() {
+  const url = `${API_URL}/public/plans`;
+  console.log(`Fetching plans from ${url} ...`);
+
+  const res = await fetch(url, {
+    headers: { Accept: 'application/json' },
+    signal: AbortSignal.timeout(15000),
+  });
+
+  if (!res.ok) {
+    throw new Error(`API returned ${res.status}: ${await res.text()}`);
+  }
+
+  const data = await res.json();
+  console.log(`  Found ${data.plans.length} plans`);
+  return data;
+}
+
+// ── Helpers ──────────────────────────────────────────────────────────────────
+function priceDisplay(plan) {
+  if (plan.price === 0 && plan.slug === 'free') return '€0';
+  if (plan.price === 0 && plan.slug === 'enterprise') return 'Custom';
+  return `€${(plan.price / 100).toFixed(0)}`;
+}
+
+function employeeLabel(plan) {
+  if (plan.max_employees === null) return `${plan.min_employees}+ employees`;
+  if (plan.min_employees === plan.max_employees) return `Up to ${plan.max_employees} employees`;
+  return `Up to ${plan.max_employees} employees`;
+}
+
+function sitesLabel(plan) {
+  if (plan.max_employees === null || plan.max_employees > 50) return 'Unlimited sites (work locations)';
+  if (plan.max_employees <= 3) return '1 site (work location)';
+  if (plan.max_employees <= 25) return '1 site (work location)';
+  return 'Unlimited sites (work locations)';
+}
+
+function trialBadge(plan) {
+  if (plan.slug === 'free') {
+    return `
+                    <div class="pricing-trial-badge">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/></svg>
+                        No credit card required, ever
+                    </div>`;
+  }
+  return `
+                    <div class="pricing-trial-badge">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/></svg>
+                        ${plan.trial_days}-day free trial · No card needed
+                    </div>`;
+}
+
+function descriptionFor(plan) {
+  const descriptions = {
+    free: 'For small teams just getting started',
+    starter: 'For small teams ready to grow',
+    business: 'Scale up with unlimited sites and clients',
+    professional: 'Advanced analytics and automation for growing teams',
+    enterprise: 'For large-scale operations',
+  };
+  return descriptions[plan.slug] || plan.description || '';
+}
+
+function ctaFor(plan) {
+  if (plan.slug === 'enterprise') return { text: 'Contact Sales', url: 'contact.html', class: 'btn btn-outline btn-block' };
+  if (plan.slug === 'professional') return { text: 'Start Free Trial', url: 'https://app.chegatta.com/trial', class: 'btn btn-primary btn-block' };
+  if (plan.slug === 'free') return { text: 'Start Free', url: 'https://app.chegatta.com/trial', class: 'btn btn-outline btn-block' };
+  return { text: 'Start Free Trial', url: 'https://app.chegatta.com/trial', class: 'btn btn-outline btn-block' };
+}
+
+function featureListFor(plan) {
+  // Enterprise has a hardcoded feature list (not from DB)
+  if (plan.slug === 'enterprise') {
+    return [
+      `${plan.min_employees || 150}+ employees`,
+      'Unlimited sites, clients & projects',
+      'Everything in Professional',
+      'Compliance reports for regulatory submission',
+      'Custom integrations & API access',
+      'Dedicated account manager',
+      '24/7 phone support',
+      'SLA guarantee',
+    ];
+  }
+  return plan.features || [];
+}
+
+function renderPlanCard(plan, index) {
+  const isPopular = plan.slug === 'professional';
+  const popularBadge = isPopular ? '\n                    <div class="popular-badge">Most Popular</div>' : '';
+  const cardClass = isPopular ? 'pricing-card pricing-popular reveal' : 'pricing-card reveal';
+  const cta = ctaFor(plan);
+  const features = featureListFor(plan);
+  const featureHtml = features.map(f => `                        <li>${f}</li>`).join('\n');
+
+  return `
+                <div class="${cardClass}">
+                    ${popularBadge}
+                    <div class="pricing-header">
+                        <h3>${plan.name}</h3>
+                        <p class="pricing-price">${priceDisplay(plan)}${plan.price > 0 && plan.slug !== 'enterprise' ? '<span>/month</span>' : ''}</p>
+                        <p class="pricing-desc">${descriptionFor(plan)}</p>
+                    </div>
+                    ${trialBadge(plan)}
+                    <ul class="pricing-features">
+${featureHtml}
+                    </ul>
+                    <a href="${cta.url}" class="${cta.class}">${cta.text}</a>
+                </div>`;
+}
+
+// ── Schema.org structured data ───────────────────────────────────────────────
+function renderSchemaOffers(plans) {
+  const activePaid = plans.filter(p => p.price > 0 && p.is_active);
+  const freePlan = plans.find(p => p.slug === 'free');
+  const offers = [];
+
+  if (freePlan) {
+    offers.push({ name: 'Free', price: '0', currency: 'EUR' });
+  }
+  for (const p of activePaid) {
+    if (p.slug === 'enterprise') continue;
+    offers.push({ name: p.name, price: String(p.price / 100), currency: 'EUR' });
+  }
+
+  const highest = Math.max(...activePaid.filter(p => p.slug !== 'enterprise').map(p => p.price / 100), 0);
+
+  return `{
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Chegatta",
+        "description": "Smart employee attendance tracking for business clients and independent businesses (restaurants, hotels, clinics, retail). GPS-verified clock-in, buddy punching prevention, full payroll calculations, multi-country compliance.",
+        "brand": { "@type": "Brand", "name": "Chegatta" },
+        "url": "https://chegatta.com/pricing.html",
+        "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "0",
+            "highPrice": "${highest}",
+            "priceCurrency": "EUR",
+            "offerCount": "${offers.length}",
+            "offers": [
+                ${offers.map(o => `{
+                    "@type": "Offer",
+                    "name": "${o.name}",
+                    "price": "${o.price}",
+                    "priceCurrency": "${o.currency}"
+                }`).join(',\n                ')}
+            ]
+        }
+    }`;
+}
+
+// ── Main HTML generation ─────────────────────────────────────────────────────
+function generateHtml(plans) {
+  const planCards = plans
+    .sort((a, b) => a.price - b.price)
+    .map((p, i) => renderPlanCard(p, i))
+    .join('\n');
+
+  const lowestPrice = Math.min(...plans.filter(p => p.price > 0 && p.slug !== 'enterprise').map(p => p.price / 100), 0);
+
+  return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,57 +197,17 @@
     <meta property="og:site_name" content="Chegatta">
     <meta property="og:url" content="https://chegatta.com/pricing.html">
     <meta property="og:title" content="Pricing — Chegatta Attendance Tracking Software">
-    <meta property="og:description" content="Simple, transparent pricing. Free plan available, Starter from €0/month. 14-day free trial, no credit card required.">
+    <meta property="og:description" content="Simple, transparent pricing. Free plan available, Starter from €${lowestPrice}/month. 14-day free trial, no credit card required.">
     <meta property="og:image" content="https://chegatta.com/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Pricing — Chegatta Attendance Tracking Software">
-    <meta name="twitter:description" content="Same plans for agencies and businesses. Free plan available, Starter from €0/month. 14-day free trial, no credit card required.">
+    <meta name="twitter:description" content="Same plans for agencies and businesses. Free plan available, Starter from €${lowestPrice}/month. 14-day free trial, no credit card required.">
     <meta name="twitter:image" content="https://chegatta.com/og-image.png">
 
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Chegatta",
-        "description": "Smart employee attendance tracking for business clients and independent businesses (restaurants, hotels, clinics, retail). GPS-verified clock-in, buddy punching prevention, full payroll calculations, multi-country compliance.",
-        "brand": { "@type": "Brand", "name": "Chegatta" },
-        "url": "https://chegatta.com/pricing.html",
-        "offers": {
-            "@type": "AggregateOffer",
-            "lowPrice": "0",
-            "highPrice": "79",
-            "priceCurrency": "EUR",
-            "offerCount": "4",
-            "offers": [
-                {
-                    "@type": "Offer",
-                    "name": "Free",
-                    "price": "0",
-                    "priceCurrency": "EUR"
-                },
-                {
-                    "@type": "Offer",
-                    "name": "Starter",
-                    "price": "19",
-                    "priceCurrency": "EUR"
-                },
-                {
-                    "@type": "Offer",
-                    "name": "Business",
-                    "price": "39",
-                    "priceCurrency": "EUR"
-                },
-                {
-                    "@type": "Offer",
-                    "name": "Professional",
-                    "price": "79",
-                    "priceCurrency": "EUR"
-                }
-            ]
-        }
-    }
+    ${renderSchemaOffers(plans)}
     </script>
     <script type="application/ld+json">
     {
@@ -162,149 +303,7 @@
     <section class="pricing section">
         <div class="container">
             <div class="pricing-grid">
-
-                <div class="pricing-card reveal">
-                    
-                    <div class="pricing-header">
-                        <h3>Free</h3>
-                        <p class="pricing-price">€0</p>
-                        <p class="pricing-desc">For small teams just getting started</p>
-                    </div>
-                    
-                    <div class="pricing-trial-badge">
-                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/></svg>
-                        No credit card required, ever
-                    </div>
-                    <ul class="pricing-features">
-                        <li>Up to 3 employees</li>
-                        <li>1 site (work location)</li>
-                        <li>QR clock in/out</li>
-                        <li>Geolocation clock-in/out</li>
-                        <li>Basic attendance reports</li>
-                        <li>Salary calculation</li>
-                        <li>Email support</li>
-                    </ul>
-                    <a href="https://app.chegatta.com/trial" class="btn btn-outline btn-block">Start Free</a>
-                </div>
-
-                <div class="pricing-card reveal">
-                    
-                    <div class="pricing-header">
-                        <h3>Enterprise</h3>
-                        <p class="pricing-price">Custom</p>
-                        <p class="pricing-desc">For large-scale operations</p>
-                    </div>
-                    
-                    <div class="pricing-trial-badge">
-                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/></svg>
-                        14-day free trial · No card needed
-                    </div>
-                    <ul class="pricing-features">
-                        <li>151+ employees</li>
-                        <li>Unlimited sites, clients & projects</li>
-                        <li>Everything in Professional</li>
-                        <li>Compliance reports for regulatory submission</li>
-                        <li>Custom integrations & API access</li>
-                        <li>Dedicated account manager</li>
-                        <li>24/7 phone support</li>
-                        <li>SLA guarantee</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-outline btn-block">Contact Sales</a>
-                </div>
-
-                <div class="pricing-card reveal">
-                    
-                    <div class="pricing-header">
-                        <h3>Starter</h3>
-                        <p class="pricing-price">€19<span>/month</span></p>
-                        <p class="pricing-desc">For small teams ready to grow</p>
-                    </div>
-                    
-                    <div class="pricing-trial-badge">
-                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/></svg>
-                        14-day free trial · No card needed
-                    </div>
-                    <ul class="pricing-features">
-                        <li>Up to 25 employees</li>
-                        <li>1 site (work location)</li>
-                        <li>QR clock in/out</li>
-                        <li>Geolocation clock-in/out</li>
-                        <li>Basic attendance reports</li>
-                        <li>Salary calculation</li>
-                        <li>Salary slips (Recibo de Vencimento)</li>
-                        <li>14-day free trial, no card</li>
-                        <li>Email support</li>
-                    </ul>
-                    <a href="https://app.chegatta.com/trial" class="btn btn-outline btn-block">Start Free Trial</a>
-                </div>
-
-                <div class="pricing-card reveal">
-                    
-                    <div class="pricing-header">
-                        <h3>Business</h3>
-                        <p class="pricing-price">€39<span>/month</span></p>
-                        <p class="pricing-desc">Scale up with unlimited sites and clients</p>
-                    </div>
-                    
-                    <div class="pricing-trial-badge">
-                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/></svg>
-                        14-day free trial · No card needed
-                    </div>
-                    <ul class="pricing-features">
-                        <li>Up to 50 employees</li>
-                        <li>Unlimited sites (work locations)</li>
-                        <li>Clients & projects (optional)</li>
-                        <li>QR clock in/out</li>
-                        <li>Geolocation clock-in/out</li>
-                        <li>Basic attendance reports</li>
-                        <li>Salary calculation</li>
-                        <li>Salary slips (Recibo de Vencimento)</li>
-                        <li>Contract management</li>
-                        <li>Compliance monitoring</li>
-                        <li>Scheduled reports</li>
-                        <li>Web push notifications</li>
-                        <li>14-day free trial, no card</li>
-                        <li>Email support</li>
-                        <li>Kiosk mode (1 kiosk included)</li>
-                    </ul>
-                    <a href="https://app.chegatta.com/trial" class="btn btn-outline btn-block">Start Free Trial</a>
-                </div>
-
-                <div class="pricing-card pricing-popular reveal">
-                    
-                    <div class="popular-badge">Most Popular</div>
-                    <div class="pricing-header">
-                        <h3>Professional</h3>
-                        <p class="pricing-price">€79<span>/month</span></p>
-                        <p class="pricing-desc">Advanced analytics and automation for growing teams</p>
-                    </div>
-                    
-                    <div class="pricing-trial-badge">
-                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/></svg>
-                        14-day free trial · No card needed
-                    </div>
-                    <ul class="pricing-features">
-                        <li>Up to 150 employees</li>
-                        <li>Unlimited sites (work locations)</li>
-                        <li>Clients & projects (optional)</li>
-                        <li>QR clock in/out</li>
-                        <li>Geolocation clock-in/out</li>
-                        <li>Attendance insights dashboard</li>
-                        <li>Attention scoring</li>
-                        <li>Pattern forecasting</li>
-                        <li>Anomaly alerts</li>
-                        <li>Scheduled reports</li>
-                        <li>Web push notifications</li>
-                        <li>Contract management</li>
-                        <li>Compliance monitoring</li>
-                        <li>Salary calculation</li>
-                        <li>Salary slips (Recibo de Vencimento)</li>
-                        <li>14-day free trial, no card</li>
-                        <li>Priority email support</li>
-                        <li>Kiosk mode (3 kiosks included)</li>
-                    </ul>
-                    <a href="https://app.chegatta.com/trial" class="btn btn-primary btn-block">Start Free Trial</a>
-                </div>
+${planCards}
             </div>
         </div>
     </section>
@@ -434,4 +433,38 @@
     <script defer src="https://cloud.umami.is/script.js" data-website-id="ee106db2-370e-4f23-91d6-7d79eec21946"></script>
     <script src="js/main.js"></script>
 </body>
-</html>
+</html>`;
+}
+
+// ── Entry point ──────────────────────────────────────────────────────────────
+async function main() {
+  try {
+    const data = await fetchPlans();
+    const html = generateHtml(data.plans);
+
+    fs.writeFileSync(OUT_FILE, html, 'utf-8');
+    console.log(`Written to ${OUT_FILE}`);
+
+    // Verify the output
+    const stat = fs.statSync(OUT_FILE);
+    console.log(`  File size: ${(stat.size / 1024).toFixed(1)} KB`);
+
+    // Quick sanity checks
+    if (!html.includes('pricing-grid')) {
+      throw new Error('Missing pricing-grid in output');
+    }
+    if (!html.includes('schema.org')) {
+      throw new Error('Missing schema.org in output');
+    }
+    if (!html.includes('FAQPage')) {
+      throw new Error('Missing FAQPage schema in output');
+    }
+
+    console.log('Sanity checks passed');
+  } catch (err) {
+    console.error('ERROR:', err.message);
+    process.exit(1);
+  }
+}
+
+main();
