@@ -148,4 +148,22 @@
     <xhtml:link rel="alternate" hreflang="pt" href="https://chegatta.com/pt/gps-geofencing.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://chegatta.com/"/>
   </url>
+  <url>
+    <loc>https://chegatta.com/pt/kiosk-time-clock.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chegatta.com/kiosk-time-clock.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://chegatta.com/pt/kiosk-time-clock.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chegatta.com/kiosk-time-clock.html"/>
+  </url>
+  <url>
+    <loc>https://chegatta.com/pt/payroll-compliance-software.html</loc>
+    <lastmod>2026-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chegatta.com/payroll-compliance-software.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://chegatta.com/pt/payroll-compliance-software.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chegatta.com/payroll-compliance-software.html"/>
+  </url>
 </urlset>
