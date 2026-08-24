@@ -3768,3 +3768,187 @@ select.trial-input {
     stroke-width: 1.8;
     flex-shrink: 0;
 }
+
+/* ============================================
+   Demo Scenarios Page v2 (2026-08-24)
+   Filters, chips, workflow accordion, highlights
+   ============================================ */
+.demo-filters-wrap {
+    text-align: center;
+}
+.demo-filters {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    padding: 4px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+}
+.demo-filter-btn {
+    padding: 9px 20px;
+    border: none;
+    background: transparent;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color .2s ease, background .2s ease, box-shadow .2s ease;
+}
+.demo-filter-btn:hover,
+.demo-filter-btn:focus-visible {
+    color: var(--primary);
+}
+.demo-filter-btn.active {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(79, 70, 229, .35);
+}
+.demo-tag {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 3px 10px;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: var(--primary);
+    background: var(--primary-bg);
+    border-radius: 999px;
+    vertical-align: 2px;
+}
+.demo-businesses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 14px 0 0;
+}
+.demo-businesses span {
+    font-size: 11.5px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 4px 10px;
+}
+.demo-keys-title {
+    margin: 18px 0 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+}
+.demo-scenario-card .demo-credential-row {
+    margin-bottom: 6px;
+    border-radius: 8px;
+}
+.demo-scenario-card .demo-copy-btn {
+    background: #fff;
+}
+.demo-scenario-card .demo-copy-btn:hover,
+.demo-scenario-card .demo-copy-btn:focus-visible {
+    background: var(--primary);
+}
+.demo-workflow {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+}
+.demo-workflow summary {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    list-style: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--primary);
+    user-select: none;
+}
+.demo-workflow summary::-webkit-details-marker {
+    display: none;
+}
+.demo-workflow summary::after {
+    content: '▾';
+    margin-left: auto;
+    font-size: 11px;
+    color: var(--text-tertiary);
+    transition: transform .2s ease;
+}
+.demo-workflow[open] summary::after {
+    transform: rotate(180deg);
+}
+.demo-workflow ol {
+    margin: 14px 0 2px;
+    padding-left: 0;
+    list-style: none;
+    counter-reset: step;
+    display: grid;
+    gap: 9px;
+}
+.demo-workflow li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 30px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+}
+.demo-workflow li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary-bg);
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.demo-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 16px 0 0;
+}
+.demo-highlights span {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--teal);
+    background: rgba(13, 148, 136, .07);
+    border: 1px solid rgba(13, 148, 136, .22);
+    border-radius: 999px;
+    padding: 4px 11px;
+}
+.demo-scenario-card .demo-login-btn {
+    margin-top: auto;
+}
+.demo-scenario-card .demo-highlights {
+    margin-bottom: 18px;
+}
+.demo-scenario-card.hidden-by-filter {
+    display: none;
+}
+@media (max-width: 768px) {
+    .demo-filters {
+        border-radius: 22px;
+    }
+    .demo-filter-btn {
+        padding: 8px 14px;
+        font-size: 12.5px;
+    }
+}
+
+.demo-accounts-title {
+    text-align: center;
+}
