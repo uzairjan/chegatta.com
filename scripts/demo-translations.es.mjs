@@ -149,4 +149,9 @@ export default [
     ['<h4>Product</h4>', '<h4>Producto</h4>'], ['<h4>Solutions</h4>', '<h4>Soluciones</h4>'], ['<h4>Company</h4>', '<h4>Empresa</h4>'],
     ['About</a>', 'Sobre nosotros</a>'], ['Contact</a>', 'Contacto</a>'],
     [">Login</a>", '>Acceso</a>'],
+    ['>About Us<', '>Sobre nosotros<'],
+    ['Privacy Policy</a>', 'Política de Privacidad</a>'],
+    ['Terms of Service</a>', 'Términos del Servicio</a>'],
+    ['>GDPR<', '>RGPD<'],
+    ['All rights reserved.', 'Todos los derechos reservados.'],
 ];

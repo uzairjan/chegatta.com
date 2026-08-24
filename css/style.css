@@ -3952,3 +3952,29 @@ select.trial-input {
 .demo-accounts-title {
     text-align: center;
 }
+
+/* Footer language switcher (demo pages) */
+.footer-lang {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.footer-lang a {
+    color: var(--text-tertiary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-lang a:hover {
+    color: #fff;
+}
+
+.footer-lang a.active {
+    color: #fff;
+    font-weight: 600;
+}
