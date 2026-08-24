@@ -525,4 +525,14 @@
                 <xhtml:link rel="alternate" hreflang="pt" href="https://chegatta.com/pt/hr-platform.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://chegatta.com/hr-platform.html"/>
     </url>
+  <url>
+    <loc>https://chegatta.com/demo.html</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://chegatta.com/demo.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://chegatta.com/pt/demo.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://chegatta.com/es/demo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://chegatta.com/demo.html"/>
+  </url>
 </urlset>

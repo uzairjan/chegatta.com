@@ -20,6 +20,7 @@
     const PT_PAGES = new Set([
         'attendance-software-for-staffing-agencies.html',
         'contact.html',
+        'demo.html',
         'employee-clock-in-app-for-staffing-agencies.html',
         'features.html',
         'index.html',
@@ -32,7 +33,8 @@
     const ES_PAGES = new Set([
         'attendance-software-for-staffing-agencies.html',
         'employee-clock-in-app-for-staffing-agencies.html',
-        'index.html'
+        'index.html',
+        'demo.html'
     ]);
 
     function getLocation() {

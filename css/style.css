@@ -3666,3 +3666,105 @@ select.trial-input {
     width: 18px;
     height: 18px;
 }
+/* ============================================
+   Demo Scenarios Page (2026-08-23)
+   ============================================ */
+.demo-accounts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 16px;
+}
+.demo-account-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-full);
+    font-size: 12px;
+    color: var(--text-tertiary);
+}
+.demo-account-pill code {
+    font-family: ui-monospace, Menlo, Consolas, monospace;
+    font-size: 12px;
+    color: var(--primary);
+}
+.demo-password-hint {
+    display: block;
+    margin-top: 12px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-primary);
+}
+.demo-scenario-card {
+    display: flex;
+    flex-direction: column;
+}
+.demo-credential-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 12px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+}
+.demo-credential-row code {
+    font-family: ui-monospace, Menlo, Consolas, monospace;
+    font-size: 13px;
+    color: var(--text-primary);
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.demo-copy-btn {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 6px 12px;
+    background: var(--primary-bg);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.demo-copy-btn:hover,
+.demo-copy-btn:focus-visible {
+    background: var(--primary);
+    color: #fff;
+}
+.demo-copy-btn.copied {
+    background: var(--green);
+    color: #fff;
+}
+.demo-login-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: 12px;
+}
+.demo-login-btn svg {
+    width: 16px;
+    height: 16px;
+}
+.demo-login-btn path {
+    stroke: currentColor;
+}
+.button-copy-icon {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    flex-shrink: 0;
+}

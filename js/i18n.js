@@ -102,6 +102,7 @@
             '/pricing.html': `${langPrefix}pricing.html`,
             '/trial.html': `${langPrefix}trial.html`,
             '/contact.html': `${langPrefix}contact.html`,
+            '/demo.html': `${langPrefix}demo.html`,
             '/privacy.html': `${langPrefix}privacy.html`,
             '/terms.html': `${langPrefix}terms.html`,
             '/': `${langPrefix}index.html`,
@@ -112,7 +113,8 @@
         // Spanish translation only exists for index and the two SEO pages
         const esTranslated = [
             '/attendance-software-for-staffing-agencies.html',
-            '/employee-clock-in-app-for-staffing-agencies.html'
+            '/employee-clock-in-app-for-staffing-agencies.html',
+            '/demo.html'
         ];
         if (lang === 'es' && pageMap[path] && path !== '/index.html' && path !== '/' && !esTranslated.includes(path)) {
             return `${langPrefix}index.html`;
@@ -137,6 +139,7 @@
             '/pt/features.html': '/features.html',
             '/pt/pricing.html': '/pricing.html',
             '/pt/trial.html': '/trial.html',
+            '/pt/demo.html': '/demo.html',
             '/pt/contact.html': '/contact.html',
             '/pt/privacy.html': '/privacy.html',
             '/pt/terms.html': '/terms.html',
@@ -145,6 +148,7 @@
             '/es/features.html': '/features.html',
             '/es/pricing.html': '/pricing.html',
             '/es/trial.html': '/trial.html',
+            '/es/demo.html': '/demo.html',
             '/es/contact.html': '/contact.html',
             '/es/privacy.html': '/privacy.html',
             '/es/terms.html': '/terms.html',
