@@ -45,4 +45,21 @@
             copyFallback(value, btn);
         }
     });
+
+    // Scenario category filter (demo page)
+    document.querySelectorAll('.demo-filter-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            document.querySelectorAll('.demo-filter-btn').forEach(function (b) {
+                b.classList.remove('active');
+                b.setAttribute('aria-pressed', 'false');
+            });
+            btn.classList.add('active');
+            btn.setAttribute('aria-pressed', 'true');
+            const filter = btn.getAttribute('data-filter');
+            document.querySelectorAll('.demo-scenario-card[data-category]').forEach(function (card) {
+                card.classList.toggle('hidden-by-filter',
+                    filter !== 'all' && card.getAttribute('data-category') !== filter);
+            });
+        });
+    });
 })();
