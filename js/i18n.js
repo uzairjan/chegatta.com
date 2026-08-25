@@ -134,6 +134,13 @@
     }
 
     function mapPathToRoot(path) {
+        // Language-only pages (no EN equivalent): keep visitors on the page
+        const langOnlyPages = [
+            '/pt/ponto-eletronico.html',
+            '/es/control-horario.html'
+        ];
+        if (langOnlyPages.includes(path)) return path;
+
         const pageMap = {
             '/pt/index.html': '/index.html',
             '/pt/features.html': '/features.html',
