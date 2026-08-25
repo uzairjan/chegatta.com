@@ -34,7 +34,8 @@
         'attendance-software-for-staffing-agencies.html',
         'employee-clock-in-app-for-staffing-agencies.html',
         'index.html',
-        'demo.html'
+        'demo.html',
+        'pricing.html'
     ]);
 
     function getLocation() {
