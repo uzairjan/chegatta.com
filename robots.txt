@@ -26,4 +26,3 @@ User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://chegatta.com/sitemap.xml
-Sitemap: https://chegatta.com/sitemap-pt.xml

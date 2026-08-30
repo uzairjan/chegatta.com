@@ -109,12 +109,33 @@
     <!-- i18n: Language detection & switcher (must load early) -->
     <script src="../js/i18n.js"></script>
     <script src="../js/lang-switcher.js"></script>
+    <link rel="alternate" hreflang="es" href="https://chegatta.com/es/pricing.html">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://chegatta.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Pricing",
+            "item": "https://chegatta.com/pt/pricing.html"
+        }
+    ]
+}
+    </script>
 </head>
 <body>
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="index.html" class="nav-logo">
-                <img src="../logo.png" alt="Chegatta" class="logo-img">
+                <img src="../logo.png" alt="Chegatta" class="logo-img" loading="lazy">
                 <span>Chegatta</span>
             </a>
             <ul class="nav-links" id="navLinks">
@@ -352,7 +373,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="nav-logo">
-                        <img src="../logo.png" alt="Chegatta" class="logo-img">
+                        <img src="../logo.png" alt="Chegatta" class="logo-img" loading="lazy">
                         <span>Chegatta</span>
                     </a>
                     <p class="footer-tagline">Registo inteligente de assiduidade e informações sobre a força de trabalho para agências de trabalho temporário e empresas independentes.</p>
