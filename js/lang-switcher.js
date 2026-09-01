@@ -15,28 +15,122 @@
         es: { label: 'ES', name: 'Español' }
     };
 
-    // Root pages that have an actual translation in each language.
+    // Pages that have an actual translation in each language.
     // Any page without one falls back to that language's index.html.
-    const PT_PAGES = new Set([
+    const ROOT_PAGES = new Set([
+        'about.html',
         'attendance-software-for-staffing-agencies.html',
+        'attendance-tracking-software.html',
+        'automated-overtime-tracking.html',
+        'blog.html',
+        'buddy-punching-prevention.html',
+        'comparison.html',
+        'compliance-requirements.html',
         'contact.html',
         'demo.html',
         'employee-clock-in-app-for-staffing-agencies.html',
+        'employee-clock-in-app.html',
         'features.html',
+        'free-vs-paid.html',
+        'geofence-construction-staffing.html',
+        'gps-geofencing.html',
+        'healthcare-staffing-attendance.html',
+        'hr-platform.html',
         'index.html',
+        'kiosk-time-clock.html',
+        'multi-company-time-and-attendance.html',
+        'payroll-compliance-software.html',
+        'prevent-buddy-punching.html',
         'pricing.html',
         'privacy.html',
+        'qr-code-employee-clock-in.html',
+        'real-time-attendance-monitoring.html',
+        'security.html',
+        'temporary-worker-attendance-tracking.html',
         'terms.html',
-        'trial.html'
+        'trial.html',
+        'use-cases.html'
+    ]);
+
+    const PT_PAGES = new Set([
+        'about.html',
+        'attendance-software-for-staffing-agencies.html',
+        'attendance-tracking-software.html',
+        'automated-overtime-tracking.html',
+        'blog.html',
+        'buddy-punching-prevention.html',
+        'comparison.html',
+        'compliance-requirements.html',
+        'contact.html',
+        'demo.html',
+        'employee-clock-in-app-for-staffing-agencies.html',
+        'employee-clock-in-app.html',
+        'features.html',
+        'free-vs-paid.html',
+        'geofence-construction-staffing.html',
+        'gps-geofencing.html',
+        'healthcare-staffing-attendance.html',
+        'hr-platform.html',
+        'index.html',
+        'kiosk-time-clock.html',
+        'multi-company-time-and-attendance.html',
+        'payroll-compliance-software.html',
+        'ponto-eletronico.html',
+        'prevent-buddy-punching.html',
+        'pricing.html',
+        'privacy.html',
+        'qr-code-employee-clock-in.html',
+        'real-time-attendance-monitoring.html',
+        'security.html',
+        'temporary-worker-attendance-tracking.html',
+        'terms.html',
+        'trial.html',
+        'use-cases.html'
     ]);
 
     const ES_PAGES = new Set([
+        'about.html',
         'attendance-software-for-staffing-agencies.html',
-        'employee-clock-in-app-for-staffing-agencies.html',
-        'index.html',
+        'attendance-tracking-software.html',
+        'automated-overtime-tracking.html',
+        'blog.html',
+        'buddy-punching-prevention.html',
+        'comparison.html',
+        'compliance-requirements.html',
+        'contact.html',
+        'control-horario.html',
         'demo.html',
-        'pricing.html'
+        'employee-clock-in-app-for-staffing-agencies.html',
+        'employee-clock-in-app.html',
+        'features.html',
+        'free-vs-paid.html',
+        'geofence-construction-staffing.html',
+        'gps-geofencing.html',
+        'healthcare-staffing-attendance.html',
+        'hr-platform.html',
+        'index.html',
+        'kiosk-time-clock.html',
+        'multi-company-time-and-attendance.html',
+        'payroll-compliance-software.html',
+        'prevent-buddy-punching.html',
+        'pricing.html',
+        'privacy.html',
+        'qr-code-employee-clock-in.html',
+        'real-time-attendance-monitoring.html',
+        'security.html',
+        'temporary-worker-attendance-tracking.html',
+        'terms.html',
+        'trial.html',
+        'use-cases.html'
     ]);
+
+    // PT <-> ES filename translation pairs (localized page names). When building a
+    // link to targetLang, the current page's filename (named for the current
+    // language) is looked up in FILENAME_MAP[targetLang].
+    const FILENAME_MAP = {
+        pt: { 'control-horario.html': 'ponto-eletronico.html' },
+        es: { 'ponto-eletronico.html': 'control-horario.html' }
+    };
 
     function getLocation() {
         const parts = window.location.pathname.split('/').filter(Boolean);
@@ -53,9 +147,15 @@
     }
 
     function getTargetFile(targetLang, pageFile) {
-        if (targetLang === 'en') return pageFile;
+        if (targetLang === 'en') {
+            return ROOT_PAGES.has(pageFile) ? pageFile : 'index.html';
+        }
         const set = targetLang === 'pt' ? PT_PAGES : ES_PAGES;
-        return set.has(pageFile) ? pageFile : 'index.html';
+        if (set.has(pageFile)) return pageFile;
+        // Localized-filename pair: pageFile is named for the CURRENT language;
+        // translate it to the opposite language's filename for the target.
+        const map = FILENAME_MAP[targetLang];
+        return (map && map[pageFile]) || 'index.html';
     }
 
     function buildHref(targetLang) {
