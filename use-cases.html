@@ -3,35 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Attendance tracking software for business clients. Manage employees across multiple work sites with geolocation clock-in, real-time analytics, and AI-powered insights.">
+    <meta name="description" content="See how staffing agencies and multi-site businesses use Chegatta: GPS-verified clock-in across locations, buddy punching prevention, and payroll-ready timesheets for security, hospitality, logistics, healthcare, cleaning and construction.">
     <meta name="theme-color" content="#4f46e5">
     <link rel="canonical" href="https://chegatta.com/use-cases.html">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="alternate" hreflang="en" href="https://chegatta.com/use-cases.html">
+    <link rel="alternate" hreflang="pt" href="https://chegatta.com/pt/use-cases.html">
     <link rel="alternate" hreflang="x-default" href="https://chegatta.com/use-cases.html">
-    <title>Attendance Tracking for Business Clients — Chegatta</title>
+    <title>Use Cases: Attendance Tracking Across Multiple Sites — Chegatta</title>
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Chegatta">
     <meta property="og:url" content="https://chegatta.com/use-cases.html">
-    <meta property="og:title" content="Attendance Tracking for Business Clients — Chegatta">
-    <meta property="og:description" content="Manage attendance for employees placed across multiple work sites. Geolocation clock-in, real-time analytics, and AI-powered insights.">
+    <meta property="og:title" content="Use Cases: Attendance Tracking Across Multiple Sites — Chegatta">
+    <meta property="og:description" content="How security, hospitality, logistics, healthcare, cleaning and construction businesses verify every clock-in with GPS geofencing, prevent buddy punching, and cut payroll prep to minutes.">
     <meta property="og:image" content="https://chegatta.com/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Attendance Tracking for Business Clients — Chegatta">
-    <meta name="twitter:description" content="Geolocation clock-in and AI insights for business clients managing employees across multiple companies.">
+    <meta name="twitter:title" content="Use Cases: Attendance Tracking Across Multiple Sites — Chegatta">
+    <meta name="twitter:description" content="GPS-verified clock-in, buddy punching prevention and payroll-ready timesheets for multi-site and staffing businesses.">
     <meta name="twitter:image" content="https://chegatta.com/og-image.png">
 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Attendance Tracking for Business Clients",
-        "description": "Attendance tracking software for business clients managing employees across multiple work sites.",
-        "url": "https://chegatta.com/use-cases.html",
-        "isPartOf": { "@type": "WebSite", "name": "Chegatta", "url": "https://chegatta.com" }
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do you track employees who work at different sites?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Each work site has its own GPS geofence (coordinates plus a radius, default 200 m). Employees clock in from their phone browser, and Chegatta captures their coordinates and verifies they are inside the correct site's geofence. Clock-ins outside the fence are flagged for review — never blocked — so shifts always get recorded."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can employees clock in from their own phone?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Chegatta is a web app — employees open a URL in their phone browser, no app install required. It is also an installable PWA that works offline: clock-ins taken without connection are queued and replayed automatically via background sync."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does Chegatta prevent buddy punching?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Chegatta fingerprints every device from HTTP headers (SHA-256) and compares it against the employee's trusted devices. Shared devices, new devices and frequent device changes are flagged as anomalies for review. Optional per-business settings let you require device approval and cap devices per employee."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What happens if an employee forgets to clock out?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Missing clock-outs are automatically flagged as anomalies on the dashboard's attention list. Admins can then correct the shift's clock-out time; every correction is written to an audit log and the employee is notified."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I see attendance for all my client sites in one dashboard?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Staffing agencies get a global dashboard that compares attendance metrics across every client company, plus per-company views. Each client can also get their own login to see only their own employees' shifts."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does it work for employees without smartphones?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Kiosk mode turns any shared tablet or computer into a time clock. Employees clock in with a PIN or QR scan on the shared device, with JWT-secured device registration — no personal phone needed."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does payroll take with Chegatta?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Hours verified by GPS and device checks are ready to export — no manual timesheet review. Chegatta calculates overtime per site rules, generates salary slips (Recibo de Vencimento) and exports SEPA pain.001 XML for bank transfers. Most businesses cut payroll prep from hours to minutes."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Chegatta GDPR compliant?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Chegatta is built for the EU market: privacy consent is recorded per user, IP addresses and user-agent strings are deleted after 90 days, device data is anonymised on a schedule, and employees can access, rectify and delete their data."
+                }
+            }
+        ]
     }
     </script>
 
@@ -110,62 +173,132 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Use Cases</span>
-                <h1 class="section-title">Attendance tracking built for business clients</h1>
-                <p class="section-subtitle">When your employees work across multiple work sites, sites, and schedules, spreadsheets and paper time cards stop working. Chegatta gives you one system to track them all.</p>
+                <h1 class="section-title">Attendance tracking across multiple sites and clients</h1>
+                <p class="section-subtitle">When your employees work across multiple work sites, venues, and schedules, spreadsheets and paper time cards stop working. Chegatta gives you one system to verify every clock-in with GPS geofencing, prevent buddy punching with device fingerprinting, and export payroll-ready timesheets in minutes.</p>
             </div>
         </div>
     </section>
 
-    <!-- Industries -->
-    <section class="features section">
+    <!-- Industry Use Cases -->
+    <section class="features section" id="industries">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Who It's For</span>
-                <h2 class="section-title">Built for the sectors business clients serve</h2>
+                <h2 class="section-title">Built for the sectors you serve</h2>
+                <p class="section-subtitle">Every industry below shares the same core challenge: verifying that people were where they said, when they said — without drowning admin teams in timesheets.</p>
             </div>
-            <div class="features-grid">
-                <div class="feature-card reveal">
-                    <div class="feature-icon icon-blue">
-                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/></svg>
-                    </div>
-                    <h3>Security staffing</h3>
-                    <p>Verify guards are actually on-site with geofenced clock-in at every client location, and flag shifts left early or started late in real time.</p>
-                </div>
-                <div class="feature-card reveal">
-                    <div class="feature-icon icon-green">
-                        <svg viewBox="0 0 24 24" fill="none"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14h-2v-4H6v-2h4V7h2v4h4v2h-4v4z" fill="currentColor"/></svg>
-                    </div>
-                    <h3>Hospitality & Events</h3>
-                    <p>Rotate temporary staff between venues, track breaks and overtime automatically, and compare attendance across every event your business staffs.</p>
-                </div>
-                <div class="feature-card reveal">
-                    <div class="feature-icon icon-purple">
-                        <svg viewBox="0 0 24 24" fill="none"><path d="M11 2v20c-5.07-.5-9-4.79-9-10s3.93-9.5 9-10zm2.03 0v8.99H22c-.47-4.74-4.24-8.52-8.97-8.99zm0 11.01V22c4.74-.47 8.5-4.25 8.97-8.99h-8.97z" fill="currentColor"/></svg>
-                    </div>
-                    <h3>Logistics & Warehousing</h3>
-                    <p>Track shift starts across distribution centers, detect missed clock-outs that break payroll accuracy, and keep temps moving between sites.</p>
-                </div>
-                <div class="feature-card reveal">
-                    <div class="feature-icon icon-orange">
-                        <svg viewBox="0 0 24 24" fill="none"><path d="M21 10.12h-6.78l2.74-2.82c-2.73-2.7-7.15-2.8-9.88-.1-2.73 2.71-2.73 7.08 0 9.79 2.73 2.71 7.15 2.71 9.88 0C18.32 15.65 19 14.08 19 12.1h2c0 1.98-.88 4.55-2.64 6.29-3.51 3.48-9.21 3.48-12.72 0-3.5-3.47-3.53-9.11-.02-12.58 3.51-3.47 9.14-3.47 12.65 0L21 3v7.12zM12.5 8v4.25l3.5 2.08-.72 1.21L11 13V8h1.5z" fill="currentColor"/></svg>
-                    </div>
-                    <h3>Facilities & Cleaning</h3>
-                    <p>Confirm cleaners clock in at the right building, catch recurring lateness with attention scores, and bill clients with accurate shift data.</p>
-                </div>
-                <div class="feature-card reveal">
-                    <div class="feature-icon icon-red">
-                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/></svg>
-                    </div>
-                    <h3>Retail & FMCG</h3>
-                    <p>Staff multiple stores with the same pool of workers, manage weekend and holiday rotations, and see attendance by store at a glance.</p>
-                </div>
-                <div class="feature-card reveal">
-                    <div class="feature-icon icon-teal">
-                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/></svg>
-                    </div>
-                    <h3>Healthcare & Care</h3>
-                    <p>Track nurses and carers across care homes and home-visit routes, with overtime control that protects both clients and workers.</p>
-                </div>
+
+            <!-- Security -->
+            <div class="use-case reveal" id="security">
+                <h3>Attendance tracking for security staffing agencies</h3>
+                <p><strong>The problem:</strong> Guards work alone at client sites, often overnight. Without verification, you're paying for hours nobody can confirm — and a single falsified shift at one site can burn a client relationship worth months of revenue.</p>
+                <p><strong>How Chegatta solves it:</strong></p>
+                <ul>
+                    <li><strong>Geofenced clock-in at every client site</strong> — each guard posts' coordinates are checked against the site's GPS fence (default 200 m radius) at clock-in and clock-out.</li>
+                    <li><strong>Device fingerprinting</strong> — SHA-256 device identity catches a guard clocking in a colleague who hasn't arrived yet.</li>
+                    <li><strong>Late-start and early-leave flags</strong> — shifts that start late or end early against the scheduled rota appear on the attention list in real time.</li>
+                    <li><strong>Client visibility</strong> — give each client their own login so they see their site's coverage without emailing you for reports.</li>
+                    <li><strong>Offline resilience</strong> — basements and car parks with no signal still capture clock-ins; they sync when the phone reconnects.</li>
+                </ul>
+                <p><strong>The outcome:</strong> Verified coverage evidence for every client site, disputes settled with data, and payroll built from confirmed hours instead of phone-call trust.</p>
+                <p><a href="prevent-buddy-punching.html">Read how buddy punching prevention works →</a></p>
+            </div>
+
+            <!-- Hospitality -->
+            <div class="use-case reveal" id="hospitality">
+                <h3>Temporary staff tracking for hospitality and events</h3>
+                <p><strong>The problem:</strong> Waiters, kitchen porters and event staff rotate between venues — sometimes several in one week. Paper sign-in sheets at each venue get lost, breaks go unrecorded, and reconciling who worked where at the end of the month eats entire days.</p>
+                <p><strong>How Chegatta solves it:</strong></p>
+                <ul>
+                    <li><strong>One worker, many venues</strong> — assign the same person to multiple sites with an immutable assignment history, so you always know who worked where and when.</li>
+                    <li><strong>Automatic break and overtime capture</strong> — pause/resume from the phone; overtime is calculated per site rules without manual maths.</li>
+                    <li><strong>Late clock-in handling</strong> — when someone clocks in after their expected start plus grace period, managers are notified immediately with an optional note from the worker.</li>
+                    <li><strong>Per-venue attendance comparison</strong> — spot which events consistently run late or understaffed from one dashboard.</li>
+                </ul>
+                <p><strong>The outcome:</strong> Reconciliation drops from days to minutes, and clients receive accurate, itemised hours for every event you staff.</p>
+                <p><a href="temporary-worker-attendance-tracking.html">Read about temporary worker tracking →</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mid-page CTA -->
+    <section class="cta-section" style="padding: 2rem 0;">
+        <div class="container">
+            <div class="cta-box reveal" style="padding: 2rem;">
+                <h2 class="cta-title" style="font-size: 1.5rem;">See every site on one dashboard</h2>
+                <p class="cta-subtitle">14-day free trial. No credit card. Setup in 5 minutes.</p>
+                <a href="https://app.chegatta.com/trial" class="btn btn-primary">Start Free Trial</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features section" style="padding-top: 2rem;">
+        <div class="container">
+            <!-- Logistics -->
+            <div class="use-case reveal" id="logistics">
+                <h3>GPS attendance for logistics and warehousing teams</h3>
+                <p><strong>The problem:</strong> Distribution centres, yards, and delivery hubs run around the clock. Agency workers flow in and out across multiple buildings, missed clock-outs destroy payroll accuracy, and night-shift supervisors have no easy way to confirm headcount at 3 AM.</p>
+                <p><strong>How Chegatta solves it:</strong></p>
+                <ul>
+                    <li><strong>Per-building geofences</strong> — separate geofence for the warehouse, the yard, and the office, so clock-ins are matched to the right building even within one campus.</li>
+                    <li><strong>Missing clock-out detection</strong> — every shift without a clock-out is automatically flagged; admins correct the time and the audit log records who changed what.</li>
+                    <li><strong>Rule-based attendance flags</strong> — off-site clock-ins, excessive overtime, and long breaks are detected automatically against each site's configuration.</li>
+                    <li><strong>Kiosk mode for shared devices</strong> — mount a tablet at the loading bay; workers clock in with PIN or QR scan, no personal phone required.</li>
+                </ul>
+                <p><strong>The outcome:</strong> Payroll-accurate hours across every building, with supervisors verifying headcount from their phone instead of walking the floor.</p>
+                <p><a href="gps-geofencing.html">Read how GPS geofencing works →</a></p>
+            </div>
+
+            <!-- Facilities & Cleaning -->
+            <div class="use-case reveal" id="facilities">
+                <h3>Cleaning and facilities management attendance</h3>
+                <p><strong>The problem:</strong> Cleaning crews work early mornings and nights when nobody from your team is on site to supervise. Clients question whether the clean actually happened, and billing is a negotiation because you can't prove attendance.</p>
+                <p><strong>How Chegatta solves it:</strong></p>
+                <ul>
+                    <li><strong>Proof-of-presence per building</strong> — geofenced clock-in with GPS capture at both events, giving you timestamped evidence of attendance at each client location.</li>
+                    <li><strong>Attention scoring</strong> — a weighted score surfaces cleaners with recurring lateness or missed shifts, so you fix problems before clients complain.</li>
+                    <li><strong>Billing-ready shift data</strong> — export verified hours per client site as CSV or PDF, itemised and ready to attach to invoices.</li>
+                    <li><strong>Client self-service portal</strong> — clients with their own login check coverage themselves; your account managers stop fielding "was the cleaner there?" calls.</li>
+                </ul>
+                <p><strong>The outcome:</strong> Every invoice backed by verified attendance data, and churn driven down by transparency.</p>
+                <p><a href="multi-company-time-and-attendance.html">Read about multi-company time and attendance →</a></p>
+            </div>
+
+            <!-- Mid-page CTA -->
+            <div class="cta-box reveal" style="padding: 2rem; margin: 2rem 0;">
+                <h2 class="cta-title" style="font-size: 1.5rem;">Prove attendance to every client</h2>
+                <p class="cta-subtitle">Verified GPS hours, exportable in one click.</p>
+                <a href="https://app.chegatta.com/trial" class="btn btn-primary">Start Free Trial</a>
+            </div>
+
+            <!-- Retail -->
+            <div class="use-case reveal" id="retail">
+                <h3>Multi-store attendance for retail and FMCG businesses</h3>
+                <p><strong>The problem:</strong> One pool of workers staffs many stores. Weekend rotations, holiday cover, and store-level overtime rules differ per location — and head office has no single view of who worked where until payroll day.</p>
+                <p><strong>How Chegatta solves it:</strong></p>
+                <ul>
+                    <li><strong>Unlimited sites on Business plan</strong> — one business, many stores; each store has its own geofence, QR code, and default shift times.</li>
+                    <li><strong>Per-store attendance comparison</strong> — compare lateness, overtime and absence across every store from the owner dashboard.</li>
+                    <li><strong>Scheduled shifts with expected times</strong> — rota the week ahead; lateness is measured against the schedule automatically.</li>
+                    <li><strong>Payroll runs and salary slips</strong> — batch-calculate pay per store, generate Recibo de Vencimento slips, and export SEPA files for the bank.</li>
+                </ul>
+                <p><strong>The outcome:</strong> Head office sees every store's attendance in real time, and payroll runs from verified data instead of store-manager emails.</p>
+                <p><a href="attendance-tracking-software.html">Read about attendance tracking software →</a></p>
+            </div>
+
+            <!-- Healthcare -->
+            <div class="use-case reveal" id="healthcare">
+                <h3>Attendance compliance for healthcare staffing</h3>
+                <p><strong>The problem:</strong> Nurses and carers work across care homes, clinics, and home-visit routes. Overtime caps are a safety issue, not just a cost issue — and regulators expect accurate, auditable records of who cared for whom, when.</p>
+                <p><strong>How Chegatta solves it:</strong></p>
+                <ul>
+                    <li><strong>Overtime control per site</strong> — excessive-overtime flags are configured per location, protecting both residents and staff from unsafe consecutive hours.</li>
+                    <li><strong>Auditable time corrections</strong> — every manual adjustment to a shift time is logged with who made it and when; the worker is notified automatically.</li>
+                    <li><strong>Compliance monitoring by country</strong> — EU Working Time Directive rules applied per site; compliance issues surface before they become reportable incidents.</li>
+                    <li><strong>Verified attendance records</strong> — GPS-verified clock-ins at care homes provide the audit trail regulators and families expect.</li>
+                </ul>
+                <p><strong>The outcome:</strong> Regulator-ready attendance records with overtime safely controlled across every facility.</p>
+                <p><a href="healthcare-staffing-attendance.html">Read about healthcare staffing attendance →</a></p>
             </div>
         </div>
     </section>
@@ -201,6 +334,81 @@
                         <p>Employees clock in from their phone at any client location. You get one real-time dashboard across all companies, with anomaly detection and insights.</p>
                     </div>
                 </div>
+                <div class="step-connector"></div>
+                <div class="step reveal">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Approve and Export Payroll</h3>
+                        <p>Review flagged shifts, approve verified hours, and export payroll-ready reports as CSV or PDF — or generate salary slips and SEPA bank files directly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="section" id="comparison">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Why Switch</span>
+                <h2 class="section-title">Chegatta vs. spreadsheets vs. paper time cards</h2>
+                <p class="section-subtitle">Most multi-site businesses don't switch because of features — they switch because of what manual tracking costs them in errors, disputes, and payroll prep time.</p>
+            </div>
+            <div class="comparison-table-wrap" style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08);">
+                    <thead>
+                        <tr style="background: #4f46e5; color: white;">
+                            <th style="padding: 1rem; text-align: left; font-size: 0.9rem;"></th>
+                            <th style="padding: 1rem; text-align: center; font-size: 0.9rem;">Chegatta</th>
+                            <th style="padding: 1rem; text-align: center; font-size: 0.9rem;">Spreadsheets</th>
+                            <th style="padding: 1rem; text-align: center; font-size: 0.9rem;">Paper time cards</th>
+                        </tr>
+                    </thead>
+                    <tbody style="font-size: 0.9rem;">
+                        <tr style="border-bottom: 1px solid #e5e7eb;">
+                            <td style="padding: 0.9rem 1rem; font-weight: 600;">Proves who was on site</td>
+                            <td style="padding: 0.9rem; text-align: center; color: #059669;">GPS + geofence evidence</td>
+                            <td style="padding: 0.9rem; text-align: center; color: #dc2626;">Self-reported</td>
+                            <td style="padding: 0.9rem; text-align: center; color: #dc2626;">Easily forged</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e5e7eb;">
+                            <td style="padding: 0.9rem 1rem; font-weight: 600;">Stops buddy punching</td>
+                            <td style="padding: 0.9rem; text-align: center; color: #059669;">Device fingerprinting</td>
+                            <td style="padding: 0.9rem; text-align: center; color: #dc2626;">Impossible to detect</td>
+                            <td style="padding: 0.9rem; text-align: center; color: #dc2626;">Impossible to detect</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e5e7eb;">
+                            <td style="padding: 0.9rem 1rem; font-weight: 600;">Break and overtime tracking</td>
+                            <td style="padding: 0.9rem; text-align: center; color: #059669;">Automatic, per-site rules</td>
+                            <td style="padding: 0.9rem; text-align: center; color: #f59e0b;">Manual calculation</td>
+                            <td style="padding: 0.9rem; text-align: center; color: #f59e0b;">Manual calculation</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e5e7eb;">
+                            <td style="padding: 0.9rem 1rem; font-weight: 600;">Multi-site visibility</td>
+                            <td style="padding: 0.9rem; text-align: center; color: #059669;">One dashboard, all sites</td>
+                            <td style="padding: 0.9rem; text-align: center; color: #f59e0b;">One file per site</td>
+                            <td style="padding: 0.9rem; text-align: center; color: #dc2626;">Chased by phone</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e5e7eb;">
+                            <td style="padding: 0.9rem 1rem; font-weight: 600;">Payroll prep time</td>
+                            <td style="padding: 0.9rem; text-align: center; color: #059669;">Minutes — export ready</td>
+                            <td style="padding: 0.9rem; text-align: center; color: #f59e0b;">Hours — manual review</td>
+                            <td style="padding: 0.9rem; text-align: center; color: #dc2626;">Days — re-key everything</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #e5e7eb;">
+                            <td style="padding: 0.9rem 1rem; font-weight: 600;">Dispute evidence</td>
+                            <td style="padding: 0.9rem; text-align: center; color: #059669;">Timestamped audit trail</td>
+                            <td style="padding: 0.9rem; text-align: center; color: #dc2626;">Nothing verifiable</td>
+                            <td style="padding: 0.9rem; text-align: center; color: #f59e0b;">Cards, if kept</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.9rem 1rem; font-weight: 600;">Works offline / no signal</td>
+                            <td style="padding: 0.9rem; text-align: center; color: #059669;">Queued and synced</td>
+                            <td style="padding: 0.9rem; text-align: center; color: #059669;">Yes</td>
+                            <td style="padding: 0.9rem; text-align: center; color: #059669;">Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
@@ -277,6 +485,90 @@
                             <div class="author-name">Anna Klein</div>
                             <div class="author-title">HR Director, Berlin Construct</div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Frequently asked questions</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>How do you track employees who work at different sites?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Each work site has its own GPS geofence (coordinates plus a radius, default 200 m). Employees clock in from their phone browser, and Chegatta captures their coordinates and verifies they are inside the correct site's geofence. Clock-ins outside the fence are flagged for review — never blocked — so shifts always get recorded.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Can employees clock in from their own phone?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. Chegatta is a web app — employees open a URL in their phone browser, no app install required. It is also an installable PWA that works offline: clock-ins taken without connection are queued and replayed automatically via background sync.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>How does Chegatta prevent buddy punching?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Chegatta fingerprints every device from HTTP headers (SHA-256) and compares it against the employee's trusted devices. Shared devices, new devices and frequent device changes are flagged as anomalies for review. Optional per-business settings let you require device approval and cap devices per employee.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>What happens if an employee forgets to clock out?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Missing clock-outs are automatically flagged as anomalies on the dashboard's attention list. Admins can then correct the shift's clock-out time; every correction is written to an audit log and the employee is notified.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Can I see attendance for all my client sites in one dashboard?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. Staffing agencies get a global dashboard that compares attendance metrics across every client company, plus per-company views. Each client can also get their own login to see only their own employees' shifts.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Does it work for employees without smartphones?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. Kiosk mode turns any shared tablet or computer into a time clock. Employees clock in with a PIN or QR scan on the shared device, with JWT-secured device registration — no personal phone needed.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>How long does payroll take with Chegatta?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Hours verified by GPS and device checks are ready to export — no manual timesheet review. Chegatta calculates overtime per site rules, generates salary slips (Recibo de Vencimento) and exports SEPA pain.001 XML for bank transfers. Most businesses cut payroll prep from hours to minutes.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Is Chegatta GDPR compliant?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. Chegatta is built for the EU market: privacy consent is recorded per user, IP addresses and user-agent strings are deleted after 90 days, device data is anonymised on a schedule, and employees can access, rectify and delete their data.</p>
                     </div>
                 </div>
             </div>

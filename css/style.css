@@ -3978,3 +3978,69 @@ select.trial-input {
     color: #fff;
     font-weight: 600;
 }
+
+/* Use case detail sections */
+.use-case {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.use-case h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+}
+
+.use-case p {
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+}
+
+.use-case ul {
+    margin: 1rem 0 1.25rem;
+    padding-left: 0;
+    list-style: none;
+}
+
+.use-case ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.6rem;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.use-case ul li::before {
+    content: "\2713";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #4f46e5;
+    font-weight: 700;
+}
+
+.use-case a {
+    color: #4f46e5;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.use-case a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+    .use-case {
+        padding: 1.25rem;
+    }
+
+    .use-case h3 {
+        font-size: 1.15rem;
+    }
+}
