@@ -169,13 +169,39 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="section" style="padding-bottom: 0;">
+    <section class="uc-hero">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Use Cases</span>
                 <h1 class="section-title">Attendance tracking across multiple sites and clients</h1>
                 <p class="section-subtitle">When your employees work across multiple work sites, venues, and schedules, spreadsheets and paper time cards stop working. Chegatta gives you one system to verify every clock-in with GPS geofencing, prevent buddy punching with device fingerprinting, and export payroll-ready timesheets in minutes.</p>
             </div>
+            <div class="uc-stats">
+                <div class="uc-stat">
+                    <span class="uc-stat-value">6</span>
+                    <span class="uc-stat-label">Industries</span>
+                </div>
+                <div class="uc-stat">
+                    <span class="uc-stat-value">1</span>
+                    <span class="uc-stat-label">Dashboard for all sites</span>
+                </div>
+                <div class="uc-stat">
+                    <span class="uc-stat-value">GPS + QR</span>
+                    <span class="uc-stat-label">Verified clock-ins</span>
+                </div>
+                <div class="uc-stat">
+                    <span class="uc-stat-value">Minutes</span>
+                    <span class="uc-stat-label">Payroll prep, not days</span>
+                </div>
+            </div>
+            <nav class="uc-index" aria-label="Jump to industry">
+                <a href="#security">🛡 Security</a>
+                <a href="#hospitality">🍽 Hospitality &amp; Events</a>
+                <a href="#logistics">🚚 Logistics</a>
+                <a href="#facilities">🧹 Facilities &amp; Cleaning</a>
+                <a href="#retail">🏪 Retail</a>
+                <a href="#healthcare">⚕ Healthcare</a>
+            </nav>
         </div>
     </section>
 
@@ -189,10 +215,19 @@
             </div>
 
             <!-- Security -->
-            <div class="use-case reveal" id="security">
+            <article class="use-case reveal uc-security" id="security">
+                <div class="uc-head">
+                    <div class="uc-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V1l-9-1zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" fill="currentColor"/></svg>
+                    </div>
+                    <div class="uc-head-meta">
+                        <span class="uc-industry">Security Staffing</span>
+
                 <h3>Attendance tracking for security staffing agencies</h3>
-                <p><strong>The problem:</strong> Guards work alone at client sites, often overnight. Without verification, you're paying for hours nobody can confirm — and a single falsified shift at one site can burn a client relationship worth months of revenue.</p>
-                <p><strong>How Chegatta solves it:</strong></p>
+                    </div>
+                </div>
+                <div class="uc-problem"><p>Guards work alone at client sites, often overnight. Without verification, you're paying for hours nobody can confirm — and a single falsified shift at one site can burn a client relationship worth months of revenue.</p></div>
+                <p class="uc-solves">How Chegatta solves it</p>
                 <ul>
                     <li><strong>Geofenced clock-in at every client site</strong> — each guard posts' coordinates are checked against the site's GPS fence (default 200 m radius) at clock-in and clock-out.</li>
                     <li><strong>Device fingerprinting</strong> — SHA-256 device identity catches a guard clocking in a colleague who hasn't arrived yet.</li>
@@ -200,33 +235,42 @@
                     <li><strong>Client visibility</strong> — give each client their own login so they see their site's coverage without emailing you for reports.</li>
                     <li><strong>Offline resilience</strong> — basements and car parks with no signal still capture clock-ins; they sync when the phone reconnects.</li>
                 </ul>
-                <p><strong>The outcome:</strong> Verified coverage evidence for every client site, disputes settled with data, and payroll built from confirmed hours instead of phone-call trust.</p>
-                <p><a href="prevent-buddy-punching.html">Read how buddy punching prevention works →</a></p>
-            </div>
+                <div class="uc-outcome"><svg class="uc-outcome-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg><p>Verified coverage evidence for every client site, disputes settled with data, and payroll built from confirmed hours instead of phone-call trust.</p></div>
+                <p><a class="uc-link" href="prevent-buddy-punching.html">Read how buddy punching prevention works <span class="arrow">&rarr;</span></a></p>
+            </article>
 
             <!-- Hospitality -->
-            <div class="use-case reveal" id="hospitality">
+            <article class="use-case reveal uc-hospitality" id="hospitality">
+                <div class="uc-head">
+                    <div class="uc-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/></svg>
+                    </div>
+                    <div class="uc-head-meta">
+                        <span class="uc-industry">Hospitality &amp; Events</span>
+
                 <h3>Temporary staff tracking for hospitality and events</h3>
-                <p><strong>The problem:</strong> Waiters, kitchen porters and event staff rotate between venues — sometimes several in one week. Paper sign-in sheets at each venue get lost, breaks go unrecorded, and reconciling who worked where at the end of the month eats entire days.</p>
-                <p><strong>How Chegatta solves it:</strong></p>
+                    </div>
+                </div>
+                <div class="uc-problem"><p>Waiters, kitchen porters and event staff rotate between venues — sometimes several in one week. Paper sign-in sheets at each venue get lost, breaks go unrecorded, and reconciling who worked where at the end of the month eats entire days.</p></div>
+                <p class="uc-solves">How Chegatta solves it</p>
                 <ul>
                     <li><strong>One worker, many venues</strong> — assign the same person to multiple sites with an immutable assignment history, so you always know who worked where and when.</li>
                     <li><strong>Automatic break and overtime capture</strong> — pause/resume from the phone; overtime is calculated per site rules without manual maths.</li>
                     <li><strong>Late clock-in handling</strong> — when someone clocks in after their expected start plus grace period, managers are notified immediately with an optional note from the worker.</li>
                     <li><strong>Per-venue attendance comparison</strong> — spot which events consistently run late or understaffed from one dashboard.</li>
                 </ul>
-                <p><strong>The outcome:</strong> Reconciliation drops from days to minutes, and clients receive accurate, itemised hours for every event you staff.</p>
-                <p><a href="temporary-worker-attendance-tracking.html">Read about temporary worker tracking →</a></p>
-            </div>
+                <div class="uc-outcome"><svg class="uc-outcome-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg><p>Reconciliation drops from days to minutes, and clients receive accurate, itemised hours for every event you staff.</p></div>
+                <p><a class="uc-link" href="temporary-worker-attendance-tracking.html">Read about temporary worker tracking <span class="arrow">&rarr;</span></a></p>
+            </article>
         </div>
     </section>
 
     <!-- Mid-page CTA -->
-    <section class="cta-section" style="padding: 2rem 0;">
+    <section class="section" style="padding: 0 0 2rem;">
         <div class="container">
-            <div class="cta-box reveal" style="padding: 2rem;">
-                <h2 class="cta-title" style="font-size: 1.5rem;">See every site on one dashboard</h2>
-                <p class="cta-subtitle">14-day free trial. No credit card. Setup in 5 minutes.</p>
+            <div class="uc-cta-mini reveal">
+                <h2>See every site on one dashboard</h2>
+                <p>14-day free trial. No credit card. Setup in 5 minutes.</p>
                 <a href="https://app.chegatta.com/trial" class="btn btn-primary">Start Free Trial</a>
             </div>
         </div>
@@ -235,71 +279,107 @@
     <section class="features section" style="padding-top: 2rem;">
         <div class="container">
             <!-- Logistics -->
-            <div class="use-case reveal" id="logistics">
+            <article class="use-case reveal uc-logistics" id="logistics">
+                <div class="uc-head">
+                    <div class="uc-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" fill="currentColor"/></svg>
+                    </div>
+                    <div class="uc-head-meta">
+                        <span class="uc-industry">Logistics &amp; Warehousing</span>
+
                 <h3>GPS attendance for logistics and warehousing teams</h3>
-                <p><strong>The problem:</strong> Distribution centres, yards, and delivery hubs run around the clock. Agency workers flow in and out across multiple buildings, missed clock-outs destroy payroll accuracy, and night-shift supervisors have no easy way to confirm headcount at 3 AM.</p>
-                <p><strong>How Chegatta solves it:</strong></p>
+                    </div>
+                </div>
+                <div class="uc-problem"><p>Distribution centres, yards, and delivery hubs run around the clock. Agency workers flow in and out across multiple buildings, missed clock-outs destroy payroll accuracy, and night-shift supervisors have no easy way to confirm headcount at 3 AM.</p></div>
+                <p class="uc-solves">How Chegatta solves it</p>
                 <ul>
                     <li><strong>Per-building geofences</strong> — separate geofence for the warehouse, the yard, and the office, so clock-ins are matched to the right building even within one campus.</li>
                     <li><strong>Missing clock-out detection</strong> — every shift without a clock-out is automatically flagged; admins correct the time and the audit log records who changed what.</li>
                     <li><strong>Rule-based attendance flags</strong> — off-site clock-ins, excessive overtime, and long breaks are detected automatically against each site's configuration.</li>
                     <li><strong>Kiosk mode for shared devices</strong> — mount a tablet at the loading bay; workers clock in with PIN or QR scan, no personal phone required.</li>
                 </ul>
-                <p><strong>The outcome:</strong> Payroll-accurate hours across every building, with supervisors verifying headcount from their phone instead of walking the floor.</p>
-                <p><a href="gps-geofencing.html">Read how GPS geofencing works →</a></p>
-            </div>
+                <div class="uc-outcome"><svg class="uc-outcome-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg><p>Payroll-accurate hours across every building, with supervisors verifying headcount from their phone instead of walking the floor.</p></div>
+                <p><a class="uc-link" href="gps-geofencing.html">Read how GPS geofencing works <span class="arrow">&rarr;</span></a></p>
+            </article>
 
             <!-- Facilities & Cleaning -->
-            <div class="use-case reveal" id="facilities">
+            <article class="use-case reveal uc-facilities" id="facilities">
+                <div class="uc-head">
+                    <div class="uc-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" fill="currentColor"/></svg>
+                    </div>
+                    <div class="uc-head-meta">
+                        <span class="uc-industry">Facilities &amp; Cleaning</span>
+
                 <h3>Cleaning and facilities management attendance</h3>
-                <p><strong>The problem:</strong> Cleaning crews work early mornings and nights when nobody from your team is on site to supervise. Clients question whether the clean actually happened, and billing is a negotiation because you can't prove attendance.</p>
-                <p><strong>How Chegatta solves it:</strong></p>
+                    </div>
+                </div>
+                <div class="uc-problem"><p>Cleaning crews work early mornings and nights when nobody from your team is on site to supervise. Clients question whether the clean actually happened, and billing is a negotiation because you can't prove attendance.</p></div>
+                <p class="uc-solves">How Chegatta solves it</p>
                 <ul>
                     <li><strong>Proof-of-presence per building</strong> — geofenced clock-in with GPS capture at both events, giving you timestamped evidence of attendance at each client location.</li>
                     <li><strong>Attention scoring</strong> — a weighted score surfaces cleaners with recurring lateness or missed shifts, so you fix problems before clients complain.</li>
                     <li><strong>Billing-ready shift data</strong> — export verified hours per client site as CSV or PDF, itemised and ready to attach to invoices.</li>
                     <li><strong>Client self-service portal</strong> — clients with their own login check coverage themselves; your account managers stop fielding "was the cleaner there?" calls.</li>
                 </ul>
-                <p><strong>The outcome:</strong> Every invoice backed by verified attendance data, and churn driven down by transparency.</p>
-                <p><a href="multi-company-time-and-attendance.html">Read about multi-company time and attendance →</a></p>
-            </div>
+                <div class="uc-outcome"><svg class="uc-outcome-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg><p>Every invoice backed by verified attendance data, and churn driven down by transparency.</p></div>
+                <p><a class="uc-link" href="multi-company-time-and-attendance.html">Read about multi-company time and attendance <span class="arrow">&rarr;</span></a></p>
+            </article>
 
             <!-- Mid-page CTA -->
-            <div class="cta-box reveal" style="padding: 2rem; margin: 2rem 0;">
-                <h2 class="cta-title" style="font-size: 1.5rem;">Prove attendance to every client</h2>
-                <p class="cta-subtitle">Verified GPS hours, exportable in one click.</p>
+            <div class="uc-cta-mini reveal">
+                <h2>Prove attendance to every client</h2>
+                <p>Verified GPS hours, exportable in one click.</p>
                 <a href="https://app.chegatta.com/trial" class="btn btn-primary">Start Free Trial</a>
             </div>
 
             <!-- Retail -->
-            <div class="use-case reveal" id="retail">
+            <article class="use-case reveal uc-retail" id="retail">
+                <div class="uc-head">
+                    <div class="uc-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm0 10c-2.76 0-5-2.24-5-5h2c0 1.66 1.34 3 3 3s3-1.34 3-3h2c0 2.76-2.24 5-5 5z" fill="currentColor"/></svg>
+                    </div>
+                    <div class="uc-head-meta">
+                        <span class="uc-industry">Retail &amp; FMCG</span>
+
                 <h3>Multi-store attendance for retail and FMCG businesses</h3>
-                <p><strong>The problem:</strong> One pool of workers staffs many stores. Weekend rotations, holiday cover, and store-level overtime rules differ per location — and head office has no single view of who worked where until payroll day.</p>
-                <p><strong>How Chegatta solves it:</strong></p>
+                    </div>
+                </div>
+                <div class="uc-problem"><p>One pool of workers staffs many stores. Weekend rotations, holiday cover, and store-level overtime rules differ per location — and head office has no single view of who worked where until payroll day.</p></div>
+                <p class="uc-solves">How Chegatta solves it</p>
                 <ul>
                     <li><strong>Unlimited sites on Business plan</strong> — one business, many stores; each store has its own geofence, QR code, and default shift times.</li>
                     <li><strong>Per-store attendance comparison</strong> — compare lateness, overtime and absence across every store from the owner dashboard.</li>
                     <li><strong>Scheduled shifts with expected times</strong> — rota the week ahead; lateness is measured against the schedule automatically.</li>
                     <li><strong>Payroll runs and salary slips</strong> — batch-calculate pay per store, generate Recibo de Vencimento slips, and export SEPA files for the bank.</li>
                 </ul>
-                <p><strong>The outcome:</strong> Head office sees every store's attendance in real time, and payroll runs from verified data instead of store-manager emails.</p>
-                <p><a href="attendance-tracking-software.html">Read about attendance tracking software →</a></p>
-            </div>
+                <div class="uc-outcome"><svg class="uc-outcome-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg><p>Head office sees every store's attendance in real time, and payroll runs from verified data instead of store-manager emails.</p></div>
+                <p><a class="uc-link" href="attendance-tracking-software.html">Read about attendance tracking software <span class="arrow">&rarr;</span></a></p>
+            </article>
 
             <!-- Healthcare -->
-            <div class="use-case reveal" id="healthcare">
+            <article class="use-case reveal uc-healthcare" id="healthcare">
+                <div class="uc-head">
+                    <div class="uc-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14h-2v-4H6v-2h4V7h2v4h4v2h-4v4z" fill="currentColor"/></svg>
+                    </div>
+                    <div class="uc-head-meta">
+                        <span class="uc-industry">Healthcare &amp; Care</span>
+
                 <h3>Attendance compliance for healthcare staffing</h3>
-                <p><strong>The problem:</strong> Nurses and carers work across care homes, clinics, and home-visit routes. Overtime caps are a safety issue, not just a cost issue — and regulators expect accurate, auditable records of who cared for whom, when.</p>
-                <p><strong>How Chegatta solves it:</strong></p>
+                    </div>
+                </div>
+                <div class="uc-problem"><p>Nurses and carers work across care homes, clinics, and home-visit routes. Overtime caps are a safety issue, not just a cost issue — and regulators expect accurate, auditable records of who cared for whom, when.</p></div>
+                <p class="uc-solves">How Chegatta solves it</p>
                 <ul>
                     <li><strong>Overtime control per site</strong> — excessive-overtime flags are configured per location, protecting both residents and staff from unsafe consecutive hours.</li>
                     <li><strong>Auditable time corrections</strong> — every manual adjustment to a shift time is logged with who made it and when; the worker is notified automatically.</li>
                     <li><strong>Compliance monitoring by country</strong> — EU Working Time Directive rules applied per site; compliance issues surface before they become reportable incidents.</li>
                     <li><strong>Verified attendance records</strong> — GPS-verified clock-ins at care homes provide the audit trail regulators and families expect.</li>
                 </ul>
-                <p><strong>The outcome:</strong> Regulator-ready attendance records with overtime safely controlled across every facility.</p>
-                <p><a href="healthcare-staffing-attendance.html">Read about healthcare staffing attendance →</a></p>
-            </div>
+                <div class="uc-outcome"><svg class="uc-outcome-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg><p>Regulator-ready attendance records with overtime safely controlled across every facility.</p></div>
+                <p><a class="uc-link" href="healthcare-staffing-attendance.html">Read about healthcare staffing attendance <span class="arrow">&rarr;</span></a></p>
+            </article>
         </div>
     </section>
 
@@ -354,58 +434,58 @@
                 <h2 class="section-title">Chegatta vs. spreadsheets vs. paper time cards</h2>
                 <p class="section-subtitle">Most multi-site businesses don't switch because of features — they switch because of what manual tracking costs them in errors, disputes, and payroll prep time.</p>
             </div>
-            <div class="comparison-table-wrap" style="overflow-x: auto;">
-                <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08);">
+            <div class="uc-compare" style="overflow-x: auto;">
+                <table>
                     <thead>
-                        <tr style="background: #4f46e5; color: white;">
-                            <th style="padding: 1rem; text-align: left; font-size: 0.9rem;"></th>
-                            <th style="padding: 1rem; text-align: center; font-size: 0.9rem;">Chegatta</th>
-                            <th style="padding: 1rem; text-align: center; font-size: 0.9rem;">Spreadsheets</th>
-                            <th style="padding: 1rem; text-align: center; font-size: 0.9rem;">Paper time cards</th>
+                        <tr>
+                            <th></th>
+                            <th>Chegatta</th>
+                            <th>Spreadsheets</th>
+                            <th>Paper time cards</th>
                         </tr>
                     </thead>
-                    <tbody style="font-size: 0.9rem;">
-                        <tr style="border-bottom: 1px solid #e5e7eb;">
-                            <td style="padding: 0.9rem 1rem; font-weight: 600;">Proves who was on site</td>
-                            <td style="padding: 0.9rem; text-align: center; color: #059669;">GPS + geofence evidence</td>
-                            <td style="padding: 0.9rem; text-align: center; color: #dc2626;">Self-reported</td>
-                            <td style="padding: 0.9rem; text-align: center; color: #dc2626;">Easily forged</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #e5e7eb;">
-                            <td style="padding: 0.9rem 1rem; font-weight: 600;">Stops buddy punching</td>
-                            <td style="padding: 0.9rem; text-align: center; color: #059669;">Device fingerprinting</td>
-                            <td style="padding: 0.9rem; text-align: center; color: #dc2626;">Impossible to detect</td>
-                            <td style="padding: 0.9rem; text-align: center; color: #dc2626;">Impossible to detect</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #e5e7eb;">
-                            <td style="padding: 0.9rem 1rem; font-weight: 600;">Break and overtime tracking</td>
-                            <td style="padding: 0.9rem; text-align: center; color: #059669;">Automatic, per-site rules</td>
-                            <td style="padding: 0.9rem; text-align: center; color: #f59e0b;">Manual calculation</td>
-                            <td style="padding: 0.9rem; text-align: center; color: #f59e0b;">Manual calculation</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #e5e7eb;">
-                            <td style="padding: 0.9rem 1rem; font-weight: 600;">Multi-site visibility</td>
-                            <td style="padding: 0.9rem; text-align: center; color: #059669;">One dashboard, all sites</td>
-                            <td style="padding: 0.9rem; text-align: center; color: #f59e0b;">One file per site</td>
-                            <td style="padding: 0.9rem; text-align: center; color: #dc2626;">Chased by phone</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #e5e7eb;">
-                            <td style="padding: 0.9rem 1rem; font-weight: 600;">Payroll prep time</td>
-                            <td style="padding: 0.9rem; text-align: center; color: #059669;">Minutes — export ready</td>
-                            <td style="padding: 0.9rem; text-align: center; color: #f59e0b;">Hours — manual review</td>
-                            <td style="padding: 0.9rem; text-align: center; color: #dc2626;">Days — re-key everything</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid #e5e7eb;">
-                            <td style="padding: 0.9rem 1rem; font-weight: 600;">Dispute evidence</td>
-                            <td style="padding: 0.9rem; text-align: center; color: #059669;">Timestamped audit trail</td>
-                            <td style="padding: 0.9rem; text-align: center; color: #dc2626;">Nothing verifiable</td>
-                            <td style="padding: 0.9rem; text-align: center; color: #f59e0b;">Cards, if kept</td>
+                    <tbody>
+                        <tr>
+                            <td>Proves who was on site</td>
+                            <td class="yes">GPS + geofence evidence</td>
+                            <td class="no">Self-reported</td>
+                            <td class="no">Easily forged</td>
                         </tr>
                         <tr>
-                            <td style="padding: 0.9rem 1rem; font-weight: 600;">Works offline / no signal</td>
-                            <td style="padding: 0.9rem; text-align: center; color: #059669;">Queued and synced</td>
-                            <td style="padding: 0.9rem; text-align: center; color: #059669;">Yes</td>
-                            <td style="padding: 0.9rem; text-align: center; color: #059669;">Yes</td>
+                            <td>Stops buddy punching</td>
+                            <td class="yes">Device fingerprinting</td>
+                            <td class="no">Impossible to detect</td>
+                            <td class="no">Impossible to detect</td>
+                        </tr>
+                        <tr>
+                            <td>Break and overtime tracking</td>
+                            <td class="yes">Automatic, per-site rules</td>
+                            <td class="mid">Manual calculation</td>
+                            <td class="mid">Manual calculation</td>
+                        </tr>
+                        <tr>
+                            <td>Multi-site visibility</td>
+                            <td class="yes">One dashboard, all sites</td>
+                            <td class="mid">One file per site</td>
+                            <td class="no">Chased by phone</td>
+                        </tr>
+                        <tr>
+                            <td>Payroll prep time</td>
+                            <td class="yes">Minutes — export ready</td>
+                            <td class="mid">Hours — manual review</td>
+                            <td class="no">Days — re-key everything</td>
+                        </tr>
+                        <tr>
+                            <td>Dispute evidence</td>
+                            <td class="yes">Timestamped audit trail</td>
+                            <td class="no">Nothing verifiable</td>
+                            <td class="mid">Cards, if kept</td>
+                        </tr>
+                        <tr>
+                            <td>Works offline / no signal</td>
+                            <td class="yes">Queued and synced</td>
+                            <td class="mid">Yes</td>
+                            <td class="mid">Yes</td>
                         </tr>
                     </tbody>
                 </table>
