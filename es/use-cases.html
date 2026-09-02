@@ -3,89 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Software de fichaje para agencias de trabajo temporal. Gestiona empleados en varios centros de trabajo con fichaje por geolocalización, análisis en tiempo real e insights con IA.">
+    <meta name="description" content="Descubre cómo las agencias de trabajo temporal y empresas con varios centros usan Chegatta: fichaje verificado por GPS en todas las ubicaciones, prevención de buddy punching y nóminas listas para procesar.">
     <meta name="theme-color" content="#4f46e5">
     <link rel="canonical" href="https://chegatta.com/es/use-cases.html">
-    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-    <link rel="alternate" hreflang="en" href="https://chegatta.com/use-cases.html">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="alternate" hreflang="es" href="https://chegatta.com/es/use-cases.html">
     <link rel="alternate" hreflang="pt" href="https://chegatta.com/pt/use-cases.html">
-    <link rel="alternate" hreflang="x-default" href="https://chegatta.com/">
-    <title>Fichaje para Agencias de Trabajo Temporal — Chegatta</title>
+    <link rel="alternate" hreflang="x-default" href="https://chegatta.com/es/use-cases.html">
+    <title>Casos de Uso: Control de Asistencia en Varios Centros — Chegatta</title>
+
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Chegatta">
     <meta property="og:url" content="https://chegatta.com/es/use-cases.html">
-    <meta property="og:title" content="Fichaje para Agencias — Chegatta">
-    <meta property="og:description" content="Gestiona la asistencia de empleados asignados a varios centros de trabajo. Fichaje por geolocalización, análisis en tiempo real e insights con IA.">
+    <meta property="og:title" content="Casos de Uso: Control de Asistencia en Varios Centros — Chegatta">
+    <meta property="og:description" content="Cómo empresas de seguridad, hostelería, logística, salud, limpieza y construcción verifican cada fichaje con geolocalización GPS, previenen buddy punching y reducen el procesamiento de nóminas a minutos.">
     <meta property="og:image" content="https://chegatta.com/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:locale" content="es_ES">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Fichaje para Agencias — Chegatta">
-    <meta name="twitter:description" content="Fichaje por geolocalización e insights con IA para agencias que gestionan empleados en varias empresas.">
+    <meta name="twitter:title" content="Casos de Uso: Control de Asistencia en Varios Centros — Chegatta">
+    <meta name="twitter:description" content="Fichaje verificado por GPS, prevención de buddy punching y nóminas listas para procesar para empresas multi-centro y agencias.">
     <meta name="twitter:image" content="https://chegatta.com/og-image.png">
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Fichaje para Agencias de Trabajo Temporal",
-        "description": "Software de fichaje para agencias de trabajo temporal que gestionan empleados en varios centros de trabajo.",
-        "url": "https://chegatta.com/es/use-cases.html",
-        "isPartOf": { "@type": "WebSite", "name": "Chegatta", "url": "https://chegatta.com" }
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do you track employees who work at different sites?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Each work site has its own GPS geofence (coordinates plus a radius, default 200 m). Employees clock in from their phone browser, and Chegatta captures their coordinates and verifies they are inside the correct site's geofence. Clock-ins outside the fence are flagged for review — never blocked — so shifts always get recorded."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Los empleados pueden fichar desde su propio móvil?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Chegatta is a web app — employees open a URL in their phone browser, no app install required. It is also an installable PWA that works offline: clock-ins taken without connection are queued and replayed automatically via background sync."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does Chegatta prevent buddy punching?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Chegatta fingerprints every device from HTTP headers (SHA-256) and compares it against the employee's trusted devices. Shared devices, new devices and frequent device changes are flagged as anomalies for review. Optional per-business settings let you require device approval and cap devices per employee."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué pasa si un empleado olvida hacer clockout?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Missing clock-outs are automatically flagged as anomalies on the dashboard's attention list. Admins can then correct the shift's clock-out time; every correction is written to an audit log and the employee is notified."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I see attendance for all my client sites in one dashboard?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Staffing agencies get a global dashboard that compares attendance metrics across every client company, plus per-company views. Each client can also get their own login to see only their own employees' shifts."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does it work for employees without smartphones?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Kiosk mode turns any shared tablet or computer into a time clock. Employees clock in with a PIN or QR scan on the shared device, with JWT-secured device registration — no personal phone needed."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does payroll take with Chegatta?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Horas verified by GPS and device checks are ready to export — no manual timesheet review. Chegatta calculates overtime per site rules, generates salary slips (Recibo de Vencimento) and exports SEPA pain.001 XML for bank transfers. Most businesses cut payroll prep from hours to minutes."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Chegatta GDPR compliant?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Chegatta is built for the EU market: privacy consent is recorded per user, IP addresses and user-agent strings are deleted after 90 days, device data is anonymised on a schedule, and employees can access, rectify and delete their data."
+                }
+            }
+        ]
     }
     </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/i18n.js"></script>
-    <script src="../js/lang-switcher.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- i18n: Language detection & switcher (must load early) -->
+    <script src="js/i18n.js"></script>
+    <script src="js/lang-switcher.js"></script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://chegatta.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Use Cases",
+            "item": "https://chegatta.com/es/use-cases.html"
+        }
+    ]
+}
+    </script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="index.html" class="nav-logo">
-                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/>
-                </svg>
+                <img src="logo.png" alt="Chegatta" class="logo-img" loading="lazy">
                 <span>Chegatta</span>
             </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="features.html">Funciones</a></li>
-                <li><a href="pricing.html">Precios</a></li>
-                <li><a href="demo.html">Demo</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="index.html#how-it-works">Cómo Funciona</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+<li><a href="demo.html">Demo</a></li>
                 <li class="nav-dropdown">
-                    <a href="#" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Soluciones</a>
+                    <a href="#" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">Solutions</a>
                     <ul class="nav-dropdown-menu">
-                        <li><a href="control-horario.html">Control Horario</a></li>
-                        <li><a href="attendance-tracking-software.html">Software de asistencia</a></li>
-                        <li><a href="attendance-software-for-staffing-agencies.html">Agencias de Trabajo Temporal</a></li>
-                        <li><a href="employee-clock-in-app-for-staffing-agencies.html">App de Fichaje</a></li>
-                        <li><a href="kiosk-time-clock.html">Reloj Kiosco</a></li>
-                        <li><a href="payroll-compliance-software.html">Nómina</a></li>
-                        <li><a href="hr-platform.html">Plataforma de RRHH</a></li>
-                        <li><a href="buddy-punching-prevention.html">Prevención de Buddy Punching</a></li>
-                        <li><a href="compliance-requirements.html">Requisitos de Cumplimiento</a></li>
-                        <li><a href="gps-geofencing.html">GPS vs Geocercas</a></li>
-                        <li><a href="free-vs-paid.html">Gratis vs de Pago</a></li>
-                        <li><a href="use-cases.html">Casos de uso</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="employee-clock-in-app-for-staffing-agencies.html">Clock-In App</a></li>
+                        <li><a href="kiosk-time-clock.html">Kiosk Time Clock</a></li>
+                        <li><a href="payroll-compliance-software.html">Payroll &amp; Compliance</a></li>
+                        <li><a href="hr-platform.html">HR Platform</a></li>
+                        <li><a href="use-cases.html">Use Cases</a></li>
                     </ul>
                 </li>
-                <li><a href="index.html#how-it-works">Cómo funciona</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="index.html#faq">Preguntas frecuentes</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
                 <li class="nav-cta-mobile">
-                    <a href="https://app.chegatta.com/trial" class="btn btn-primary btn-sm">Empezar</a>
+                    <a href="https://app.chegatta.com/trial" class="btn btn-primary btn-sm">Get Started</a>
                 </li>
             </ul>
 
             <div class="nav-actions">
-                <a href="https://app.chegatta.com/trial" class="btn btn-primary btn-sm">Empezar</a>
+                <a href="https://app.chegatta.com/trial" class="btn btn-primary btn-sm">Get Started</a>
             </div>
-            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -93,54 +168,438 @@
         </div>
     </nav>
 
-    <section class="section">
+    <!-- Page Header -->
+    <section class="uc-hero">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Casos de uso</span>
-                <h1 class="section-title">Construido para agencias de trabajo temporal</h1>
-                <p class="section-subtitle">Chegatta está diseñado específicamente para agencias que gestionan empleados en varias empresas cliente. Cada caso de uso siguiente muestra cómo la plataforma se adapta a tus necesidades.</p>
+                <span class="section-tag">Use Cases</span>
+                <h1 class="section-title">Fichaje en mñltiples sitios y clientes</h1>
+                <p class="section-subtitle">When your employees work across multiple work sites, venues, and schedules, spreadsheets and paper time cards stop working. Chegatta gives you one system to verify every clock-in with GPS geofencing, prevent buddy punching with device fingerprinting, and export payroll-ready timesheets in minutes.</p>
             </div>
-            <div class="features-grid">
-                <div class="feature-card reveal">
-                    <div class="feature-icon icon-blue"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/></svg></div>
-                    <h3>Múltiples empresas cliente</h3>
-                    <p>Gestiona empleados asignados a decenas de empresas cliente. Cada empresa tiene su geocerca, reglas de turno y dashboard de asistencia.</p>
+            <div class="uc-stats">
+                <div class="uc-stat">
+                    <span class="uc-stat-value">6</span>
+                    <span class="uc-stat-label">Industries</span>
                 </div>
-                <div class="feature-card reveal">
-                    <div class="feature-icon icon-green"><svg viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg></div>
-                    <h3>Rotaciones e historial</h3>
-                    <p>Realiza el seguimiento de las rotaciones de empleados entre empresas. Consulta el historial completo de asignaciones y mantén registros de auditoría para el cumplimiento.</p>
+                <div class="uc-stat">
+                    <span class="uc-stat-value">1</span>
+                    <span class="uc-stat-label">Dashboard for all sites</span>
                 </div>
-                <div class="feature-card reveal">
-                    <div class="feature-icon icon-purple"><svg viewBox="0 0 24 24" fill="none"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z" fill="currentColor"/></svg></div>
-                    <h3>Dashboard global</h3>
-                    <p>Compara métricas de asistencia entre todas las empresas cliente. Identifica tendencias, detecta anomalías y toma decisiones informadas.</p>
+                <div class="uc-stat">
+                    <span class="uc-stat-value">GPS + QR</span>
+                    <span class="uc-stat-label">Verified clock-ins</span>
                 </div>
-                <div class="feature-card reveal">
-                    <div class="feature-icon icon-orange"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z" fill="currentColor"/></svg></div>
-                    <h3>Alertas inteligentes</h3>
-                    <p>Recibe notificaciones en tiempo real por fichajes fuera de ubicación, olvidos de fichaje de salida, llegadas tarde y horas extra excesivas.</p>
+                <div class="uc-stat">
+                    <span class="uc-stat-value">Minutos</span>
+                    <span class="uc-stat-label">Payroll prep, not days</span>
                 </div>
-                <div class="feature-card reveal">
-                    <div class="feature-icon icon-red"><svg viewBox="0 0 24 24" fill="none"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" fill="currentColor"/></svg></div>
-                    <h3>Exportaciones para nómina</h3>
-                    <p>Exporta horas verificadas para el procesamiento de nómina y facturación. Elimina la revisión manual de hojas de horas.</p>
+            </div>
+            <nav class="uc-index" aria-label="Jump to industry">
+                <a href="#security">🛡 Security</a>
+                <a href="#hospitality">🍽 Hospitality &amp; Events</a>
+                <a href="#logistics">🚚 Logistics</a>
+                <a href="#facilities">🧹 Facilities &amp; Cleaning</a>
+                <a href="#retail">🏪 Retail</a>
+                <a href="#healthcare">⚕ Healthcare</a>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Industry Use Cases -->
+    <section class="features section" id="industries">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Who It's For</span>
+                <h2 class="section-title">Built for the sectors you serve</h2>
+                <p class="section-subtitle">Every industry below shares the same core challenge: verifying that people were where they said, when they said — without drowning admin teams in timesheets.</p>
+            </div>
+
+            <!-- Security -->
+            <article class="use-case reveal uc-security" id="security">
+                <div class="uc-head">
+                    <div class="uc-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V1l-9-1zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" fill="currentColor"/></svg>
+                    </div>
+                    <div class="uc-head-meta">
+                        <span class="uc-industry">Security Staffing</span>
+
+                <h3>Fichaje para agencias de seguridad</h3>
+                    </div>
                 </div>
-                <div class="feature-card reveal">
-                    <div class="feature-icon icon-teal"><svg viewBox="0 0 24 24" fill="none"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.21-4.61 1.35-6.93-.21-.52-.48-1.02-.8-1.47l1.8-1.8c1.18 1.27 1.87 2.94 1.87 4.72 0 .34-.03.67-.07.99.61.34 1.16.78 1.62 1.32.72-.6 1.2-1.48 1.2-2.49 0-1.79-1.45-3.24-3.24-3.24-.39 0-.76.07-1.11.2-.36-1.07-.95-2.04-1.72-2.84.84-.53 1.83-.84 2.83-.84 3.31 0 6 2.69 6 6 0 2.97-2.16 5.44-5 5.92v.08z" fill="currentColor"/></svg></div>
-                    <h3>Cumplimiento multi-país</h3>
-                    <p>Cada centro de trabajo tiene su propio motor de legislación laboral. Directiva de tiempo de trabajo de la UE, reglas de horas extra por país, calendarios de festivos.</p>
+                <div class="uc-problem"><p>Guards work alone at client sites, often overnight. Without verification, you're paying for hours nobody can confirm — and a single falsified shift at one site can burn a client relationship worth months of revenue.</p></div>
+                <p class="uc-solves">Cómo resuelve Chegatta</p>
+                <ul>
+                    <li><strong>Geofenced clock-in at every client site</strong> — each guard posts' coordinates are checked against the site's GPS fence (default 200 m radius) at clock-in and clock-out.</li>
+                    <li><strong>Device fingerprinting</strong> — SHA-256 device identity catches a guard clocking in a colleague who hasn't arrived yet.</li>
+                    <li><strong>Late-start and early-leave flags</strong> — shifts that start late or end early against the scheduled rota appear on the attention list in real time.</li>
+                    <li><strong>Client visibility</strong> — give each client their own login so they see their site's coverage without emailing you for reports.</li>
+                    <li><strong>Offline resilience</strong> — basements and car parks with no signal still capture clock-ins; they sync when the phone reconnects.</li>
+                </ul>
+                <div class="uc-outcome"><svg class="uc-outcome-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg><p>Verified coverage evidence for every client site, disputes settled with data, and payroll built from confirmed hours instead of phone-call trust.</p></div>
+                <p><a class="uc-link" href="prevent-buddy-punching.html">Read how buddy punching prevention works <span class="arrow">&rarr;</span></a></p>
+            </article>
+
+            <!-- Hospitality -->
+            <article class="use-case reveal uc-hospitality" id="hospitality">
+                <div class="uc-head">
+                    <div class="uc-icon">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/></svg>
+                    </div>
+                    <div class="uc-head-meta">
+                        <span class="uc-industry">Hostelería y Eventos</span>
+
+                <h3>Fichaje de personal temporal para hostelería y eventos</h3>
+                    </div>
+                </div>
+                <div class="uc-problem"><p>Camareros, cocineros y staff de eventos rotan entre centros — a veces varios en una semana. Las hojas de firma en papel se pierden, los descansos no se registran, y reconciliar quién trabajó dónde al final del mes consume días enteros.</p></div>
+                <p class="uc-solves">Cómo resuelve Chegatta</p>
+                <ul>
+                    <li><strong>Un trabajador, varios centros</strong> — asigna la misma persona a múltiples centros con un historial inmutable, para saber siempre quién trabajó dónde y cuándo.</li>
+                    <li><strong>Captura automática de descansos y horas extra</strong> — pausa/reanudar desde el móvil; horas extra calculadas por reglas del centro sin cálculos manuales.</li>
+                    <li><strong>Tratamiento de fichaje tardío</strong> — cuando alguien fichas después del inicio esperado más período de gracia, los gestores son notificados inmediatamente con una nota opcional del trabajador.</li>
+                    <li><strong>Comparación de asistencia por centro</strong> — identifica qué eventos consistentemente empiezan tarde o tienen poco personal desde un solo panel.</li>
+                </ul>
+                <div class="uc-outcome"><svg class="uc-outcome-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg><p>La reconciliación cae de días a minutos, y los clientes reciben horas exactas y detalladas para cada evento.</p></div>
+                <p><a class="uc-link" href="temporary-worker-attendance-tracking.html">Lee sobre fichaje de trabajadores temporales <span class="arrow">&rarr;</span></a></p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Mid-page CTA -->
+    <section class="section" style="padding: 0 0 2rem;">
+        <div class="container">
+            <div class="uc-cta-mini reveal">
+                <div class="uc-cta-mini-body">
+                    <h2>Ve todos los sitios en un solo panel</h2>
+                    <p>Un login para todas tus ubicaciones y sitios de clientes — verified hours, alerts and exports.</p>
+                    <ul class="uc-cta-mini-chips">
+                        <li>14 días de prueba gratis</li>
+                        <li>Sin tarjeta de crédito</li>
+                        <li>Setup in 5 minutes</li>
+                    </ul>
+                </div>
+                <div class="uc-cta-mini-actions">
+                    <a href="https://app.chegatta.com/trial" class="btn">Start Gratis Trial <span class="btn-arrow">&rarr;</span></a>
+                    <a href="pricing.html" class="uc-cta-mini-alt">Comparar planes</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="features section" style="padding-top: 2rem;">
+        <div class="container">
+            <!-- Logistics -->
+            <article class="use-case reveal uc-logistics" id="logistics"><div class="uc-head"><div class="uc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" fill="currentColor"/></svg></div><div class="uc-head-meta"><span class="uc-industry">Logística y Almacenamiento</span><h3>Fichaje GPS para equipos de logística y almacenes</h3></div></div><div class="uc-problem"><p>Centros de distribución, almacenes y hubs de reparto funcionan 24/7. Trabajadores temporales fluyen entre varios edificios, clockouts faltantes destruyen la precisión de la nómina.</p></div><p class="uc-solves">Cómo resuelve Chegatta</p><ul><li><strong>Geofence por edificio</strong> — geofence separado para el almacén, exterior y oficina.</li><li><strong>Detección de clockout faltante</strong> — cada turno sin clockout se señala automáticamente.</li><li><strong>Alertas de asistencia basadas en reglas</strong> — fichajes fuera del centro, horas extra excesivas y descansos largos se detectan automáticamente.</li><li><strong>Modo kiosco para dispositivos compartidos</strong> — monte una tableta en la zona de cargas.</li></ul><div class="uc-outcome"><svg class="uc-outcome-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg><p>Horas con precisión para nómina en cada edificio.</p></div><p><a class="uc-link" href="gps-geofencing.html">Lee cómo funciona el geofencing GPS <span class="arrow">&rarr;</span></a></p></article>
+
+            <!-- Facilities & Cleaning -->
+            <article class="use-case reveal uc-facilities" id="facilities"><div class="uc-head"><div class="uc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z" fill="currentColor"/></svg></div><div class="uc-head-meta"><span class="uc-industry">Limpieza e Instalaciones</span><h3>Control de fichajes para equipos de limpieza e instalaciones</h3></div></div><div class="uc-problem"><p>Equipos de limpieza e instalaciones trabajan en múltiples ubicaciones, frecuentemente fuera del horario comercial. Los clientes quieren prueba de presencia, los trabajadores pueden no tener móvil, y los supervisores no pueden visitar todas las ubicaciones todas las noches.</p></div><p class="uc-solves">Cómo resuelve Chegatta</p><ul><li><strong>Fichaje por QR code</strong> — imprima y fije un QR code en cada ubicación.</li><li><strong>Modo kiosco para dispositivos compartidos</strong> — deje una tableta en el lugar de trabajo.</li><li><strong>Geofence por ubicación</strong> — cada ubicación tiene su geofence.</li><li><strong>Informes por cliente</strong> — exporte informes de asistencia por cliente para facturación.</li></ul><div class="uc-outcome"><svg class="uc-outcome-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg><p>Facturación precisa para cada cliente, con prueba de presencia que elimina disputas.</p></div><p><a class="uc-link" href="multi-company-time-and-attendance.html">Lee cómo funciona para equipos de limpieza <span class="arrow">&rarr;</span></a></p></article>
+
+            <!-- Mid-page CTA -->
+            <div class="uc-cta-mini reveal">
+                <div class="uc-cta-mini-body">
+                    <h2>Prueba asistencia a cada cliente</h2>
+                    <p>Apoya cada factura y disputa con horas verificadas por GPS, listas para nómina.</p>
+                    <ul class="uc-cta-mini-chips">
+                        <li>Fichajes verificados por GPS</li>
+                        <li>Exportaciones SEPA + CSV</li>
+                        <li>Portal de auto-servicio del cliente</li>
+                    </ul>
+                </div>
+                <div class="uc-cta-mini-actions">
+                    <a href="https://app.chegatta.com/trial" class="btn">Start Gratis Trial <span class="btn-arrow">&rarr;</span></a>
+                    <a href="pricing.html" class="uc-cta-mini-alt">Comparar planes</a>
+                </div>
+            </div>
+
+            <!-- Retail -->
+            <article class="use-case reveal uc-retail" id="retail"><div class="uc-head"><div class="uc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" fill="currentColor"/></svg></div><div class="uc-head-meta"><span class="uc-industry">Retail y FMCG</span><h3>Control de fichajes para retail y FMCG</h3></div></div><div class="uc-problem"><p>Tiendas de retail y empresas FMCG tienen múltiples ubicaciones, horarios variables y alta rotación. Los gerentes de tienda necesitan una forma simple de gestionar la asistencia sin formación extensiva.</p></div><p class="uc-solves">Cómo resuelve Chegatta</p><ul><li><strong>Fichaje por QR code</strong> — cada tienda tiene su QR code.</li><li><strong>Geofence por tienda</strong> — geofence por ubicación.</li><li><strong>Panel centralizado</strong> — la sede ve la asistencia de todas las tiendas en tiempo real.</li><li><strong>Auto-servicio del empleado</strong> — los empleados pueden ver su propio historial de asistencia.</li></ul><div class="uc-outcome"><svg class="uc-outcome-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg><p>Visibilidad en tiempo real para la sede, con gerentes de tienda gestionando la asistencia en minutos por día.</p></div><p><a class="uc-link" href="attendance-tracking-software.html">Lee cómo funciona para retail <span class="arrow">&rarr;</span></a></p></article>
+
+            <!-- Healthcare -->
+            <article class="use-case reveal uc-healthcare" id="healthcare"><div class="uc-head"><div class="uc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z" fill="currentColor"/></svg></div><div class="uc-head-meta"><span class="uc-industry">Sanidad</span><h3>Control de fichajes para agencias de sanidad</h3></div></div><div class="uc-problem"><p>Agencias de sanidad colocan enfermeros, cuidadores y auxiliares en hospitales, clínicas y cuidados a domicilio. El cumplimiento normativo es crítico, los clientes exigen prueba de presencia, y los trabajadores se desplazan entre múltiples ubicaciones diariamente.</p></div><p class="uc-solves">Cómo resuelve Chegatta</p><ul><li><strong>Geofence por ubicación</strong> — cada hospital, clínica y ubicación de cuidados a domicilio tiene su geofence.</li><li><strong>Fichaje por QR code</strong> — imprima y fije un QR code en cada ubicación.</li><li><strong>Monitorización de cumplimiento</strong> — reglas de cumplimiento automáticas garantizan que los trabajadores cumplen los requisitos normativos.</li><li><strong>Informes por cliente</strong> — exporte informes de asistencia por cliente para facturación.</li></ul><div class="uc-outcome"><svg class="uc-outcome-icon" viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg><p>Cumplimiento normativo garantizado, con prueba de presencia para cada cliente e informes listos para auditoría.</p></div><p><a class="uc-link" href="healthcare-staffing-attendance.html">Lee cómo funciona para sanidad <span class="arrow">&rarr;</span></a></p></article>
+        </div>
+    </section>
+
+    <!-- Cómo Funciona -->
+    <section class="how-it-works section section-alt" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Cómo Funciona</span>
+                <h2 class="section-title">From signup to full visibility in one afternoon</h2>
+            </div>
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Set Up Your Agency</h3>
+                        <p>Create your business client, add each work site, and configure geofence locations for every worksite your employees operate in.</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step reveal">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Assign Employees to Clients</h3>
+                        <p>Invite workers by email, assign them to one or more work sites, and set up shifts. Roles and permissions are handled automatically.</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step reveal">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Track Across Every Site</h3>
+                        <p>Employees clock in from their phone at any client location. You get one real-time dashboard across all companies, with anomaly detection and insights.</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step reveal">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Approve and Export Payroll</h3>
+                        <p>Review flagged shifts, approve verified hours, and export payroll-ready reports as CSV or PDF — or generate salary slips and SEPA bank files directly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="section" id="comparison">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Why Switch</span>
+                <h2 class="section-title">Chegatta vs. spreadsheets vs. paper time cards</h2>
+                <p class="section-subtitle">Most multi-site businesses don't switch because of features — they switch because of what manual tracking costs them in errors, disputes, and payroll prep time.</p>
+            </div>
+            <div class="uc-compare" style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Chegatta</th>
+                            <th>Hojas de cálculo</th>
+                            <th>Tarjetas de papel</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Proves who was on site</td>
+                            <td class="yes">GPS + geofence evidence</td>
+                            <td class="no">Self-reported</td>
+                            <td class="no">Easily forged</td>
+                        </tr>
+                        <tr>
+                            <td>Stops buddy punching</td>
+                            <td class="yes">Device fingerprinting</td>
+                            <td class="no">Impossible to detect</td>
+                            <td class="no">Impossible to detect</td>
+                        </tr>
+                        <tr>
+                            <td>Break and overtime tracking</td>
+                            <td class="yes">Automatic, per-site rules</td>
+                            <td class="mid">Manual calculation</td>
+                            <td class="mid">Manual calculation</td>
+                        </tr>
+                        <tr>
+                            <td>Multi-site visibility</td>
+                            <td class="yes">One dashboard, all sites</td>
+                            <td class="mid">One file per site</td>
+                            <td class="no">Chased by phone</td>
+                        </tr>
+                        <tr>
+                            <td>Payroll prep time</td>
+                            <td class="yes">Minutos — export ready</td>
+                            <td class="mid">Horas — manual review</td>
+                            <td class="no">Días — re-key everything</td>
+                        </tr>
+                        <tr>
+                            <td>Dispute evidence</td>
+                            <td class="yes">Timestamped audit trail</td>
+                            <td class="no">Nothing verifiable</td>
+                            <td class="mid">Cards, if kept</td>
+                        </tr>
+                        <tr>
+                            <td>Works offline / no signal</td>
+                            <td class="yes">Queued and synced</td>
+                            <td class="mid">Yes</td>
+                            <td class="mid">Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits for agencies -->
+    <section class="roles section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Why Agencies Choose Chegatta</span>
+                <h2 class="section-title">Everything your business client needs in one place</h2>
+            </div>
+            <div class="roles-grid">
+                <div class="role-card reveal">
+                    <div class="role-icon role-admin">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V1l-9-1z" fill="currentColor" opacity="0.2"/><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V1l-9-1zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Verify Real Clock-Ins</h3>
+                    <p>Geolocation and geofencing eliminate buddy punching and off-site clock-ins. You know every hour claimed was actually worked at the right place.</p>
+                </div>
+                <div class="role-card reveal">
+                    <div class="role-icon role-company">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Compare Clients at a Glance</h3>
+                    <p>See attendance, lateness, and overtime across every work site from one dashboard. Spot problem sites before your clients do.</p>
+                </div>
+                <div class="role-card reveal">
+                    <div class="role-icon role-employee">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/></svg>
+                    </div>
+                    <h3>Protect Payroll Precisión</h3>
+                    <p>Automatic break and overtime tracking means payroll is based on verified hours, not estimates. Export clean reports for your accounts team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">Loved by business clients across Europe</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Chegatta transformed how we manage our 200+ employees across 15 client sites. The attention list alone saves me 3 hours a week."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div>
+                            <div class="author-name">Maria Rodriguez</div>
+                            <div class="author-title">Operations Manager, Stoic Solutions</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"The geofencing feature eliminated buddy-punching completely. We know exactly when and where our team clocks in."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JC</div>
+                        <div>
+                            <div class="author-name">João Costa</div>
+                            <div class="author-title">CEO, HealthFirst Clinics</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"The AI insights caught a pattern of late arrivals we'd been missing for months. Incredibly useful for proactive management."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AK</div>
+                        <div>
+                            <div class="author-name">Anna Klein</div>
+                            <div class="author-title">HR Director, Berlin Construct</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Preguntas frecuentes</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>How do you track employees who work at different sites?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Each work site has its own GPS geofence (coordinates plus a radius, default 200 m). Employees clock in from their phone browser, and Chegatta captures their coordinates and verifies they are inside the correct site's geofence. Clock-ins outside the fence are flagged for review — never blocked — so shifts always get recorded.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>¿Los empleados pueden fichar desde su propio móvil?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. Chegatta is a web app — employees open a URL in their phone browser, no app install required. It is also an installable PWA that works offline: clock-ins taken without connection are queued and replayed automatically via background sync.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>How does Chegatta prevent buddy punching?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Chegatta fingerprints every device from HTTP headers (SHA-256) and compares it against the employee's trusted devices. Shared devices, new devices and frequent device changes are flagged as anomalies for review. Optional per-business settings let you require device approval and cap devices per employee.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>¿Qué pasa si un empleado olvida hacer clockout?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Missing clock-outs are automatically flagged as anomalies on the dashboard's attention list. Admins can then correct the shift's clock-out time; every correction is written to an audit log and the employee is notified.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Can I see attendance for all my client sites in one dashboard?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. Staffing agencies get a global dashboard that compares attendance metrics across every client company, plus per-company views. Each client can also get their own login to see only their own employees' shifts.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Does it work for employees without smartphones?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. Kiosk mode turns any shared tablet or computer into a time clock. Employees clock in with a PIN or QR scan on the shared device, with JWT-secured device registration — no personal phone needed.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>How long does payroll take with Chegatta?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Horas verified by GPS and device checks are ready to export — no manual timesheet review. Chegatta calculates overtime per site rules, generates salary slips (Recibo de Vencimento) and exports SEPA pain.001 XML for bank transfers. Most businesses cut payroll prep from hours to minutes.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Is Chegatta GDPR compliant?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. Chegatta is built for the EU market: privacy consent is recorded per user, IP addresses and user-agent strings are deleted after 90 days, device data is anonymised on a schedule, and employees can access, rectify and delete their data.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
     <section class="cta-section">
         <div class="container">
             <div class="cta-box reveal">
-                <h2 class="cta-title">¿Listo para empezar?</h2>
-                <p class="cta-subtitle">Prueba Chegatta gratis durante 14 días. Sin tarjeta de crédito.</p>
-                <a href="https://app.chegatta.com/trial" class="btn btn-primary btn-lg btn-cta">Empieza la prueba gratuita</a>
+                <h2 class="cta-title">Run your business on verified attendance data</h2>
+                <p class="cta-subtitle">Start your 14 días de prueba gratis today. Sin tarjeta de crédito required. Completa access to all features.</p>
+                <a href="https://app.chegatta.com/trial" class="btn btn-primary btn-lg btn-cta">Start My Gratis Trial</a>
+                <a href="https://app.chegatta.com/demo/request" class="btn btn-outline btn-lg btn-cta">Request a Demo</a>
+                <p class="cta-note">Sin tarjeta de crédito required · 14 days full access · Cancel anytime · Setup in 5 minutes</p>
             </div>
         </div>
     </section>
@@ -151,61 +610,57 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="nav-logo">
-                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/>
-                        </svg>
-                        <span>Chegatta</span>
-                    </a>
-                    <p class="footer-tagline">Control inteligente de asistencia y datos de plantilla para agencias de trabajo temporal modernas.</p>
-                    <div class="linkedin-badge">
-                        <a href="https://www.linkedin.com/company/chegatta/?viewAsMember=true" target="_blank" rel="noopener" class="linkedin-badge-link" aria-label="Chegatta en LinkedIn">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67h-3.56V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45h-3.56V9h3.56v11.45zM8.91 20.45h3.56V9h-3.56v11.45z"/></svg>
-                            <span>Síguenos en LinkedIn</span>
-                        </a>
+                <img src="logo.png" alt="Chegatta" class="logo-img" loading="lazy">
+                <span>Chegatta</span>
+            </a>
+                    <p class="footer-tagline">Smart attendance tracking and workforce insights for modern business clients.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.64-.58 1.38-.58 2.17 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.84 3.44 4.21a4.22 4.22 0 0 1-1.93.07c.54 1.69 2.13 2.93 4.01 2.97-1.47 1.16-3.32 1.84-5.34 1.84-.35 0-.69-.02-1.03-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/></svg></a>
+                        <a href="https://www.linkedin.com/company/chegatta/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+                        <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg></a>
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Producto</h4>
+                    <h4>Product</h4>
                     <ul>
-                        <li><a href="features.html">Funciones</a></li>
-                        <li><a href="pricing.html">Precios</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
 <li><a href="demo.html">Demo</a></li>
-                        <li><a href="control-horario.html">Control Horario</a></li>
-                        <li><a href="attendance-software-for-staffing-agencies.html">Software de asistencia</a></li>
-                        <li><a href="employee-clock-in-app-for-staffing-agencies.html">App de Fichaje</a></li>
-                        <li><a href="kiosk-time-clock.html">Reloj Kiosco</a></li>
-                        <li><a href="payroll-compliance-software.html">Nómina y Cumplimiento</a></li>
-                        <li><a href="hr-platform.html">Plataforma de RRHH</a></li>
-                        <li><a href="use-cases.html">Casos de uso</a></li>
-                        <li><a href="#faq">Preguntas frecuentes</a></li>
+                        <li><a href="attendance-software-for-staffing-agencies.html">Attendance Software</a></li>
+                        <li><a href="employee-clock-in-app-for-staffing-agencies.html">Clock-In App</a></li>
+                        <li><a href="kiosk-time-clock.html">Kiosk Time Clock</a></li>
+                        <li><a href="payroll-compliance-software.html">Payroll &amp; Compliance</a></li>
+                        <li><a href="hr-platform.html">HR Platform</a></li>
+                        <li><a href="use-cases.html">Use Cases</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Empresa</h4>
+                    <h4>Company</h4>
                     <ul>
-                        <li><a href="about.html">Sobre nosotros</a></li>
-                        <li><a href="contact.html">Contacto</a></li>
-                        <li><a href="https://app.chegatta.com/developers">Desarrolladores</a></li>
-                        <li><a href="index.html#apps">Apps móviles</a></li>
-                        <li><a href="https://app.chegatta.com/trial">Empezar prueba</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html#apps">Mobile Apps</a></li>
+                        <li><a href="https://app.chegatta.com/trial">Start Trial</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="privacy.html">Política de privacidad</a></li>
-                        <li><a href="terms.html">Términos del servicio</a></li>
-                        <li><a href="privacy.html#gdpr">RGPD</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html#gdpr">GDPR</a></li>
                         <li><a href="security.html">Seguridad</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Chegatta. Todos los derechos reservados.</p>
+                <p>&copy; 2026 Chegatta. All rights reserved. Built with Laravel + React + Tailwind CSS.</p>
             </div>
         </div>
     </footer>
+
     <script defer src="https://cloud.umami.is/script.js" data-website-id="ee106db2-370e-4f23-91d6-7d79eec21946"></script>
-    <script src="../js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
