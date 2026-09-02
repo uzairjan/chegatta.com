@@ -252,4 +252,41 @@
             insightObserver.observe(bar);
         });
     }
+
+    /* ============================================
+       Interactive Hero Mockup Tabs
+       ============================================ */
+    var mockupTabs = document.querySelectorAll('.mockup-tabs .mockup-tab');
+    var mockupImage = document.querySelector('.mockup-screen img');
+    var mockupBase = 'img/product/';
+    var mockupAlts = {
+        dashboard: 'Chegatta attendance dashboard showing live employee stats',
+        employees: 'Chegatta employee management screen',
+        attendance: 'Chegatta attendance supervision screen',
+        sites: 'Chegatta site management with geofenced locations',
+        reports: 'Chegatta reports and compliance screen'
+    };
+
+    if (mockupTabs.length > 0 && mockupImage) {
+        mockupTabs.forEach(function (tab) {
+            tab.addEventListener('click', function () {
+                var name = tab.getAttribute('data-tab');
+                if (!name) return;
+                var src = mockupBase + name + '.webp';
+                if (mockupImage.getAttribute('src') !== src) {
+                    mockupImage.style.opacity = '0';
+                    mockupImage.src = src;
+                    mockupImage.alt = mockupAlts[name] || mockupImage.alt;
+                }
+                mockupTabs.forEach(function (t) {
+                    var isActive = t === tab;
+                    t.classList.toggle('active', isActive);
+                    t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                });
+            });
+        });
+        mockupImage.addEventListener('load', function () {
+            mockupImage.style.opacity = '1';
+        });
+    }
 })();

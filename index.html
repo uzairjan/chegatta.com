@@ -306,65 +306,21 @@
             </div>
             <div class="hero-visual">
                 <div class="dashboard-mockup">
-                    <div class="mockup-header">
+                    <div class="mockup-toolbar">
                         <div class="mockup-dots">
                             <span></span><span></span><span></span>
                         </div>
-                        <div class="mockup-title">Attendance Dashboard</div>
+                        <div class="mockup-title">app.chegatta.com</div>
                     </div>
-                    <div class="mockup-body">
-                        <div class="mockup-stats">
-                            <div class="mockup-stat-card">
-                                <div class="mockup-stat-icon present">
-                                    <svg viewBox="0 0 24 24" fill="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
-                                </div>
-                                <div>
-                                    <div class="mockup-stat-value">142</div>
-                                    <div class="mockup-stat-label">Present</div>
-                                </div>
-                            </div>
-                            <div class="mockup-stat-card">
-                                <div class="mockup-stat-icon absent">
-                                    <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="currentColor"/></svg>
-                                </div>
-                                <div>
-                                    <div class="mockup-stat-value">8</div>
-                                    <div class="mockup-stat-label">Absent</div>
-                                </div>
-                            </div>
-                            <div class="mockup-stat-card">
-                                <div class="mockup-stat-icon late">
-                                    <svg viewBox="0 0 24 24" fill="none"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="currentColor"/></svg>
-                                </div>
-                                <div>
-                                    <div class="mockup-stat-value">12</div>
-                                    <div class="mockup-stat-label">Late</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mockup-chart">
-                            <div class="mockup-chart-title">Weekly Attendance</div>
-                            <div class="mockup-bars">
-                                <div class="mockup-bar" style="height: 60%"></div>
-                                <div class="mockup-bar" style="height: 75%"></div>
-                                <div class="mockup-bar" style="height: 90%"></div>
-                                <div class="mockup-bar" style="height: 85%"></div>
-                                <div class="mockup-bar" style="height: 95%"></div>
-                                <div class="mockup-bar" style="height: 70%"></div>
-                                <div class="mockup-bar" style="height: 50%"></div>
-                            </div>
-                        </div>
-                        <div class="mockup-attention">
-                            <div class="mockup-attention-title">⚠ Attention List</div>
-                            <div class="mockup-attention-item">
-                                <span class="attention-dot high"></span>
-                                <span>John Doe — Missing clock-out</span>
-                            </div>
-                            <div class="mockup-attention-item">
-                                <span class="attention-dot medium"></span>
-                                <span>Jane Smith — Off-site clock-in</span>
-                            </div>
-                        </div>
+                    <div class="mockup-tabs" role="tablist" aria-label="Chegatta screens">
+                        <button type="button" class="mockup-tab active" role="tab" data-tab="dashboard" aria-selected="true">Dashboard</button>
+                        <button type="button" class="mockup-tab" role="tab" data-tab="employees" aria-selected="false">Employees</button>
+                        <button type="button" class="mockup-tab" role="tab" data-tab="attendance" aria-selected="false">Attendance</button>
+                        <button type="button" class="mockup-tab" role="tab" data-tab="sites" aria-selected="false">Sites</button>
+                        <button type="button" class="mockup-tab" role="tab" data-tab="reports" aria-selected="false">Reports</button>
+                    </div>
+                    <div class="mockup-screen">
+                        <img src="img/product/dashboard.webp" alt="Chegatta attendance dashboard showing live employee stats" width="1440" height="900" loading="eager" fetchpriority="high">
                     </div>
                 </div>
                 <div class="floating-card card-1">
@@ -742,6 +698,121 @@
                                 <p>Attendance is <strong>up 6%</strong> vs. last week. 2 employees need attention.</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase Section -->
+    <section class="showcase section" id="product">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">In the App</span>
+                <h2 class="section-title">Designed for real teams, not demos</h2>
+                <p class="section-subtitle">From employee management to compliance-ready reports — every screen is built to get you back to running your business.</p>
+            </div>
+            <div class="showcase-grid">
+                <div class="showcase-item reveal">
+                    <div class="showcase-frame">
+                        <div class="showcase-toolbar">
+                            <div class="mockup-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="showcase-title">Dashboard</div>
+                        </div>
+                        <div class="showcase-screen">
+                            <img src="img/product/dashboard.webp" alt="Chegatta attendance dashboard with live employee stats" width="1440" height="900" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="showcase-caption">
+                        <h4>Live overview at a glance</h4>
+                        <p>Who's in, who's late, and what's due — in one screen.</p>
+                    </div>
+                </div>
+                <div class="showcase-item reveal">
+                    <div class="showcase-frame">
+                        <div class="showcase-toolbar">
+                            <div class="mockup-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="showcase-title">Employees</div>
+                        </div>
+                        <div class="showcase-screen">
+                            <img src="img/product/employees.webp" alt="Chegatta employee management list screen" width="1440" height="900" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="showcase-caption">
+                        <h4>Manage your whole team</h4>
+                        <p>Assignments across clients, rates, and compliance — no spreadsheets.</p>
+                    </div>
+                </div>
+                <div class="showcase-item reveal">
+                    <div class="showcase-frame">
+                        <div class="showcase-toolbar">
+                            <div class="mockup-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="showcase-title">Attendance</div>
+                        </div>
+                        <div class="showcase-screen">
+                            <img src="img/product/attendance.webp" alt="Chegatta attendance supervision and correction screen" width="1440" height="900" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="showcase-caption">
+                        <h4>Supervise every shift</h4>
+                        <p>Approve, correct, and audit clock-ins from one place.</p>
+                    </div>
+                </div>
+                <div class="showcase-item reveal">
+                    <div class="showcase-frame">
+                        <div class="showcase-toolbar">
+                            <div class="mockup-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="showcase-title">Sites</div>
+                        </div>
+                        <div class="showcase-screen">
+                            <img src="img/product/sites.webp" alt="Chegatta site management with geofenced locations" width="1440" height="900" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="showcase-caption">
+                        <h4>Geofenced locations</h4>
+                        <p>Pin sites and verify that clock-ins happen where they should.</p>
+                    </div>
+                </div>
+                <div class="showcase-item reveal">
+                    <div class="showcase-frame">
+                        <div class="showcase-toolbar">
+                            <div class="mockup-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="showcase-title">Time Off</div>
+                        </div>
+                        <div class="showcase-screen">
+                            <img src="img/product/leaves.webp" alt="Chegatta leave and time-off approvals screen" width="1440" height="900" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="showcase-caption">
+                        <h4>Time off, approved fast</h4>
+                        <p>Approve leave requests and track balances without email ping-pong.</p>
+                    </div>
+                </div>
+                <div class="showcase-item reveal">
+                    <div class="showcase-frame">
+                        <div class="showcase-toolbar">
+                            <div class="mockup-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="showcase-title">Reports &amp; Compliance</div>
+                        </div>
+                        <div class="showcase-screen">
+                            <img src="img/product/reports.webp" alt="Chegatta reports and compliance screen" width="1440" height="900" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="showcase-caption">
+                        <h4>Audit-ready in a click</h4>
+                        <p>Export payroll and compliance reports in the formats you need.</p>
                     </div>
                 </div>
             </div>
