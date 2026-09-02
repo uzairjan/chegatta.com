@@ -4282,25 +4282,44 @@ select.trial-input {
 }
 
 .uc-cta-mini {
-    background: var(--gradient-cta);
-    border-radius: 20px;
-    padding: 2rem;
-    margin: 2.5rem 0;
-    text-align: center;
-    color: #ffffff;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.25rem;
+    border-radius: 22px;
+    padding: 2.25rem 2.5rem;
+    margin: 2.5rem 0;
+    color: #ffffff;
+    background:
+        radial-gradient(900px 320px at 8% -30%, rgba(255, 255, 255, 0.22) 0%, transparent 60%),
+        radial-gradient(600px 300px at 95% 120%, rgba(6, 182, 212, 0.35) 0%, transparent 60%),
+        var(--gradient-cta);
+    box-shadow: 0 20px 45px -18px rgba(79, 70, 229, 0.55);
     overflow: hidden;
+    text-align: left;
 }
 
 .uc-cta-mini::before {
     content: "";
     position: absolute;
-    top: -120px;
-    right: -80px;
-    width: 280px;
-    height: 280px;
-    background: rgba(255, 255, 255, 0.12);
+    bottom: -170px;
+    right: 6%;
+    width: 340px;
+    height: 340px;
     border-radius: 50%;
+    background: rgba(255, 255, 255, 0.09);
+}
+
+.uc-cta-mini::after {
+    content: "";
+    position: absolute;
+    top: -46px;
+    right: -46px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.14);
 }
 
 .uc-cta-mini > * {
@@ -4308,25 +4327,141 @@ select.trial-input {
     z-index: 1;
 }
 
+.uc-cta-mini-body {
+    min-width: 0;
+    max-width: 640px;
+}
+
 .uc-cta-mini h2 {
-    font-size: 1.4rem;
+    font-size: 1.55rem;
     font-weight: 800;
-    margin: 0 0 0.4rem;
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+    margin: 0 0 0.5rem;
 }
 
 .uc-cta-mini p {
-    color: rgba(255, 255, 255, 0.85);
-    margin: 0 0 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin: 0 0 1.1rem;
+}
+
+.uc-cta-mini-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.uc-cta-mini-chips li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.uc-cta-mini-chips li::before {
+    content: "¹3";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.22);
+    font-size: 0.62rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.uc-cta-mini-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem;
+    flex-shrink: 0;
 }
 
 .uc-cta-mini .btn {
-    background: #ffffff;
-    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    margin: 0;
+    padding: 0.9rem 1.6rem;
     border: none;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #4338ca;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 10px 26px -10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .uc-cta-mini .btn:hover {
+    transform: translateY(-2px);
     background: #eef2ff;
+    box-shadow: 0 14px 30px -10px rgba(0, 0, 0, 0.45);
+}
+
+.uc-cta-mini .btn-arrow {
+    transition: transform 0.2s ease;
+}
+
+.uc-cta-mini .btn:hover .btn-arrow {
+    transform: translateX(3px);
+}
+
+.uc-cta-mini-alt {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.4rem 0.6rem;
+}
+
+.uc-cta-mini-alt:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+@media (max-width: 820px) {
+    .uc-cta-mini {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.35rem;
+        padding: 1.75rem 1.5rem;
+        text-align: left;
+    }
+
+    .uc-cta-mini-actions {
+        width: 100%;
+    }
+
+    .uc-cta-mini .btn {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .uc-cta-mini .btn,
+    .uc-cta-mini .btn-arrow {
+        transition: none;
+    }
 }
 
 .uc-compare table {
